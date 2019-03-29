@@ -1,32 +1,18 @@
-import React, { Component }  from 'react'
-import { Spring } from 'react-spring/renderprops'
+import React, { useState } from 'react'
+import { useSpring, animated } from 'react-spring'
 
-export default class Animated2 extends Component{
-	state = {
-		show: false
-	}
-	render(){
-		return(
-			<Spring
-				from={{ opacity: 0}}
-				to={{ opacity: 1}}
-				config={{delay:1000, duration:1000}}
-		 	>
-		      {props=>(
-		        <div style={props}>
-		          <div style={c2Style}>
-		            <h1>dur</h1>
-		            <button onClick={this.props.toggle}>Toggle</button>
-		          </div>
-		        </div>
-		      )}
-		    </Spring>
-		) 
-	}
-}
-
-const c2Style={
-	background:'green',
-	color:'white',
-	padding:'1.5rem'
+export default function Animated(props){
+  const slide = useSpring({
+    position:'relative',
+    zIndex:'1', 
+    from: { right: '0%' }, 
+    right: props.toggle ? '0%' : '50%', 
+    config: { duration: 1000 } 
+  })
+  return (
+    <section >
+      <animated.div style={slide} className=""> <img src="https://ichef.bbci.co.uk/images/ic/720x405/p0517py6.jpg" alt="dog"/><img src="https://ichef.bbci.co.uk/images/ic/720x405/p0517py6.jpg" alt="dog"/>
+      </animated.div>
+    </section>
+  )
 }
