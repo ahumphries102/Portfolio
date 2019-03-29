@@ -1,17 +1,11 @@
-import React, { Component } from 'react'
-import Intro from "./Intro"
-
-export default class FetchDisplay extends Component{
-	state = {
-
-	}
-	componentDidMount(){
-
-	}
-	render(){
-		
-		return(
-			<h1>FetchDis</h1>
-		)
-	}
+function Counter({initialCount}) {
+  const [count, setCount] = useState(initialCount);
+  return (
+    <>
+      Count: {count}
+      <button onClick={() => setCount(initialCount)}>Reset</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+    </>
+  );
 }
