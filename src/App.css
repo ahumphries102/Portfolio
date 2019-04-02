@@ -8,124 +8,44 @@ will not work ***/
 html{
   scroll-behavior: smooth;
 }
-a{
-  color: black;
+.wrapL a{
+  color: white;
   text-decoration: none;
-}
-body{
-  position: relative;
-}
-.fixedNav{
-  position: fixed;
-  z-index: 1000;
-  background-color: rgba(100,100,100,.8);
-}
-/******* FETCH DISPLAY: Logic affecting the array of magic cards *******/
-.mainBody{
-  position: relative;
-}
-.mainBody img{
-  display: block;
-  height:20%;
-  width:20%;
-  /*filter: grayscale(100%);*/
-}
-/******* All logic here is contained within infoContainer ****/
-.infoContainer{
-  position: absolute;
-  top: 2%;
-  width: 100%;
-  z-index: 899;
-}
-.introText{
-  display: flex;
-  justify-content: center;
-}
-/**** Styles for everything in the intro section *********/
-.introChildren{
-  background-color:rgb(250,250,250);
-  width: 75%;
   padding: 2%;
-  border-radius: 25px;
+  font-size: 1.5rem;
 }
-.introChildren div{
-  margin-top:2%;
+body{ 
 }
-.introChildren article{
-  line-height: 200%;
-  text-align: justify;
-}
-.imgText{
-  display: flex;
-}
-.imgText img{
-  display: inline-block;
-  width: 50%;
-  height: 50%;
-  padding-right:5%;
-  box-shadow: 50px, 50px, 20px, black)
-}
-/****** Form ******/
-.form{
-  position: relative;
-  z-index: 895;
-  background-color:lightblue;
-  padding:2%;
-  margin-top:2%;
-  text-align: center;
-  border-radius: 10px;
-}
-.thoughts{
-  padding:1%;
-  margin: 2%;
-  font-family: arial;
-  border-radius: 10px;
-}
-/**************/
-.grid{
-  /*** the positioning and z-index allow the cards to scroll over the hero *****/
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  z-index: 896
-}
-/******* Logic for setting a fixed Hero *******/
-::-webkit-scrollbar { 
-    display: none; 
-}
+
 .mainContainer{
   position: relative;
-}
-.imgCon{
-  height: 100vh;
-  width:200%;
-  background-color: pink;
-}
-.imgCon img{
-  display: inline-block;
-  width: 50%;
-  height:100vh;
-}
-.imgWrapper{
-  position: relative;
+  background-color:yellow;
   display: flex;
   height: 100vh;
+  width: 200vw;
+  overflow: hidden;
 }
-/* just a place holder for wrapL so that wrapR doesn't move over it */
-.placeHoldL{
-  height:100vh;
-  width: 50vw;
-}
-/**** wrapL governs the styles on the left side of viewport ****/
 .wrapL{
-  position: fixed;
+  background-color: pink;
+  position: absolute;
+  width:50vw;
+}
+.nav{
+  background-color:red;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  height: 100vh;
-  z-index:898;
-  background-color: rgb(255,255,255);
+  width: 100%;
+  bottom: 0;
+}
+.wrapR{
+  background-color: purple;
+  width:50vw;
+}
+.about{
+  background-color: green;
+  width:50vw;
+}
+.port{  background-color: silver;
+  width:50vw;
 }
 /**** introText styles all the texxt inside the intro box ****/
 .introText{
@@ -139,15 +59,9 @@ body{
   height: 50%;
   width: 50%;
 }
-.wrapR{
-  position: relative;
-  width: 50vw;
-  background-color: purple;
-  z-index: 897;
-}
 /**** Button logic ****/
 .toggleSlide{
-  position:fixed;
+  position:absolute;
   top:50%;
   z-index: 999;
   border-radius: 50%;
