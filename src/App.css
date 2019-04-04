@@ -8,11 +8,14 @@ will not work ***/
 html{
   scroll-behavior: smooth;
 }
-.wrapL a{
+a{
   color: white;
   text-decoration: none;
   padding: 2%;
   font-size: 1.5rem;
+}
+a:visited{
+  color:white;
 }
 body{ 
 }
