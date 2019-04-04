@@ -1,6 +1,3 @@
-/*** NOTE: ONLY THE MENU BUTTON CAN HAVE A Z-INDEX OF 1000!
-If any other style has a higher order than that, the menu button
-will not work ***/
 *{
   margin: 0;
   padding:0;
@@ -8,54 +5,70 @@ will not work ***/
 html{
   scroll-behavior: smooth;
 }
+.mainContainer{
+  position: relative;
+  background-color:yellow;
+  right:50%;
+  display: flex;
+  height: 100vh;
+  width: 200vw;
+  overflow: hidden;
+}
+/*** Left side styles ***/
+.wrapL{
+  position: relative;
+  background-color: rgb(255,255,255);
+  width:50vw;
+}
+.nav{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+}
+.about{
+  background-color: green;
+  width:50vw;
+}
 a{
-  color: white;
+  color: rgb(0,0,0);
   text-decoration: none;
   padding: 2%;
   font-size: 1.5rem;
 }
 a:visited{
-  color:white;
+  color:rgb(0,0,0);
 }
-body{ 
-}
-.mainContainer{
-  position: relative;
-  background-color:yellow;
-  right: 50%;
-  display: flex;
-  height: 100vh;
-  width: 200%;
-  overflow: hidden;
-}
-.moveL{
-  transform: translate3d(25%, 0, 0);
-}
-.moveR{
-  transform: translate3d(0%, 0, 0);
-}
-.wrapL{
-  position: relative;
-  background-color: pink;
-  width:50%;
-}
-.nav{
-  background-color:red;
-  display: flex;
-  width: 100%;
-  bottom: 0;
-}
+
+/*** Right side styles ***/
 .wrapR{
+  position: relative;
+  /*** overflow scroll gives the illusion of a fixed left positioned left side ***/
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
   background-color: purple;
-  width:50%;
+  width:50vw;
 }
-.about{
-  background-color: green;
-  width:50%;
+.wrapR img{
+  display: block;
+  width:100%;
+  height:100%;
+  scroll-snap-align:center;
+  overflow: hidden;
+  filter: grayscale(1);
 }
-.port{  background-color: silver;
-  width:50%;
+.wrapR::-webkit-scrollbar{
+  height:0 !important;
+  width:0;
 }
+
+.port{
+  position: relative;
+  background-color: silver;
+  width:50vw;
+  overflow: scroll;
+}
+
 /**** introText styles all the texxt inside the intro box ****/
 .introText{
   display:flex;
@@ -70,7 +83,7 @@ body{
 }
 /**** Button logic ****/
 .toggleSlide{
-  position:absolute;
+  position:fixed;
   top:50%;
   z-index: 999;
   border-radius: 50%;
@@ -95,4 +108,22 @@ button:focus{
 .toggleSlide:active{
   transform: scale(1);
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
+}
+.scrollList{
+  position: absolute;
+  list-style-type: none;
+  right: 0;
+  width: 1%;
+  height: 100%;
+  z-index: 801;
+}
+.scrollList li{
+  height:10%;
+  border-bottom: solid black thin;
+}
+.scrollFill{
+  position: absolute;
+  right:0;
+  z-index: 800;
+  width:1%;
 }
