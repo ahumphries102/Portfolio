@@ -26,7 +26,8 @@ export default function MainContainer(props){
   	})
   	const heightInc = useSpring({
   		background:'red', 
-	    height: `${height}%`
+	    height: `${height}%`,
+	    config: {ease: 500}
   	})
 	function show(view){
 		if(view === 'about' ){
@@ -48,20 +49,10 @@ export default function MainContainer(props){
 		}
 	}
 	function increaseHeight(){
-		
-		const scrolling = document.getElementById('wrapR').scrollTop.toFixed()
-
-		if( scrolling < currentInc){
-			setHeight(height - .5)
-		}
-		else{
-			setHeight(height + .5)
-		}
-
-		const scrolled = document.getElementById('wrapR').scrollTop.toFixed()
-
-		setCurrentInc(scrolled)
-		console.log((scrolled / 100) * 10)
+		let scrollTop = document.getElementById('wrapR').scrollTop
+		let scrollBottom = document.getElementById('wrapR').scrollHeight - document.getElementById('wrapR').clientHeight
+		let scrollPercent = scrollTop / scrollBottom * 100 
+		setHeight(scrollPercent)
 	}
 	return(
 		<animated.div style={slide} className="mainContainer" id="mainCon">
@@ -97,6 +88,7 @@ export default function MainContainer(props){
 				</div>
 				<div onClick={()=>show('work')} onScroll={()=>increaseHeight()} className="wrapR" id="wrapR" >
 				<img src={images.img1}/>
+				<progress max='1' value='0'/>
 				<img src={images.img2}/>
 					<button className="toggleSlide">{button}</button>
 				}

@@ -57,6 +57,7 @@ a:visited{
   overflow: hidden;
   filter: grayscale(1);
 }
+/*** hide the scroll bar ***/
 .wrapR::-webkit-scrollbar{
   height:0 !important;
   width:0;
