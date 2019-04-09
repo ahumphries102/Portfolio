@@ -10,5 +10,5 @@ export default function scrollLogic(){
   scrollList.map((element, key)=>{
     return <li> oops</li>
   })
-  return scrollList
+
 }

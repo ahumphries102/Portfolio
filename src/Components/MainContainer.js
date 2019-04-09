@@ -26,13 +26,12 @@ export default function MainContainer(props){
   	})
   	const heightInc = useSpring({
   		background:'red', 
-	    height: `${height}%`,
-	    config: {ease: 500}
+	    height: `${height}%`
   	})
 	function show(view){
 		if(view === 'about' ){
 			setToggleWork(!toggleWork)
-			setNavPos('25%')
+			setNavPos('50')
 			setNavWork(navWork === 'work' ? '': 'work')
 			setNavAbout(navAbout === 'about' ? 'home': 'about')
 		}
@@ -48,53 +47,35 @@ export default function MainContainer(props){
 			setToggleWork(!toggleWork)
 		}
 	}
-	function increaseHeight(){
-		let scrollTop = document.getElementById('wrapR').scrollTop
-		let scrollBottom = document.getElementById('wrapR').scrollHeight - document.getElementById('wrapR').clientHeight
-		let scrollPercent = scrollTop / scrollBottom * 100 
+	window.onscroll = function(){
+		
+		let scrollTop = document.documentElement.scrollTop
+		let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
+		let scrollPercent = scrollTop / scrollBottom * 100
 		setHeight(scrollPercent)
-	}
+		}
 	return(
-		<animated.div style={slide} className="mainContainer" id="mainCon">
-				<div className="about" id="about">
-				</div>
-				<div className="wrapL" id="">
-				<animated.div style={heightInc}  className="scrollFill"></animated.div>
-					<ul className='scrollList'>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-					</ul>
-					<nav className="nav">
-						<a href="#about" onClick={()=>show('about')}>{navAbout}</a>
-					</nav>
-				</div>
-				<div onClick={()=>show('work')} onScroll={()=>increaseHeight()} className="wrapR" id="wrapR" >
-				<img src={images.img1}/>
-				<progress max='1' value='0'/>
-				<img src={images.img2}/>
-					<button className="toggleSlide">{button}</button>
-				}
-				}
+		<div className="mainContainer">
+
+				<animated.div style={slide} className="leftContainer">
+					<div className="wrapL">
+					<animated.div style={heightInc}  className="scrollFill">
+					</animated.div>
+						<nav className="nav">
+							<a href="#about" onClick={()=>show('about')}>{navAbout}</a>
+						</nav>
+					</div>
+					<div className="about"></div>
+				</animated.div>
+				<div className="rightContainer">
+
+				<div className="wrapR">
+				<img src={images.img1} alt="placeHold"/>
+				<img src={images.img2} alt="placeHold"/>
+					<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
 				</div>
 				<div className="port" id="home"></div>
-		</animated.div>
+				</div>
+		</div>
 	)
 }

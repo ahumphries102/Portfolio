@@ -52,3 +52,26 @@ export default class FrontPage extends Component {
         )
     }
 }
+
+
+	// function increaseHeight(){
+		
+	// 	// const scrolling = document.getElementById('wrapR').scrollTop.toFixed()
+
+	// 	// if( scrolling < currentInc){
+	// 	// 	setHeight(height - .5)
+	// 	// }
+	// 	// else{
+	// 	// 	setHeight(height + .5)
+	// 	// }
+
+	// 	// const scrolled = document.getElementById('wrapR').scrollTop.toFixed()
+
+	// 	// setCurrentInc(scrolled)
+
+	// 	let scrollTop = document.documentElement.scrollTop
+	// 	let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
+	// 	let scrollPercent = scrollTop / scrollBottom * 100
+	// 	setHeight(scrollPercent)
+	// 	console.log(scrollTop.toFixed(), scrollBottom)
+	// }
