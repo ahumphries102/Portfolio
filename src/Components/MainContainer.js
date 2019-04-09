@@ -5,23 +5,32 @@ import images from './images'
 import scrollLogic from './scrollLogic'
 
 export default function MainContainer(props){
-	const [navPos, setNavPos] = useState('0%')
+	//Adjusts the sliding of the innerMainContainer
+	const [containerPos, setContainerPos] = useState('0%')
+
+	//Toggles what About says in the navigation 
 	const [toggleAbout, setToggleAbout] = useState(true)
+
+	//Toggles what About says in the navigation
 	const [toggleWork, setToggleWork] = useState(true)
+
+	//Toggles what the button looks like on the right side of screen	
 	const [button, setButton] = useState('>')
+
+	//Changes About to say home
 	const [navAbout, setNavAbout] = useState('about')
+
+	//Changes work to say home
 	const [navWork, setNavWork] = useState('work')
-	const [inc, setInc] = useState(0)
-	const [currentInc, setCurrentInc] = useState(0)
-	// set the height of psuedo scroll bar in center of screen
+
+	//Set the height of psuedo scroll bar in center of screen
 	const [height, setHeight] = useState(0)
 
 
-
+	//Animation used to move the innerMainContainer element left or right
 	const slide = useSpring({
-	    zIndex:'1', 
 	    from: { transform: 'translate(0%,0)' }, 
-	    transform:`translate: (${toggleWork ? '0%' : navPos },0)`, 
+	    transform:`translate: (${toggleWork ? '0%' : containerPos },0)`, 
 	    config: { ease: 5000 } 
   	})
   	const heightInc = useSpring({
@@ -31,16 +40,15 @@ export default function MainContainer(props){
 	function show(view){
 		if(view === 'about' ){
 			setToggleWork(!toggleWork)
-			setNavPos('50')
+			setContainerPos('50')
 			setNavWork(navWork === 'work' ? '': 'work')
 			setNavAbout(navAbout === 'about' ? 'home': 'about')
 		}
 		else if(view === 'work'){
 			setToggleWork(!toggleWork)
-			setNavPos('-25%')
+			setContainerPos('-50%')
 			setButton(button === '>' ? 'x': '>')
 			setNavWork(navWork === 'work' ? 'home': 'work')
-			setNavAbout(navAbout === 'about' ? '': 'about')
 		}
 		else{
 			//in the nav bar set text to home or work
@@ -48,7 +56,7 @@ export default function MainContainer(props){
 		}
 	}
 	window.onscroll = function(){
-		
+
 		let scrollTop = document.documentElement.scrollTop
 		let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
 		let scrollPercent = scrollTop / scrollBottom * 100
@@ -56,8 +64,8 @@ export default function MainContainer(props){
 		}
 	return(
 		<div className="mainContainer">
-
-				<animated.div style={slide} className="leftContainer">
+			<animated.div style={slide} className="innerMainContainer">
+				<div className="leftContainer">
 					<div className="wrapL">
 					<animated.div style={heightInc}  className="scrollFill">
 					</animated.div>
@@ -66,7 +74,8 @@ export default function MainContainer(props){
 						</nav>
 					</div>
 					<div className="about"></div>
-				</animated.div>
+				</div>
+
 				<div className="rightContainer">
 
 				<div className="wrapR">
@@ -74,8 +83,10 @@ export default function MainContainer(props){
 				<img src={images.img2} alt="placeHold"/>
 					<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
 				</div>
-				<div className="port" id="home"></div>
+				<div className="portfolio" id="home"></div>
 				</div>
+			</animated.div>
+
 		</div>
 	)
 }

@@ -5,19 +5,29 @@
 html{
   scroll-behavior: smooth;
 }
-.mainContainer{
-  position: relative;
-  right:50%;
-  width: 50vw;
-  height:200vh;
-}
-.mainContainer::-webkit-scrollbar{
+body::-webkit-scrollbar{
   height:0 !important;
   width:0;
 } 
-/*** Left side styles ***/
-.leftContainer{
+/*** Main Container sets the height of the entire app.
+Inner Main Container holds all the divs and always remains in
+the clients view ***/
+.mainContainer{
+  position: relative;
+  width: 100%;
+  height:200vh;
+}
+.innerMainContainer{
   position: fixed;
+  display: flex;
+  width:100%;
+  height: 100vh;
+  right:50%;
+}
+/*** Left side styles ***/
+/*** Left Container deals with all the html styles
+on the left side of the screen ***/
+.leftContainer{
   display: flex;
   flex-direction: row-reverse;
   width:100vw;
@@ -26,8 +36,8 @@ html{
 }
 .wrapL{
   position: relative;
-  background-color: rgb(25,255,255);
-  width:50%;
+  background-color: rgb(255,255,255);
+  width:50vw;
   height: inherit;
 }
 .nav{
@@ -36,9 +46,11 @@ html{
   width: 100%;
   bottom: 0;
 }
+/*** about is the only style for navigation ***/
 .about{
+  position: relative;
   background-color: green;
-  width:50%;
+  width:50vw;
   height: inherit;
 }
 a{
@@ -52,16 +64,12 @@ a:visited{
 }
 
 /*** Right side styles ***/
+/*** Right Container deals with all the html styles
+on the Right side of the screen ***/
 .rightContainer{
-  position: fixed;
-  /*** this is what makes the right side of the website appear ***/
-  right:-50%;
-  display: flex;
+  background:red;
 }
 .wrapR{
-  position: relative;
-  /*** overflow scroll gives the illusion of a fixed left positioned left side ***/
- 
   background-color: purple;
   width:50vw;
   height: 100vh;
@@ -73,8 +81,7 @@ a:visited{
   scroll-snap-align:center;
   filter: grayscale(1);
 }
-
-.port{
+.portfolio{
   position: relative;
   background-color: silver;
   width:50vw;
@@ -92,7 +99,7 @@ a:visited{
   height: 50%;
   width: 50%;
 }
-/**** Button logic ****/
+/**** Button styles ****/
 .toggleSlide{
   position:fixed;
   top:50%;
@@ -109,16 +116,9 @@ a:visited{
   border:0;
   font-family: inherit;
 }
+/*** Disables the blue box around the button on click ***/
 button:focus{
   outline:0;
-}
-.toggleSlide:hover{
-  transform: scale(1.05);
-  box-shadow: 0px 1px 1.5px 0px rgba(0,0,0,1)
-}
-.toggleSlide:active{
-  transform: scale(1);
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
 }
 .scrollList{
   position: absolute;
@@ -132,6 +132,8 @@ button:focus{
   height:10%;
   border-bottom: solid black thin;
 }
+
+/*** Scroll Fill handles the psuedo scroll bar ***/
 .scrollFill{
   position: absolute;
   right:0%;
