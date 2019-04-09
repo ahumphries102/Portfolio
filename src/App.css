@@ -68,11 +68,12 @@ a:visited{
 on the Right side of the screen ***/
 .rightContainer{
   background:red;
+  display: flex;
 }
 .wrapR{
   background-color: purple;
   width:50vw;
-  height: 100vh;
+  height: inherit;
 }
 .wrapR img{
   display: block;
@@ -83,8 +84,9 @@ on the Right side of the screen ***/
 }
 .portfolio{
   position: relative;
-  background-color: silver;
-  width:50vw;
+  background-color: blue;
+  width:50vh;
+  height: inherit;
 }
 
 /**** introText styles all the texxt inside the intro box ****/

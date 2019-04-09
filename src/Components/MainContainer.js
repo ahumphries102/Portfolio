@@ -5,10 +5,8 @@ import images from './images'
 import scrollLogic from './scrollLogic'
 
 export default function MainContainer(props){
-	//Adjusts the sliding of the innerMainContainer
+	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
-
-
 	const [containerYPos, setContainerYPos] = useState('0%')
 
 	//Toggles what About says in the navigation 
@@ -29,6 +27,10 @@ export default function MainContainer(props){
 	//Set the height of psuedo scroll bar in center of screen
 	const [height, setHeight] = useState(0)
 
+	const [scrolling, setScrolling] = useState(0)
+	const [scrolled, setScrolled] = useState(0)
+
+	const [scrollDirection, setScrollDirection] = useState(String)
 
 	//Animation used to move the innerMainContainer element left or right
 	const slide = useSpring({
@@ -73,27 +75,48 @@ export default function MainContainer(props){
 		}
 	}
 
-	//A unverisal function that is called whenever the user scrolls
+	//* A unverisal function that is called whenever the user scrolls
 	//When it's called scrollTop finds the amount of pixels from the top of the page to wherever the client currently is scrolled to.
 	//scrollBottom gets the total height of the app then it subtracts the inner height
 	//scrollPercent then divides the top from the bottom and multiples it by 100 to give us
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
 	window.onscroll = function(){
+
+		setScrolling(document.documentElement.scrollTop)
+		if(scrolling < scrolled){
+			setScrollDirection('Up')
+			}
+		else{
+			setScrollDirection('Down')
+		}
+		setScrolled(scrolling)
+
+		/***** *This logic defines the scrollFill element *****/
 		let scrollTop = document.documentElement.scrollTop
 		let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
-		let scrollPercent = scrollTop / scrollBottom * 100
-		setHeight(scrollPercent)
-			if(height >= 20 && height <= 29){
+		let scrollPercent = scrollTop.toFixed() / scrollBottom.toFixed() * 100
+		setHeight(scrollPercent.toFixed())
+
+		/*** Getting wrapR to scroll ***/
+		if(scrollDirection === 'Down'){
+			if(height >= 20){
 				setContainerYPos('-100%')
-				if(height < 21){
-					setContainerYPos('0')
-				}
 			}
-			else if(height >= 50){
+			else if(height >= 40){
 				setContainerYPos('-200%')
 			}
 		}
+		else{
+			if(height < 20 && containerYPos === '-100%'){
+				setContainerYPos('0%')
+			}
+			else if(height > 20 && height < 40 && containerYPos === '-200%'){
+				setContainerYPos('100%')
+			}
+		}
+		console.log(height, containerYPos, scrollDirection)
+	}
 	return(
 		<div className="mainContainer">
 			<animated.div style={slide} className="innerMainContainer">
@@ -113,6 +136,7 @@ export default function MainContainer(props){
 				<animated.div style={slideUp} className="wrapR">
 					<img src={images.img1} alt="placeHold"/>
 					<img src={images.img2} alt="placeHold"/>
+					<img src={images.img3} alt="placeHold"/>
 						<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
 				</animated.div>
 				<div className="portfolio" id="home"></div>
