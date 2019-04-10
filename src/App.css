@@ -141,7 +141,7 @@ button:focus{
   z-index: 801;
 }
 .scrollList li{
-  height:10%;
+  height:20%;
   border-bottom: solid black thin;
 }
 
@@ -149,6 +149,6 @@ button:focus{
 .scrollFill{
   position: absolute;
   right:0%;
-  z-index: 999;
+  z-index: 800;
   width:1%;
 }

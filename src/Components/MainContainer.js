@@ -1,16 +1,12 @@
 //MainContainer essentially is our main display
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
-import images from './images'
-import scrollLogic from './scrollLogic'
-import Portfolio from './Portfolio'
-export default function MainContainer(props){
+import RightWrapper from './RightWrapper'
+import LeftWrapper from './LeftWrapper'
+export default function MainContainer(){
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
-	const [containerYPos, setContainerYPos] = useState('0%')
 
-	//Toggles what About says in the navigation 
-	const [toggleAbout, setToggleAbout] = useState(true)
 
 	//Toggles what About says in the navigation
 	const [toggleWork, setToggleWork] = useState(true)
@@ -29,9 +25,10 @@ export default function MainContainer(props){
 	const [width, setWidth] = useState(1)
 
 	const [homeState, setHomeState] = useState(true)
-
+	const [containerYPos, setContainerYPos] = useState('0%')
+	
 	//Animation used to move the innerMainContainer element left or right
-	const slide = useSpring({
+	const slideX = useSpring({
 	    from: { transform: 'translate(0%,0)' },
 	    //Use a ternary to set innerMainContainers translation to whatever the state
 	    //of toggleWork is or the containerPos 
@@ -39,19 +36,12 @@ export default function MainContainer(props){
 	    config: { ease: 5000 } 
   	})
 
-	const slideUp = useSpring({
+	const slideY = useSpring({
 	    from: { transform: 'translate(0%,0%)' },
 	    //Use a ternary to set innerMainContainers translation to whatever the state
 	    //of toggleWork is or the containerPos 
 	    transform:`translate(0%,${containerYPos})`, 
 	    config: { ease: 5000 } 
-  	})
-
-  	//Animation to adjust scrollFill's height
-  	const heightInc = useSpring({
-  		background:'red', 
-	    height: `${height}%`,
-	    width:`${width}%`
   	})
 
   	//Show is called when the About link or the button element is clicked
@@ -90,14 +80,14 @@ export default function MainContainer(props){
 			let scrollPercent = scrollTop.toFixed() / scrollBottom.toFixed() * 100
 			setHeight(scrollPercent.toFixed())
 
-			/*** Getting wrapR to scroll, the values are in percentages ***/
+		  	/*** Getting wrapR to scroll, the values are in percentages ***/
 			if(scrollPercent >= 20 && scrollPercent <= 39.9){
 				setContainerYPos('-100%')
 			}
-			else if(scrollPercent >= 40 && scrollPercent <= 69.9){
+			else if(scrollPercent >= 40 && scrollPercent <= 59.9){
 				setContainerYPos('-200%')
 			}
-			else if(scrollPercent >= 70 && scrollPercent <= 100){
+			else if(scrollPercent >= 60 && scrollPercent <= 100){
 				setContainerYPos('-300%')
 			}
 			else{
@@ -106,36 +96,12 @@ export default function MainContainer(props){
 		}
 	}
 	return(
-		<div className="mainContainer">
-			<animated.div style={slide} className="innerMainContainer">
-				<div className="leftContainer">
-					<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
-					<div className="wrapL">
-					<animated.div style={heightInc}  className="scrollFill">
-					</animated.div>
-					<h1>Hey y'all welcome to AJ's portfolio</h1>
-						<nav className="nav">
-							<a href="#about" onClick={()=>show('about')}>{navAbout}</a>
-						</nav>
-					</div>
-					<div className="about">
-					<h1>I'm a web master</h1>
-					</div>
-				</div>
-
-				<animated.div style={slideUp} className="rightContainer">
-					<div className="wrapR">
-						<img src={images.img1} alt="placeHold"/>
-						<img src={images.img2} alt="placeHold"/>
-						<img src={images.img3} alt="placeHold"/>
-						<img src={images.img4} alt="placeHold"/>
-					</div>
-					<div className="portfolio">
-						<Portfolio />
-					</div>
-				</animated.div>
-			</animated.div>
-
-		</div>
+		<section className="mainContainer">
+			<animated.section style={slideX} className="innerMainContainer">
+				
+				<LeftWrapper show={show} button={button} height={height} width={width} navAbout={navAbout}/>
+				<RightWrapper slideY={slideY}/>
+			</animated.section>
+		</section>
 	)
 }
