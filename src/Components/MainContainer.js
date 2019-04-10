@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import images from './images'
 import scrollLogic from './scrollLogic'
-
+import Portfolio from './Portfolio'
 export default function MainContainer(props){
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
@@ -26,11 +26,9 @@ export default function MainContainer(props){
 
 	//Set the height of psuedo scroll bar in center of screen
 	const [height, setHeight] = useState(0)
+	const [width, setWidth] = useState(1)
 
-	const [scrolling, setScrolling] = useState(0)
-	const [scrolled, setScrolled] = useState(0)
-
-	const [scrollDirection, setScrollDirection] = useState(String)
+	const [homeState, setHomeState] = useState(true)
 
 	//Animation used to move the innerMainContainer element left or right
 	const slide = useSpring({
@@ -52,27 +50,29 @@ export default function MainContainer(props){
   	//Animation to adjust scrollFill's height
   	const heightInc = useSpring({
   		background:'red', 
-	    height: `${height}%`
+	    height: `${height}%`,
+	    width:`${width}%`
   	})
 
   	//Show is called when the About link or the button element is clicked
 	function show(view){
 		if(view === 'about' ){
+			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
 			setNavWork(navWork === 'work' ? '': 'work')
 			setNavAbout(navAbout === 'about' ? 'home': 'about')
 		}
-		else if(view === 'work'){
+		else{
+			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('-50%')
 			setButton(button === '>' ? 'x': '>')
 			setNavWork(navWork === 'work' ? 'home': 'work')
 		}
-		else{
-			//in the nav bar set text to home or work
-			setToggleWork(!toggleWork)
-		}
+		//disable the ability to scroll if you're not on the Home section
+		!toggleWork ? setHomeState(true) : setHomeState(false)
+		!toggleWork ? setWidth(1) : setWidth(0)
 	}
 
 	//* A unverisal function that is called whenever the user scrolls
@@ -81,63 +81,59 @@ export default function MainContainer(props){
 	//scrollPercent then divides the top from the bottom and multiples it by 100 to give us
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
+	
 	window.onscroll = function(){
+		if(homeState){
+			/***** *This logic defines the scrollFill element *****/
+			let scrollTop = document.documentElement.scrollTop
+			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			let scrollPercent = scrollTop.toFixed() / scrollBottom.toFixed() * 100
+			setHeight(scrollPercent.toFixed())
 
-		setScrolling(document.documentElement.scrollTop)
-		if(scrolling < scrolled){
-			setScrollDirection('Up')
+			/*** Getting wrapR to scroll, the values are in percentages ***/
+			if(scrollPercent >= 20 && scrollPercent <= 39.9){
+				setContainerYPos('-100%')
 			}
-		else{
-			setScrollDirection('Down')
+			else if(scrollPercent >= 40 && scrollPercent <= 69.9){
+				setContainerYPos('-200%')
+			}
+			else if(scrollPercent >= 70 && scrollPercent <= 100){
+				setContainerYPos('-300%')
+			}
+			else{
+				setContainerYPos('0%')
+			}
 		}
-		setScrolled(scrolling)
-
-		/***** *This logic defines the scrollFill element *****/
-		let scrollTop = document.documentElement.scrollTop
-		let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
-		let scrollPercent = scrollTop.toFixed() / scrollBottom.toFixed() * 100
-		setHeight(scrollPercent.toFixed())
-
-		/*** Getting wrapR to scroll ***/
-		if(scrollPercent >= 10 && scrollPercent <= 29){
-			setContainerYPos('-100%')
-		}
-		else if(scrollPercent >= 30 && scrollPercent <= 59){
-			setContainerYPos('-200%')
-		}
-		else if(scrollPercent >= 60 && scrollPercent <= 100){
-			setContainerYPos('-300%')
-		}
-		else{
-			setContainerYPos('0%')
-		}
-		console.log(scrollPercent.toFixed())
 	}
 	return(
 		<div className="mainContainer">
 			<animated.div style={slide} className="innerMainContainer">
 				<div className="leftContainer">
+					<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
 					<div className="wrapL">
 					<animated.div style={heightInc}  className="scrollFill">
 					</animated.div>
+					<h1>Hey y'all welcome to AJ's portfolio</h1>
 						<nav className="nav">
 							<a href="#about" onClick={()=>show('about')}>{navAbout}</a>
 						</nav>
 					</div>
-					<div className="about"></div>
+					<div className="about">
+					<h1>I'm a web master</h1>
+					</div>
 				</div>
 
-				<div className="rightContainer">
-
-				<animated.div style={slideUp} className="wrapR">
-					<img src={images.img1} alt="placeHold"/>
-					<img src={images.img2} alt="placeHold"/>
-					<img src={images.img3} alt="placeHold"/>
-					<img src={images.img4} alt="placeHold"/>
-						<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
+				<animated.div style={slideUp} className="rightContainer">
+					<div className="wrapR">
+						<img src={images.img1} alt="placeHold"/>
+						<img src={images.img2} alt="placeHold"/>
+						<img src={images.img3} alt="placeHold"/>
+						<img src={images.img4} alt="placeHold"/>
+					</div>
+					<div className="portfolio">
+						<Portfolio />
+					</div>
 				</animated.div>
-				<div className="portfolio" id="home"></div>
-				</div>
 			</animated.div>
 
 		</div>

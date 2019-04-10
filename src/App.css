@@ -15,7 +15,7 @@ the clients view ***/
 .mainContainer{
   position: relative;
   width: 100%;
-  height:200vh;
+  height:1000vh;
 }
 .innerMainContainer{
   position: fixed;
@@ -49,9 +49,10 @@ on the left side of the screen ***/
 /*** about is the only style for navigation ***/
 .about{
   position: relative;
-  background-color: green;
+  background-color: rgb(60,60,60);
   width:50vw;
   height: inherit;
+  color:rgb(255,255,255);
 }
 a{
   color: rgb(0,0,0);
@@ -81,14 +82,21 @@ on the Right side of the screen ***/
   display: block;
   width:100%;
   height:100%;
-  scroll-snap-align:center;
+  /*scroll-snap-align:center;*/
   filter: grayscale(1);
 }
 .portfolio{
   position: relative;
-  background-color: blue;
+  background-color: magenta;
   width:50vw;
   height: inherit;
+}
+/*** style everything in the portfolio ***/
+.portfolio > div{
+  background:greenyellow;
+  height:100vh;
+  font-size: 72px;
+  padding:5%;
 }
 
 /**** introText styles all the texxt inside the intro box ****/
@@ -109,7 +117,7 @@ on the Right side of the screen ***/
   top:50%;
   z-index: 999;
   border-radius: 50%;
-  margin-left:2%;
+  margin-left:6%;
   padding:1%;
   color:white;
   background-color: maroon;
