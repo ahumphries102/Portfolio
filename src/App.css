@@ -69,6 +69,8 @@ on the Right side of the screen ***/
 .rightContainer{
   background:red;
   display: flex;
+  width: 100vw;
+  background-color:orange;
 }
 .wrapR{
   background-color: purple;
@@ -85,7 +87,7 @@ on the Right side of the screen ***/
 .portfolio{
   position: relative;
   background-color: blue;
-  width:50vh;
+  width:50vw;
   height: inherit;
 }
 
