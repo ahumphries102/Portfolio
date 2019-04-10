@@ -99,23 +99,19 @@ export default function MainContainer(props){
 		setHeight(scrollPercent.toFixed())
 
 		/*** Getting wrapR to scroll ***/
-		if(scrollDirection === 'Down'){
-			if(height >= 20){
-				setContainerYPos('-100%')
-			}
-			else if(height >= 40){
-				setContainerYPos('-200%')
-			}
+		if(scrollPercent >= 10 && scrollPercent <= 29){
+			setContainerYPos('-100%')
+		}
+		else if(scrollPercent >= 30 && scrollPercent <= 59){
+			setContainerYPos('-200%')
+		}
+		else if(scrollPercent >= 60 && scrollPercent <= 100){
+			setContainerYPos('-300%')
 		}
 		else{
-			if(height < 20 && containerYPos === '-100%'){
-				setContainerYPos('0%')
-			}
-			else if(height > 20 && height < 40 && containerYPos === '-200%'){
-				setContainerYPos('100%')
-			}
+			setContainerYPos('0%')
 		}
-		console.log(height, containerYPos, scrollDirection)
+		console.log(scrollPercent.toFixed())
 	}
 	return(
 		<div className="mainContainer">
@@ -137,6 +133,7 @@ export default function MainContainer(props){
 					<img src={images.img1} alt="placeHold"/>
 					<img src={images.img2} alt="placeHold"/>
 					<img src={images.img3} alt="placeHold"/>
+					<img src={images.img4} alt="placeHold"/>
 						<button onClick={()=>show('work')} className="toggleSlide">{button}</button>
 				</animated.div>
 				<div className="portfolio" id="home"></div>
