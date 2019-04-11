@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 import MainContainer from './Components/MainContainer';
 import './App.css'
 import 'semantic-ui-css/semantic.min.css';

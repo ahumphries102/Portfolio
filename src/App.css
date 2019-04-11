@@ -8,7 +8,11 @@ html{
 body::-webkit-scrollbar{
   height:0 !important;
   width:0;
-} 
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+
+}
 /*** Main Container sets the height of the entire app.
 Inner Main Container holds all the divs and always remains in
 the clients view ***/
@@ -24,6 +28,10 @@ the clients view ***/
   height: 100vh;
   right:50%;
 }
+
+
+
+
 /*** Left side styles ***/
 /*** Left Container deals with all the html styles
 on the left side of the screen ***/
@@ -39,6 +47,44 @@ on the left side of the screen ***/
   background-color: rgb(255,255,255);
   width:50vw;
   height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** Scroll Fill handles the psuedo scroll bar ***/
+.scrollFill{
+  position: absolute;
+  right:0%;
+  /*** Top is defined so it's parent's flex doesn't
+  center it vertically ***/
+  top: 0% !important;
+  z-index: 800;
+  width:1%;
+}
+
+.scrollList{
+  position: absolute;
+  list-style-type: none;
+  right: 0;
+  width: 1%;
+  height: 100%;
+  z-index: 801;
+}
+.scrollList li{
+  height: 20%;
+  border-bottom: solid black thin;
+}
+
+.home{
+  position: relative;
+  background: orange;
+  right:20%;
+}
+.home > div{
+  width:90%;
+  margin-left: 5%;
+  padding:5%;
 }
 .nav{
   position: absolute;
@@ -63,6 +109,11 @@ a{
 a:visited{
   color:rgb(0,0,0);
 }
+
+
+
+
+
 
 /*** Right side styles ***/
 /*** Right Container deals with all the html styles
@@ -131,24 +182,4 @@ on the Right side of the screen ***/
 /*** Disables the blue box around the button on click ***/
 button:focus{
   outline:0;
-}
-.scrollList{
-  position: absolute;
-  list-style-type: none;
-  right: 0;
-  width: 1%;
-  height: 100%;
-  z-index: 801;
-}
-.scrollList li{
-  height:20%;
-  border-bottom: solid black thin;
-}
-
-/*** Scroll Fill handles the psuedo scroll bar ***/
-.scrollFill{
-  position: absolute;
-  right:0%;
-  z-index: 800;
-  width:1%;
 }

@@ -3,7 +3,7 @@ import React from 'react'
 export default function ScrollLogic(){
   let scrollList = []
 
-  for(let i = 0; i < 4; i++){
+  for(let i = 0; i <= 5; i++){
     scrollList.push(null)
   }
 

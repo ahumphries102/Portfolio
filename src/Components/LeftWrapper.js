@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import ScrollLogic from './ScrollLogic'
-import Home from './Home'
+import HomeContent from './HomeContent'
 export default function LeftWrapper(props){
   	//Animation to adjust scrollFill's height
   	const heightInc = useSpring({
@@ -13,14 +13,16 @@ export default function LeftWrapper(props){
 	return(
 		<div className="leftContainer">
 			<button onClick={()=>props.show('work')} className="toggleSlide">{props.button}</button>
-			<div className="wrapL">
 
+			<div className="wrapL">
 			<animated.div style={heightInc}  className="scrollFill">
 			</animated.div>
+
 			<ul className="scrollList">
 				<ScrollLogic />
 			</ul>
-			<Home />
+
+				<HomeContent />
 				<nav className="nav">
 					<button onClick={()=>props.show('about')}>{props.navAbout}</button>
 				</nav>

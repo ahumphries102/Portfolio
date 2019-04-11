@@ -1,8 +1,10 @@
 import React from 'react'
 export default function Home(){
 	return(
-		<section>
-			<h1>Hi</h1>
+		<section className="home">
+			<div>
+				<h1>Andrew Humphries</h1>
+			</div>
 		</section>
 	)
 }

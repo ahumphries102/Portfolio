@@ -6,6 +6,8 @@ export default function Portfolio() {
 	<div className="portfolio">
     	<div>Page 1</div>
     	<div>Page 2</div>
+    	<div>Page 3</div>
+    	<div>Page 4</div>
     </div>
     )
 }

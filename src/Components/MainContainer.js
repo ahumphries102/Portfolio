@@ -4,6 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
 export default function MainContainer(){
+	let ru = Math.ceil
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
 
@@ -77,22 +78,23 @@ export default function MainContainer(){
 			/***** *This logic defines the scrollFill element *****/
 			let scrollTop = document.documentElement.scrollTop
 			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
-			let scrollPercent = scrollTop.toFixed() / scrollBottom.toFixed() * 100
-			setHeight(scrollPercent.toFixed())
+			let scrollPercent = scrollTop / scrollBottom * 100
+			setHeight(scrollPercent)
 
 		  	/*** Getting wrapR to scroll, the values are in percentages ***/
-			if(scrollPercent >= 20 && scrollPercent <= 39.9){
+			if(ru(scrollPercent) >= 20 && ru(scrollPercent) <= 39.9){
 				setContainerYPos('-100%')
 			}
-			else if(scrollPercent >= 40 && scrollPercent <= 59.9){
+			else if(ru(scrollPercent) >= 40 && ru(scrollPercent) <= 59.9){
 				setContainerYPos('-200%')
 			}
-			else if(scrollPercent >= 60 && scrollPercent <= 100){
+			else if(ru(scrollPercent) >= 60 && ru(scrollPercent) <= 100){
 				setContainerYPos('-300%')
 			}
 			else{
 				setContainerYPos('0%')
 			}
+		console.log(ru(scrollPercent))
 		}
 	}
 	return(
