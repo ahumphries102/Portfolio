@@ -9,28 +9,26 @@ export default function LeftWrapper(props){
 	    height: `${props.height}%`,
 	    width:`${props.width}%`
   	})
-
 	return(
-		<div className="leftContainer">
+		<section className="leftContainer">
 			<button onClick={()=>props.show('work')} className="toggleSlide">{props.button}</button>
-
-			<div className="wrapL">
+			<section className="wrapL">
 			<animated.div style={heightInc}  className="scrollFill">
 			</animated.div>
 
 			<ul className="scrollList">
-				<ScrollLogic />
+				{/*<ScrollLogic />*/}
 			</ul>
 
 				<HomeContent />
 				<nav className="nav">
-					<button onClick={()=>props.show('about')}>{props.navAbout}</button>
+					<button className="navButton" onClick={()=>props.show('about')}><span>{props.navAbout}</span></button>
 				</nav>
-			</div>
+			</section>
 
 			<div className="about">
 				<h1>I'm a weeb master</h1>
 			</div>
-		</div>
+		</section>
 	)
 }

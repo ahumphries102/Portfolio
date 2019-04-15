@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
+
 export default function MainContainer(){
 	let ru = Math.ceil
 	//Adjusts the X and Y translation sliding of the innerMainContainer
@@ -16,7 +17,7 @@ export default function MainContainer(){
 	const [button, setButton] = useState('>')
 
 	//Changes About to say home
-	const [navAbout, setNavAbout] = useState('about')
+	const [navAbout, setNavAbout] = useState('About')
 
 	//Changes work to say home
 	const [navWork, setNavWork] = useState('work')
@@ -27,7 +28,14 @@ export default function MainContainer(){
 
 	const [homeState, setHomeState] = useState(true)
 	const [containerYPos, setContainerYPos] = useState('0%')
-	
+
+	//Adjust the color of the background-image in the wrapR class on click
+	const [grayScale, setGrayScale] = useState('grayscale(1)')
+	//Set the color of wrapR class to be gray
+	const wrapRFilter = {
+  		'filter': grayScale ? 'grayScale(1)' : 'grayScale(0)'
+  	}
+
 	//Animation used to move the innerMainContainer element left or right
 	const slideX = useSpring({
 	    from: { transform: 'translate(0%,0)' },
@@ -52,9 +60,10 @@ export default function MainContainer(){
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
 			setNavWork(navWork === 'work' ? '': 'work')
-			setNavAbout(navAbout === 'about' ? 'home': 'about')
+			setNavAbout(navAbout === 'About' ? 'home': 'About')
 		}
 		else{
+	  		setGrayScale(!grayScale) 
 			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('-50%')
@@ -94,15 +103,14 @@ export default function MainContainer(){
 			else{
 				setContainerYPos('0%')
 			}
-		console.log(ru(scrollPercent))
 		}
 	}
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper show={show} button={button} height={height} width={width} navAbout={navAbout}/>
-				<RightWrapper slideY={slideY}/>
+				<LeftWrapper button={button} show={show} height={height} width={width} navAbout={navAbout}/>
+				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
 		</section>
 	)

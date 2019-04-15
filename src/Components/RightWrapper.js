@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { animated } from 'react-spring'
 import Images from './Images'
 import Portfolio from './Portfolio'
-
 export default function RightWrapper(props){
+	
 
 	return(
-		<animated.div style={props.slideY} className="rightContainer">
-			<div className="wrapR">
-				<img src={Images.img1} alt="placeHold"/>
-				<img src={Images.img2} alt="placeHold"/>
-				<img src={Images.img3} alt="placeHold"/>
-				<img src={Images.img4} alt="placeHold"/>
-			</div>
+		<animated.section style={props.slideY} className="rightContainer">
+			
+			<section style={props.wrapRFilter} className="wrapR">
+				<div/>
+				<div/>
+				<div/>
+				<div/>
+			</section>
 			<Portfolio />
-		</animated.div>
+		</animated.section>
 
 	)
 }

@@ -9,9 +9,22 @@ body::-webkit-scrollbar{
   height:0 !important;
   width:0;
 }
+/*** Disables the blue box around the button on click ***/
+button:focus{
+  outline:0;
+}
 h1{
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 2rem !important;
+}
+h1 > span{
+  color:red;
+}
+hr{
+  border-top: 3px solid orange;
+}
+p{
+  font-family: 'Palanquin', sans-serif !important;
 }
 /*** Main Container sets the height of the entire app.
 Inner Main Container holds all the divs and always remains in
@@ -44,11 +57,12 @@ on the left side of the screen ***/
 }
 .wrapL{
   position: relative;
+  padding:5%;
   background-color: rgb(255,255,255);
   width:50vw;
   height: inherit;
+  /*** centers the home styles ***/
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -63,6 +77,7 @@ on the left side of the screen ***/
   width:1%;
 }
 
+/*** styles the little black lines in center of page ***/
 .scrollList{
   position: absolute;
   list-style-type: none;
@@ -76,21 +91,51 @@ on the left side of the screen ***/
   border-bottom: solid black thin;
 }
 
+/*** styles the content on the home page ***/
 .home{
-  position: relative;
-  background: orange;
-  right:20%;
+  position: relative; 
 }
-.home > div{
-  width:90%;
-  margin-left: 5%;
-  padding:5%;
+.homeSp{
+  color:rgb(200,80,80);
+  vertical-align: 40%;
 }
 .nav{
   position: absolute;
   display: flex;
   width: 100%;
+  bottom: 2.5%;
+}
+.navButton{
+  position: relative;
+  z-index: 999;
+  padding:1%;
+  color:black;
+  background-color: rgb(0,0,0,0);
+  font-size: 2rem;
+  transition: .1s linear;
+  transform-origin: center;
+  border:0;
+  font-family: inherit;
+}
+
+.navButton > span::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
   bottom: 0;
+  left: 0%;
+  background-color: rgb(175,0,0);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navButton > span:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 /*** about is the only style for navigation ***/
 .about{
@@ -100,15 +145,6 @@ on the left side of the screen ***/
   height: inherit;
   color:rgb(255,255,255);
 }
-a{
-  color: rgb(0,0,0);
-  text-decoration: none;
-  padding: 2%;
-  font-size: 1.5rem;
-}
-a:visited{
-  color:rgb(0,0,0);
-}
 
 
 
@@ -116,51 +152,13 @@ a:visited{
 
 
 /*** Right side styles ***/
+
 /*** Right Container deals with all the html styles
 on the Right side of the screen ***/
 .rightContainer{
-  background:red;
+  background-color: rgb(255,255,255);
   display: flex;
   width: 100vw;
-  background-color:orange;
-}
-.wrapR{
-  background-color: purple;
-  width:50vw;
-  height: inherit;
-}
-.wrapR img{
-  display: block;
-  width:100%;
-  height:100%;
-  /*scroll-snap-align:center;*/
-  filter: grayscale(1);
-}
-.portfolio{
-  position: relative;
-  background-color: magenta;
-  width:50vw;
-  height: inherit;
-}
-/*** style everything in the portfolio ***/
-.portfolio > div{
-  background:greenyellow;
-  height:100vh;
-  font-size: 72px;
-  padding:5%;
-}
-
-/**** introText styles all the texxt inside the intro box ****/
-.introText{
-  display:flex;
-  justify-content: center;
-  padding:5%;
-  text-align: justify;
-  font-size: 24px;
-  line-height: 125%;
-  border: thin maroon solid;
-  height: 50%;
-  width: 50%;
 }
 /**** Button styles ****/
 .toggleSlide{
@@ -179,7 +177,57 @@ on the Right side of the screen ***/
   border:0;
   font-family: inherit;
 }
-/*** Disables the blue box around the button on click ***/
-button:focus{
-  outline:0;
+.wrapR{
+  background-color: purple;
+  width:50vw;
+  height: inherit;
+  transition: .3s ease-in-out;
+}
+/*** setting the background-image to each child of wrapR ***/
+.wrapR > div{
+  background: 15%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
+  height: 100vh;
+}
+.wrapR > div > div{
+  background: center / cover no-repeat url(./ScreenShots/capstonelandingimg.png);
+  height: 100vh;
+}
+
+/*** Portfolio styles ***/
+.portfolio{
+  position: relative;
+  width:50vw;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+.portfolio img{
+  margin-top: 10%;
+  width:100%;
+  height:35%;
+}
+.portInfo figcaption{
+  opacity: .5;
+  text-align: right;
+}
+/*** style everything in the portfolio ***/
+.portInfo{
+  padding: 15%;
+  overflow-y:scroll;
+  height: 100vh;
+}
+.portInfo::-webkit-scrollbar{
+  height:0 !important;
+  width:0;
+}
+/**** introText styles all the texxt inside the intro box ****/
+.introText{
+  display:flex;
+  justify-content: center;
+  padding:5%;
+  text-align: justify;
+  font-size: 24px;
+  line-height: 125%;
+  border: thin maroon solid;
+  height: 50%;
+  width: 50%;
 }

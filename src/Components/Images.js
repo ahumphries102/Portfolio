@@ -1,8 +1,13 @@
+import capImgLand from '../ScreenShots/capstonelandingimg.png'
+import CapImg2 from '../ScreenShots/flaskserv.png'
+import capImgGif from '../ScreenShots/usewebsite.gif'
+import FlaskImg from '../ScreenShots/flaskserv.png'
+import FetchApi from '../ScreenShots/fetchapi.png'
 let portfolioImages = {
-	img1:'https://images.unsplash.com/photo-1551263640-1c007852f616?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="placehold',
-	img2:'https://images.unsplash.com/photo-1550063873-ab792950096b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-	img3:'https://images.unsplash.com/photo-1551167998-b8466786d942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-	img4:'https://images.unsplash.com/photo-1548761013-f4c9d4f524ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80'
+	img1:capImgLand,
+	img2:capImgGif,
+	img3:FlaskImg,
+	img4:FetchApi
 }
 
 export default portfolioImages
