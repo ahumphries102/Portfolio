@@ -188,11 +188,14 @@ on the Right side of the screen ***/
   background: 15%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
   height: 100vh;
 }
-.wrapR > div > div{
+.wrapR > div ~ div{
+  background: center / cover no-repeat url(./ScreenShots/deckbuild.png);
+  height: 100vh;
+}
+.wrapR > div ~ div ~ div{
   background: center / cover no-repeat url(./ScreenShots/capstonelandingimg.png);
   height: 100vh;
 }
-
 /*** Portfolio styles ***/
 .portfolio{
   position: relative;
@@ -204,6 +207,14 @@ on the Right side of the screen ***/
   margin-top: 10%;
   width:100%;
   height:35%;
+  transition: .3s ease-in-out;
+  transform-origin: center;
+}
+.portfolio img:hover{
+  z-index: 999;
+  transform: scale(1.5);
+  box-shadow: 0 6px 6px rgba(0,0,0,.5);
+
 }
 .portInfo figcaption{
   opacity: .5;

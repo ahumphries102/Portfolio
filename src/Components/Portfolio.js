@@ -20,8 +20,8 @@ export default function Portfolio() {
     	
     	<div className="portInfo">
     		<p>Magic the Gathering Tutorial</p>
-    		<img src={Images.img2}/><p>Magic the Gathering Tutorial</p>
-    		<img src={Images.img2}/>
+    		<img src={Images.img5}/><p>Magic the Gathering Tutorial</p>
+    		<img src={Images.img6}/>
     	</div>
     	<div className="portInfo">
     		<p>Magic the Gathering Tutorial</p>

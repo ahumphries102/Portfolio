@@ -17,7 +17,7 @@ export default function LeftWrapper(props){
 			</animated.div>
 
 			<ul className="scrollList">
-				{/*<ScrollLogic />*/}
+				<ScrollLogic />
 			</ul>
 
 				<HomeContent />
