@@ -18,10 +18,10 @@ h1{
   font-size: 2rem !important;
 }
 h1 > span{
-  color:red;
+  color: #ff1144;
 }
 hr{
-  border-top: 3px solid orange;
+  border-top: 3px solid #ff1144;
 }
 p{
   font-family: 'Palanquin', sans-serif !important;
@@ -32,7 +32,7 @@ the clients view ***/
 .mainContainer{
   position: relative;
   width: 100%;
-  height:1000vh;
+  height:400vh;
 }
 .innerMainContainer{
   position: fixed;
@@ -87,7 +87,7 @@ on the left side of the screen ***/
   z-index: 801;
 }
 .scrollList li{
-  height: 20%;
+  height: 25%;
   border-bottom: solid black thin;
 }
 
@@ -117,7 +117,9 @@ on the left side of the screen ***/
   border:0;
   font-family: inherit;
 }
-
+.navButton:hover{
+  cursor: pointer;
+}
 .navButton > span::before{
   content: "";
   position: absolute;
@@ -125,7 +127,7 @@ on the left side of the screen ***/
   height: 2px;
   bottom: 0;
   left: 0%;
-  background-color: rgb(175,0,0);
+  background-color: #ff1144;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -140,10 +142,21 @@ on the left side of the screen ***/
 /*** about is the only style for navigation ***/
 .about{
   position: relative;
-  background-color: rgb(60,60,60);
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+  padding: 5%;
+  background-color: rgb(40,40,40);
   width:50vw;
   height: inherit;
   color:rgb(255,255,255);
+}
+.aboutText{
+  font-size: 1.2rem;
+  width:70%;
+}
+.aboutText > h2 span, p > span{
+  color:#ff1144;
 }
 
 
@@ -169,7 +182,7 @@ on the Right side of the screen ***/
   margin-left:6%;
   padding:1%;
   color:white;
-  background-color: maroon;
+  background-color: #ff1144;
   cursor: pointer;
   font-size: 36px;
   transition: .1s linear;
@@ -193,7 +206,11 @@ on the Right side of the screen ***/
   height: 100vh;
 }
 .wrapR > div ~ div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/capstonelandingimg.png);
+  background: center / cover no-repeat url(./ScreenShots/tomagatchicover.png);
+  height: 100vh;
+}
+.wrapR > div ~ div ~ div ~ div{
+  background: center / cover no-repeat url(./ScreenShots/gamejquerycover.png);
   height: 100vh;
 }
 /*** Portfolio styles ***/
@@ -204,8 +221,11 @@ on the Right side of the screen ***/
   font-size: 1.5rem;
 }
 .portfolio img{
+  position: relative;
+  display: block;
+  z-index: 898;
   margin-top: 10%;
-  width:100%;
+  width:50%;
   height:35%;
   transition: .3s ease-in-out;
   transform-origin: center;

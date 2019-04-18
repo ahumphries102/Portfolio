@@ -9,7 +9,6 @@ export default function MainContainer(){
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
 
-
 	//Toggles what About says in the navigation
 	const [toggleWork, setToggleWork] = useState(true)
 
@@ -20,7 +19,7 @@ export default function MainContainer(){
 	const [navAbout, setNavAbout] = useState('About')
 
 	//Changes work to say home
-	const [navWork, setNavWork] = useState('work')
+	const [navWork, setNavWork] = useState('Work')
 
 	//Set the height of psuedo scroll bar in center of screen
 	const [height, setHeight] = useState(0)
@@ -59,8 +58,8 @@ export default function MainContainer(){
 			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
-			setNavWork(navWork === 'work' ? '': 'work')
-			setNavAbout(navAbout === 'About' ? 'home': 'About')
+			setNavWork(navWork === 'Work' ? '': 'Work')
+			setNavAbout(navAbout === 'About' ? 'Home': 'About')
 		}
 		else{
 	  		setGrayScale(!grayScale) 
@@ -68,7 +67,7 @@ export default function MainContainer(){
 			setToggleWork(!toggleWork)
 			setContainerXPos('-50%')
 			setButton(button === '>' ? 'x': '>')
-			setNavWork(navWork === 'work' ? 'home': 'work')
+			setNavWork(navWork === 'Work' ? 'Home': 'Work')
 		}
 		//disable the ability to scroll if you're not on the Home section
 		!toggleWork ? setHomeState(true) : setHomeState(false)
@@ -91,13 +90,13 @@ export default function MainContainer(){
 			setHeight(scrollPercent)
 
 		  	/*** Getting wrapR to scroll, the values are in percentages ***/
-			if(ru(scrollPercent) >= 20 && ru(scrollPercent) <= 39.9){
+			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
 				setContainerYPos('-100%')
 			}
-			else if(ru(scrollPercent) >= 40 && ru(scrollPercent) <= 59.9){
+			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
 				setContainerYPos('-200%')
 			}
-			else if(ru(scrollPercent) >= 60 && ru(scrollPercent) <= 100){
+			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 100){
 				setContainerYPos('-300%')
 			}
 			else{
@@ -109,7 +108,8 @@ export default function MainContainer(){
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper button={button} show={show} height={height} width={width} navAbout={navAbout}/>
+				<LeftWrapper  button={button} show={show} height={height} width={width} navAbout={navAbout}/>
+				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
 		</section>
