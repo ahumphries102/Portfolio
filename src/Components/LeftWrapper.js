@@ -33,22 +33,23 @@ export default function LeftWrapper(props){
 				<HomeContent/>
 				<nav className="nav">
 					<button className="navButton" onClick={()=>props.show('about')}><span>{props.navAbout}</span></button>
-					<button className="navButton" onClick={()=>props.show('index')}><span>Index</span></button>
+					<button className="navButton" onClick={props.openCloseIndex}><span>Index</span></button>
 				</nav>
 			</section>
+
 			<animated.section style={indexSlide} className="index">
 				<ul>
 					<li>
-						<a href="#pro1" onClick={props.closeIndex} className="indexButton">Magic the Gathering Tutorial</a>
+						<a href="#pro1" onClick={props.openCloseIndex} className="indexButton">Magic the Gathering Tutorial</a>
 					</li>/
 					<li>
-						<a href="#pro2" onClick={props.closeIndex} className="indexButton">Magic the Gathering Deck Builder</a>
+						<a href="#pro2" onClick={props.openCloseIndex} className="indexButton">Magic the Gathering Deck Builder</a>
 					</li>/
 					<li>
-						<a href="#pro3" onClick={props.closeIndex} className="indexButton">Tomogatchi Game</a>
+						<a href="#pro3" onClick={props.openCloseIndex} className="indexButton">Tomogatchi Game</a>
 					</li>/
 					<li>
-						<a href="#pro4" onClick={props.closeIndex} className="indexButton">Typography Quiz</a>
+						<a href="#pro4" onClick={props.openCloseIndex} className="indexButton">Typography Quiz</a>
 					</li>
 				</ul>
 			</animated.section>

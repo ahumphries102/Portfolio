@@ -60,35 +60,15 @@ export default function MainContainer(){
   	//Show is called when the About link or the button element is clicked
 	function show(view){
 		if(view === 'about' ){
-			//We disable the html from scrolling when we are not on the home page
-			!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
-
-
-			//disable the ability to scroll if you're not on the Home section
-			!toggleWork ? setHomeState(true) : setHomeState(false)
-			!toggleWork ? setWidth(1) : setWidth(0)
+			
 			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
 			setNavWork(navWork === 'Work' ? '': 'Work')
 			setNavAbout(navAbout === 'About' ? 'Home': 'About')
 		}
-		else if(view === 'index'){
-			if(indexXPos === '0'){
-				setIndexXPos('100%')
-			}
-			else{
-				setIndexXPos('0')
-			}
-		}
 		else{
-			//We disable the html from scrolling when we are not on the home page
-			!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
-
-
-			//disable the ability to scroll if you're not on the Home section
-			!toggleWork ? setHomeState(true) : setHomeState(false)
-			!toggleWork ? setWidth(1) : setWidth(0)
+			
 	  		setGrayScale(!grayScale) 
 			setHomeState(false)
 			setToggleWork(!toggleWork)
@@ -96,14 +76,22 @@ export default function MainContainer(){
 			setButton(button === '>' ? 'x': '>')
 			setNavWork(navWork === 'Work' ? 'Home': 'Work')
 		}
+	
+	//We disable the html from scrolling when we are not on the home page
+			!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
+
+
+			//disable the ability to scroll if you're not on the Home section
+			!toggleWork ? setHomeState(true) : setHomeState(false)
+			!toggleWork ? setWidth(1) : setWidth(0)
+
+	
 	}
 
-	function closeIndex(){
-		if(indexXPos === '100%'){
-			setIndexXPos('0')
-		}
+	//this function handles the index page's logic
+	function openCloseIndex(){
+		indexXPos === '0'? setIndexXPos('100%') : setIndexXPos('0')
 	}
-
 	//*************************************************************************
 	//* A unverisal function that is called whenever the user scrolls
 	//When it's called scrollTop finds the amount of pixels from the top of the page to wherever the client currently is scrolled to.
@@ -138,7 +126,7 @@ export default function MainContainer(){
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper  button={button} show={show} height={height} width={width} indexXPos={indexXPos} navAbout={navAbout} closeIndex = {closeIndex}/>
+				<LeftWrapper  button={button} show={show} height={height} width={width} indexXPos={indexXPos} navAbout={navAbout} openCloseIndex = {openCloseIndex}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>

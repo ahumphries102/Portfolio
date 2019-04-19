@@ -104,20 +104,6 @@ on the left side of the screen ***/
   width:1%;
 }
 
-/*** styles the little black lines in center of page ***/
-.scrollList{
-  position: absolute;
-  list-style-type: none;
-  right: 0;
-  width: 1%;
-  height: 100%;
-  z-index: 801;
-}
-.scrollList li{
-  height: 25%;
-  border-bottom: solid black thin;
-}
-
 /*** styles the content on the home page ***/
 .home{
   position: relative; 
@@ -135,7 +121,7 @@ on the left side of the screen ***/
   height:100vh;
   width: 50%;
   background-color: rgb(40,40,40);
-  transition: .2s linear;
+  transition: .2s ease;
 }
 .index ul{
   list-style: none;
@@ -212,6 +198,19 @@ on the left side of the screen ***/
   transform: scaleX(1);
 }
 
+/*** styles the little black lines in center of page ***/
+.scrollList{
+  position: absolute;
+  list-style-type: none;
+  right: 0;
+  width: 1%;
+  height: 100%;
+  z-index: 801;
+}
+.scrollList li{
+  height: 25%;
+  border-bottom: solid black thin;
+}
 /*** about is the only style for navigation ***/
 .about{
   position: relative;
@@ -258,10 +257,13 @@ on the Right side of the screen ***/
   background-color: #ff1144;
   cursor: pointer;
   font-size: 36px;
-  transition: .1s linear;
+  transition: .2s linear;
   transform-origin: center;
   border:0;
   font-family: inherit;
+}
+.toggleSlide:hover{
+  transform: scale(1.2);
 }
 .wrapR{
   background-color: purple;
@@ -271,7 +273,7 @@ on the Right side of the screen ***/
 }
 /*** setting the background-image to each child of wrapR ***/
 .wrapR > div{
-  background: 15%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
+  background: 35%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
   height: 100vh;
 }
 .wrapR > div ~ div{
