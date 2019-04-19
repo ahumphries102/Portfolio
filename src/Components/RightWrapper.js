@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { animated } from 'react-spring'
-import Images from './Images'
 import Portfolio from './Portfolio'
 export default function RightWrapper(props){
-	
+
 	return(
 		<animated.section style={props.slideY} className="rightContainer">
 

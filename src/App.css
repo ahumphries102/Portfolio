@@ -9,6 +9,17 @@ body::-webkit-scrollbar{
   height:0 !important;
   width:0;
 }
+/*** this class is used to prevent the body from scrolling when a user is not on the home page ***/
+.bodyNoScroll{
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+a{
+  /*** display needs to be set in order for transforms to work ***/
+  display: inline-block;
+  color:rgb(255, 255, 255) !important;
+}
 /*** Disables the blue box around the button on click ***/
 button:focus{
   outline:0;
@@ -32,8 +43,22 @@ the clients view ***/
 .mainContainer{
   position: relative;
   width: 100%;
-  height:400vh;
 }
+/*** the pro id are styled this way to give us the ability to use the a tag scroll
+feature associated with scrolling. Users can use the Index to scroll to projects with these styles***/
+#pro1{
+  height:100vh;
+}
+#pro2{
+  height:100vh;
+}
+#pro3{
+  height:100vh;
+}
+#pro4{
+  height:100vh;
+}
+
 .innerMainContainer{
   position: fixed;
   display: flex;
@@ -49,6 +74,7 @@ the clients view ***/
 /*** Left Container deals with all the html styles
 on the left side of the screen ***/
 .leftContainer{
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   width:100vw;
@@ -57,6 +83,7 @@ on the left side of the screen ***/
 }
 .wrapL{
   position: relative;
+  z-index: 800;
   padding:5%;
   background-color: rgb(255,255,255);
   width:50vw;
@@ -99,10 +126,55 @@ on the left side of the screen ***/
   color:rgb(200,80,80);
   vertical-align: 40%;
 }
+
+
+/****** Styles for the index page ******/
+.index{
+  position: absolute;
+  z-index: 799;
+  height:100vh;
+  width: 50%;
+  background-color: rgb(40,40,40);
+  transition: .2s linear;
+}
+.index ul{
+  list-style: none;
+}
+.indexButton{
+  color:white;
+  background-color: rgb(0,0,0,0);
+  font-size: 2rem;
+  border:0;
+  transition: .15s linear;
+  font-family: inherit;
+}
+.indexButton:hover{
+  font-weight: 900;
+  transform:translateX(2%);
+}
+.index li{
+  position: relative;
+  display: block;
+  width: 90%;
+  padding:200px 0 0 25px;
+}
+
+.index li::after{
+  content: '';
+  background-color: white;
+  height:2px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  margin-top:2%;
+}
+
+/****** Nav Styles *******/
 .nav{
   position: absolute;
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  width: 80%;
   bottom: 2.5%;
 }
 .navButton{
@@ -139,6 +211,7 @@ on the left side of the screen ***/
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
 /*** about is the only style for navigation ***/
 .about{
   position: relative;
@@ -177,7 +250,7 @@ on the Right side of the screen ***/
 .toggleSlide{
   position:fixed;
   top:50%;
-  z-index: 999;
+  z-index: 798;
   border-radius: 50%;
   margin-left:6%;
   padding:1%;
@@ -262,3 +335,4 @@ on the Right side of the screen ***/
   height: 50%;
   width: 50%;
 }
+

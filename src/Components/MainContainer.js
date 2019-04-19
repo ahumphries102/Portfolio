@@ -9,6 +9,8 @@ export default function MainContainer(){
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
 
+	const [indexXPos, setIndexXPos] = useState('0')
+
 	//Toggles what About says in the navigation
 	const [toggleWork, setToggleWork] = useState(true)
 
@@ -23,6 +25,7 @@ export default function MainContainer(){
 
 	//Set the height of psuedo scroll bar in center of screen
 	const [height, setHeight] = useState(0)
+
 	const [width, setWidth] = useState(1)
 
 	const [homeState, setHomeState] = useState(true)
@@ -52,16 +55,40 @@ export default function MainContainer(){
 	    config: { ease: 5000 } 
   	})
 
+	
+
   	//Show is called when the About link or the button element is clicked
 	function show(view){
 		if(view === 'about' ){
+			//We disable the html from scrolling when we are not on the home page
+			!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
+
+
+			//disable the ability to scroll if you're not on the Home section
+			!toggleWork ? setHomeState(true) : setHomeState(false)
+			!toggleWork ? setWidth(1) : setWidth(0)
 			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
 			setNavWork(navWork === 'Work' ? '': 'Work')
 			setNavAbout(navAbout === 'About' ? 'Home': 'About')
 		}
+		else if(view === 'index'){
+			if(indexXPos === '0'){
+				setIndexXPos('100%')
+			}
+			else{
+				setIndexXPos('0')
+			}
+		}
 		else{
+			//We disable the html from scrolling when we are not on the home page
+			!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
+
+
+			//disable the ability to scroll if you're not on the Home section
+			!toggleWork ? setHomeState(true) : setHomeState(false)
+			!toggleWork ? setWidth(1) : setWidth(0)
 	  		setGrayScale(!grayScale) 
 			setHomeState(false)
 			setToggleWork(!toggleWork)
@@ -69,18 +96,21 @@ export default function MainContainer(){
 			setButton(button === '>' ? 'x': '>')
 			setNavWork(navWork === 'Work' ? 'Home': 'Work')
 		}
-		//disable the ability to scroll if you're not on the Home section
-		!toggleWork ? setHomeState(true) : setHomeState(false)
-		!toggleWork ? setWidth(1) : setWidth(0)
 	}
 
+	function closeIndex(){
+		if(indexXPos === '100%'){
+			setIndexXPos('0')
+		}
+	}
+
+	//*************************************************************************
 	//* A unverisal function that is called whenever the user scrolls
 	//When it's called scrollTop finds the amount of pixels from the top of the page to wherever the client currently is scrolled to.
 	//scrollBottom gets the total height of the app then it subtracts the inner height
 	//scrollPercent then divides the top from the bottom and multiples it by 100 to give us
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
-	
 	window.onscroll = function(){
 		if(homeState){
 			/***** *This logic defines the scrollFill element *****/
@@ -108,10 +138,15 @@ export default function MainContainer(){
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper  button={button} show={show} height={height} width={width} navAbout={navAbout}/>
+				<LeftWrapper  button={button} show={show} height={height} width={width} indexXPos={indexXPos} navAbout={navAbout} closeIndex = {closeIndex}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
+		{/* these divs set how tall our body is. Currently it is 400vh tall*/}
+			<div id="pro1"/>
+			<div id="pro2"/>
+			<div id="pro3"/>
+			<div id="pro4"/>
 		</section>
 	)
 }

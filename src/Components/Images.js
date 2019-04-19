@@ -1,16 +1,15 @@
 import capImgLand from '../ScreenShots/capstonelandingimg.png'
-import CapImg2 from '../ScreenShots/flaskserv.png'
+//import CapImg2 from '../ScreenShots/flaskserv.png'
 import capImgGif from '../ScreenShots/usewebsite.gif'
 import FlaskImg from '../ScreenShots/flaskserv.png'
 import FetchApi from '../ScreenShots/fetchapi.png'
 
 //Second div in portfolio images
 import BuildDeckGif from '../ScreenShots/builddeck.gif'
-import DeckBuildPng from '../ScreenShots/deckbuild.png'
+//import DeckBuildPng from '../ScreenShots/deckbuild.png'
 import SqlInsert from '../ScreenShots/sqlinsert.png'
 
 //Third div in portfolio images
-import TomagatchiCover from '../ScreenShots/tomagatchicover.png'
 import TomagatchiGif from '../ScreenShots/tomagatchigif.gif'
 import TomagatchiCode from '../ScreenShots/tomagatchijquery.png'
 
