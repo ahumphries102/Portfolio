@@ -6,7 +6,8 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
-    "react-transition-group": "^1.2.1"
+    "react-transition-group": "^1.2.1",
+    "react-spring" : "^8.0.19"
   },
   "scripts": {
     "start": "react-scripts start",
