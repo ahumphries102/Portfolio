@@ -4,6 +4,7 @@
 }
 html{
   scroll-behavior: smooth;
+  background-color:gold;
 }
 body::-webkit-scrollbar{
   height:0 !important;
@@ -84,10 +85,9 @@ on the left side of the screen ***/
 .wrapL{
   position: relative;
   z-index: 800;
-  padding:5%;
   background-color: rgb(255,255,255);
   width:50vw;
-  height: inherit;
+  height: 100vh;
   /*** centers the home styles ***/
   display: flex;
   align-items: center;
@@ -106,7 +106,8 @@ on the left side of the screen ***/
 
 /*** styles the content on the home page ***/
 .home{
-  position: relative; 
+  position: relative;
+  padding: 5%;
 }
 .homeSp{
   color:rgb(200,80,80);
@@ -121,7 +122,8 @@ on the left side of the screen ***/
   position: absolute;
   z-index: 799;
   height:100vh;
-  width: 50%;
+  width: 50vw;
+  margin-left:0;
   background-color: rgb(40,40,40);
   transition: .2s ease;
 }
@@ -163,7 +165,8 @@ on the left side of the screen ***/
   display: flex;
   justify-content: space-between;
   width: 80%;
-  bottom: 2.5%;
+  padding: 5%;
+  bottom: 0;
 }
 .navButton{
   position: relative;
@@ -219,7 +222,6 @@ on the left side of the screen ***/
   display: flex;
   flex-direction: row-reverse;
   text-align: right;
-  padding: 5%;
   background-color: rgb(40,40,40);
   width:50vw;
   height: inherit;
@@ -229,6 +231,7 @@ on the left side of the screen ***/
   font-size: 1.6rem;
   width:70%;
   width: 100%;
+  padding:10%;
 }
 .aboutText h2{
   font-size: calc(.5rem + 2rem);
