@@ -11,7 +11,6 @@ export default function LeftWrapper(props){
 	    height: `${props.height}%`,
 	    width:`${props.width}%`
   	})
-
 	return(
 		<section className="leftContainer">
 			<button onClick={()=>props.show('work')} className="toggleSlide">{props.button}</button>
