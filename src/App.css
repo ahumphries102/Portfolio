@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding:0;
+  font-family: 'Maitree', serif;
 }
 html{
   scroll-behavior: smooth;
@@ -20,23 +21,17 @@ a{
   /*** display needs to be set in order for transforms to work ***/
   display: inline-block;
   color:rgb(255, 255, 255) !important;
+  text-decoration: none;
 }
 /*** Disables the blue box around the button on click ***/
 button:focus{
   outline:0;
-}
-h1{
-  font-family: 'Montserrat', sans-serif !important;
-
 }
 h1 > span{
   color: #ff1144;
 }
 hr{
   border-top: 3px solid #ff1144;
-}
-p{
-  font-family: 'Palanquin', sans-serif !important;
 }
 /*** Main Container sets the height of the entire app.
 Inner Main Container holds all the divs and always remains in
@@ -113,8 +108,11 @@ on the left side of the screen ***/
   color:rgb(200,80,80);
   vertical-align: 40%;
 }
+.name{
+  width:20%;
+}
 .name h1{
-  font-size: 3.5rem;
+  font-size: 2.5em;
 }
 
 /****** Styles for the index page ******/
@@ -123,7 +121,6 @@ on the left side of the screen ***/
   z-index: 799;
   height:100vh;
   width: 50vw;
-  margin-left:0;
   background-color: rgb(40,40,40);
   transition: .2s ease;
 }
@@ -133,7 +130,6 @@ on the left side of the screen ***/
 .indexButton{
   color:white;
   background-color: rgb(0,0,0,0);
-  font-size: 2rem;
   border:0;
   transition: .15s linear;
   font-family: inherit;
@@ -142,18 +138,20 @@ on the left side of the screen ***/
   font-weight: 900;
   transform:translateX(2%);
 }
-.index li{
+
+.indexPage li{
   position: relative;
   display: block;
   width: 90%;
-  padding:200px 0 0 25px;
+  font-size: 1rem;
+  padding:100px 0 0 25px;
 }
 
-.index li::after{
+.indexPage li::after{
   content: '';
   background-color: white;
   height:2px;
-  width: 100%;
+  width: 95%;
   display: block;
   position: absolute;
   margin-top:2%;
@@ -179,6 +177,7 @@ on the left side of the screen ***/
   transform-origin: center;
   border:0;
   font-family: inherit;
+  font-size: 1em;
 }
 .navButton:hover{
   cursor: pointer;
@@ -228,13 +227,14 @@ on the left side of the screen ***/
   color:rgb(255,255,255);
 }
 .aboutText{
-  font-size: 1.6rem;
+  font-family: 'Maitree', serif !important;
+  font-weight: 100;
   width:70%;
   width: 100%;
   padding:10%;
 }
 .aboutText h2{
-  font-size: calc(.5rem + 2rem);
+  font-weight: 400;
 }
 .aboutText > h2 span, p > span{
   color:#ff1144;
@@ -254,15 +254,16 @@ on the Right side of the screen ***/
   display: flex;
   width: 100vw;
 }
-/**** Button styles ****/
+/**** Styles for Red Button to move container left ****/
 .toggleSlide{
-  position:fixed;
-  top:50%;
+  position: fixed;
+  top: 50%;
   z-index: 798;
   border-radius: 50%;
-  margin-left:6%;
-  padding:1%;
-  color:white;
+  width: 50px;
+  height: 50px;
+  margin-left: 80px;
+  color: white;
   background-color: #ff1144;
   cursor: pointer;
   font-size: 36px;
@@ -270,7 +271,15 @@ on the Right side of the screen ***/
   transform-origin: center;
   border:0;
   font-family: inherit;
+  display: flex;
+  justify-content: center;
 }
+.toggleSlide p{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
 .toggleSlide:hover{
   transform: scale(1.2);
 }
@@ -297,42 +306,23 @@ on the Right side of the screen ***/
   background: center / cover no-repeat url(./ScreenShots/gamejquerycover.png);
   height: 100vh;
 }
+
 /*** Portfolio styles ***/
 .portfolio{
   position: relative;
   width:50vw;
-  height: 100vh;
-  font-size: 1.5rem;
 }
-.portfolio img{
-  position: relative;
-  z-index: 898;
-  margin-top: 10%;
-  width:100%;
-  height:35%;
-  transition: .3s ease-in-out;
-  transform-origin: center;
-}
-.portfolio img:hover{
-  z-index: 999;
-  transform: scale(1.5);
-  box-shadow: 0 6px 6px rgba(0,0,0,.5);
-}
-.portInfo:nth-child(1) {
-  padding-top: 50%;
-}
-.portInfo:last-child{
-  padding-top: 50%;
-}
+
 /*** style everything in the portfolio ***/
 .portInfo{
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  padding: 15%;
-  overflow-y:scroll;
-  height: 100vh;
+  overflow-y: scroll; 
+  padding: 4vh 4vw 4vh 4vw;
+  height: 92vh;
+  background-color: rgb(255,255,255)
 }
+
 
 .portInfo::-webkit-scrollbar{
   height:0 !important;
@@ -342,16 +332,22 @@ on the Right side of the screen ***/
   opacity: .5;
   text-align: right;
 }
-/**** introText styles all the texxt inside the intro box ****/
-.introText{
-  display:flex;
-  justify-content: center;
-  padding:5%;
-  text-align: justify;
-  font-size: 24px;
-  line-height: 125%;
-  border: thin maroon solid;
-  height: 50%;
-  width: 50%;
+.portInfo img{
+  position: relative;
+  z-index: 898;
+  width:100%;
+  height:35%;
+  margin: 5% 0 5% 0;
+  transition: .3s ease-in-out;
+  transform-origin: center;
 }
+.portInfo img:hover{
+  z-index: 999;
+  transform: scale(1.2);
+  box-shadow: 0 6px 6px rgba(0,0,0,.5);
+}
+
+
+
+
 

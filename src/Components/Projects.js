@@ -7,7 +7,7 @@ export default function Index(props){
 	    from: { transform: 'translate(0%,0%)' },
 	    //Use a ternary to set innerMainContainers translation to whatever the state
 	    //of toggleWork is or the containerPos 
-	    transform:`translate(${props.indexXPos},0)`, 
+	    transform:`translate(${props.projectsXPos},0)`, 
   	})
 	return(
 		<animated.section style={indexSlide} className="index">

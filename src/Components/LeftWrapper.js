@@ -3,7 +3,8 @@ import { useSpring, animated } from 'react-spring'
 import ScrollLogic from './ScrollLogic'
 import HomeContent from './HomeContent'
 import About from './About'
-import Index from './Projects'
+import Projects from './Projects'
+
 export default function LeftWrapper(props){
   	//Animation to adjust scrollFill's height
   	const heightInc = useSpring({
@@ -13,7 +14,7 @@ export default function LeftWrapper(props){
   	})
 	return(
 		<section className="leftContainer">
-			<button onClick={()=>props.show('work')} className="toggleSlide">{props.button}</button>
+			<button onClick={()=>props.show('work')} className="toggleSlide"><p>{props.button}</p></button>
 			<section className="wrapL">
 			<animated.div style={heightInc}  className="scrollFill">
 			</animated.div>
@@ -23,10 +24,10 @@ export default function LeftWrapper(props){
 			<HomeContent/>
 			<nav className="nav">
 				<button className="navButton" onClick={()=>props.show('about')}><span>{props.navAbout}</span></button>
-				<button className="navButton" onClick={props.openCloseIndex}><span>Index</span></button>
+				<button className="navButton" onClick={props.openCloseIndex}><span>{props.navIndex}</span></button>
 			</nav>
 			</section>
-			<Index  indexXPos={props.indexXPos} openCloseIndex = {props.openCloseIndex}/>
+			<Projects  projectsXPos={props.projectsXPos} openCloseIndex = {props.openCloseIndex}/>
 			<About/>
 		</section>
 	)

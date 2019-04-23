@@ -10,7 +10,7 @@ export default function MainContainer(){
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
 
-	const [indexXPos, setIndexXPos] = useState('0')
+	const [projectsXPos, setProjectsXPos] = useState('0')
 
 	//Toggles what About says in the navigation
 	const [toggleWork, setToggleWork] = useState(true)
@@ -20,6 +20,8 @@ export default function MainContainer(){
 
 	//Changes About to say home
 	const [navAbout, setNavAbout] = useState('About')
+
+	const [navIndex, setNavIndex] = useState('Index')
 
 	//Changes work to say home
 	const [navWork, setNavWork] = useState('Work')
@@ -61,10 +63,10 @@ export default function MainContainer(){
   	//Show is called when the About link or the button element is clicked
 	function show(view){
 		if(view === 'about' ){
-			
 			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
+			setNavIndex(navWork === 'Work' ? '' : 'Index')
 			setNavWork(navWork === 'Work' ? '': 'Work')
 			setNavAbout(navAbout === 'About' ? 'Home': 'About')
 		}
@@ -91,7 +93,7 @@ export default function MainContainer(){
 
 	//this function handles the index page's logic
 	function openCloseIndex(){
-		indexXPos === '0'? setIndexXPos('100%') : setIndexXPos('0')
+		projectsXPos === '0'? setProjectsXPos('100%') : setProjectsXPos('0')
 	}
 	//*************************************************************************
 	//* A unverisal function that is called whenever the user scrolls
@@ -127,7 +129,7 @@ export default function MainContainer(){
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper  button={button} show={show} height={height} width={width} indexXPos={indexXPos} navAbout={navAbout} openCloseIndex = {openCloseIndex}/>
+				<LeftWrapper navIndex = {navIndex}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseIndex = {openCloseIndex}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
