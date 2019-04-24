@@ -23,9 +23,7 @@ a{
   color:rgb(255, 255, 255) !important;
   text-decoration: none;
 }
-button{
-  font-family: 'Arial', sans-serif, !important;
-}
+
 /*** Disables the blue box around the button on click ***/
 button:focus{
   outline:0;
@@ -80,6 +78,25 @@ on the left side of the screen ***/
   height: 100vh;
   background:pink;
 }
+/*** Styles for the about section left of the home content ***/
+.about{
+  position: relative;
+  z-index: 800;
+  text-align: right;
+  background-color: rgb(40,40,40);
+  width:50vw;
+  height: inherit;
+  color:rgb(255,255,255);
+}
+.aboutText{
+  padding: .5rem;
+}
+.aboutText{
+  font-weight: 400;
+}
+.aboutText > h2 span, p > span{
+  color:#ff1144;
+}
 .wrapL{
   position: relative;
   z-index: 800;
@@ -107,51 +124,7 @@ on the left side of the screen ***/
   position: relative;
   padding: 5%;
 }
-.homeSp{
-  color:rgb(200,80,80);
-  vertical-align: 40%;
-}
 
-/****** Styles for the projects page ******/
-.projects{
-  position: absolute;
-  z-index: 799;
-  height:100vh;
-  width: 50vw;
-  background-color: rgb(40,40,40);
-  transition: .2s ease;
-}
-.projects ul{
-  list-style: none;
-}
-.projectsButton{
-  color:white;
-  background-color: rgb(0,0,0,0);
-  border:0;
-  transition: .15s linear;
-  font-family: inherit;
-}
-.projectsButton:hover{
-  font-weight: 900;
-  transform:translateX(2%);
-}
-
-.projectsPage li{
-  position: relative;
-  display: block;
-  width: 90%;
-  padding:100px 0 0 25px;
-}
-
-.projectsPage li::after{
-  content: '';
-  background-color: white;
-  height:2px;
-  width: 95%;
-  display: block;
-  position: absolute;
-  margin-top:2%;
-}
 
 /****** Nav Styles *******/
 .nav{
@@ -196,6 +169,47 @@ on the left side of the screen ***/
   transform: scaleX(1);
 }
 
+/****** Styles for the projects page ******/
+.projects{
+  position: absolute;
+  /*** goes above the toggleslide button ***/
+  z-index: 798;
+  height:100vh;
+  width: 50vw;
+  background-color: rgb(40,40,40);
+  transition: .2s ease;
+}
+.projects ul{
+  list-style: none;
+}
+.projectsButton{
+  color:white;
+  background-color: rgb(0,0,0,0);
+  border:0;
+  transition: .15s linear;
+  font-family: inherit;
+}
+.projectsButton:hover{
+  font-weight: 900;
+  transform:translateX(2%);
+}
+.projectsPage li{
+  position: relative;
+  display: block;
+  width: 90%;
+  padding:100px 0 0 25px;
+}
+
+.projectsPage li::after{
+  content: '';
+  background-color: white;
+  height:2px;
+  width: 95%;
+  display: block;
+  position: absolute;
+  margin-top:2%;
+}
+
 /*** styles the little black lines in center of page ***/
 .scrollList{
   position: absolute;
@@ -209,28 +223,6 @@ on the left side of the screen ***/
   height: 25%;
   border-bottom: solid black thin;
 }
-/*** Styles for the about section left of the home content ***/
-.about{
-  position: relative;
-  z-index: 800;
-  text-align: right;
-  background-color: rgb(40,40,40);
-  width:50vw;
-  height: inherit;
-  color:rgb(255,255,255);
-}
-.aboutText{
-  padding: .5rem;
-}
-.aboutText{
-  font-weight: 400;
-}
-.aboutText > h2 span, p > span{
-  color:#ff1144;
-}
-
-
-
 
 
 
@@ -247,11 +239,11 @@ on the Right side of the screen ***/
 .toggleSlide{
   position: fixed;
   top: 50%;
+  /*** appears until the projects button is displayed ***/ 
   z-index: 798;
-  border-radius: 50%;
   width: 50px;
-  height: 50px;
-  margin-left: 80px;
+  border-radius: 50%;
+  left:102%;
   color: white;
   background-color: #ff1144;
   cursor: pointer;
@@ -261,13 +253,6 @@ on the Right side of the screen ***/
   transform-origin: center;
   border:0;
   font-family: inherit;
-  display: flex;
-  justify-content: center;
-}
-.toggleSlide p{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
 }
 
 .toggleSlide:hover{
@@ -308,9 +293,11 @@ on the Right side of the screen ***/
   display: flex;
   flex-direction: column;
   overflow-y: scroll; 
+  margin:0 auto;
   padding: 4vh 4vw 4vh 4vw;
   height: 92vh;
-  background-color: rgb(255,255,255)
+  width: 50%;
+  background-color: rgb(255,255,255);
 }
 
 
@@ -325,7 +312,7 @@ on the Right side of the screen ***/
 .portInfo img{
   position: relative;
   z-index: 898;
-  width:100%;
+  width:75%;
   height:35%;
   margin: 5% 0 5% 0;
   transition: .3s ease-in-out;
@@ -368,7 +355,6 @@ on the Right side of the screen ***/
   li{
     margin: 1rem 0 0 1rem;
   }
-  
 }
 
 /* 

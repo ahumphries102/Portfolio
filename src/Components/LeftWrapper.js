@@ -14,6 +14,7 @@ export default function LeftWrapper(props){
   	})
 	return(
 		<section className="leftContainer">
+			
 			<button onClick={()=>props.show('work')} className="toggleSlide">{props.button}</button>
 			<section className="wrapL">
 			<animated.div style={heightInc}  className="scrollFill">
