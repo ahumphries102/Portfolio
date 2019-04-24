@@ -337,3 +337,189 @@ on the Right side of the screen ***/
   transform: scale(1.2);
   box-shadow: 0 6px 6px rgba(0,0,0,.5);
 }
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  a{
+    font-size: 1.5rem;
+  }
+  button{
+  font-size: 3rem;
+  }
+  h1{
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3{
+    font-size: .8rem
+  }
+  p{
+    font-size: 1.5rem;
+  }
+  li{
+    margin: 1rem 0 0 1rem;
+  }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  a{
+    font-size: 1.8rem;
+  }
+  button{
+  font-size: 3rem;
+  }
+  h1{
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3{
+    font-size: .8rem
+  }
+  p{
+    font-size: 1.8rem;
+  }
+  li{
+    margin: 1rem 0 0 1rem;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  a{
+    font-size: 1.4rem;
+  }
+  button{
+  font-size: 2rem;
+  }
+  h1{
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3{
+    font-size: .8rem
+  }
+  p{
+    font-size: 1.4rem;
+  }
+  li{
+    margin: 1rem 0 0 1rem;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  a{
+    font-size: 1.4rem;
+  }
+  button{
+  font-size: 2rem;
+  }
+  h1{
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3{
+    font-size: .8rem
+  }
+  p{
+    font-size: 1.4rem;
+  }
+  li{
+    margin: 1rem 0 0 1rem;
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  a{
+    font-size: 1rem;
+  }
+  button{
+  font-size: 2rem;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: .8rem
+  }
+  p{
+    font-size: 1.2rem;
+  }
+  li{
+    margin: 1rem 0 0 1rem;
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  button{
+  font-size: 2rem;
+  }
+  h1{
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3{
+    font-size: .8rem
+  }
+  p{
+    font-size: 1rem;
+  }
+  li{
+    margin: 1rem 0 0 1rem;
+  }
+  
+  
+}
