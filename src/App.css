@@ -351,19 +351,19 @@ on the Right side of the screen ***/
     font-size: 1.5rem;
   }
   button{
-  font-size: 3rem;
+  font-size: 1.5rem;
   }
   h1{
-    font-size: 6rem;
+    font-size: 3.5rem;
   }
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   h3{
     font-size: .8rem
   }
   p{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   li{
     margin: 1rem 0 0 1rem;
@@ -379,22 +379,22 @@ on the Right side of the screen ***/
 @media (min-width: 1025px) and (max-width: 1280px) {
   
   a{
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
   button{
-  font-size: 3rem;
+  font-size: 1.5rem;
   }
   h1{
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   h3{
     font-size: .8rem
   }
   p{
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
   li{
     margin: 1rem 0 0 1rem;
@@ -410,22 +410,22 @@ on the Right side of the screen ***/
 @media (min-width: 768px) and (max-width: 1024px) {
   
   a{
-    font-size: 1.4rem;
+    font-size: 100.8rem;
   }
   button{
-  font-size: 2rem;
+  font-size: 1.5rem;
   }
   h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
   h3{
     font-size: .8rem
   }
   p{
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   li{
     margin: 1rem 0 0 1rem;
