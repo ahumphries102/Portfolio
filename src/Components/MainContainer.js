@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
-
 export default function MainContainer(){
 	let ru = Math.ceil
 
@@ -21,7 +20,7 @@ export default function MainContainer(){
 	//Changes About to say home
 	const [navAbout, setNavAbout] = useState('About')
 
-	const [navIndex, setNavIndex] = useState('Index')
+	const [navProjects, setNavProjects] = useState('Projects')
 
 	//Changes work to say home
 	const [navWork, setNavWork] = useState('Work')
@@ -66,7 +65,7 @@ export default function MainContainer(){
 			setHomeState(false)
 			setToggleWork(!toggleWork)
 			setContainerXPos('50')
-			setNavIndex(navWork === 'Work' ? '' : 'Index')
+			setNavProjects(navWork === 'Work' ? '' : 'Projects')
 			setNavWork(navWork === 'Work' ? '': 'Work')
 			setNavAbout(navAbout === 'About' ? 'Home': 'About')
 		}
@@ -92,7 +91,7 @@ export default function MainContainer(){
 	}
 
 	//this function handles the index page's logic
-	function openCloseIndex(){
+	function openCloseProjects(){
 		projectsXPos === '0'? setProjectsXPos('100%') : setProjectsXPos('0')
 	}
 	//*************************************************************************
@@ -129,7 +128,7 @@ export default function MainContainer(){
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper navIndex = {navIndex}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseIndex = {openCloseIndex}/>
+				<LeftWrapper navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>

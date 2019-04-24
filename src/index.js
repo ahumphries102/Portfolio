@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 //import './index.css';
 import MainContainer from './Components/MainContainer';
 import './App.css'
+import 'typeturajs'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<MainContainer />, document.getElementById('root'));

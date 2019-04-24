@@ -24,10 +24,10 @@ export default function LeftWrapper(props){
 			<HomeContent/>
 			<nav className="nav">
 				<button className="navButton" onClick={()=>props.show('about')}><span>{props.navAbout}</span></button>
-				<button className="navButton" onClick={props.openCloseIndex}><span>{props.navIndex}</span></button>
+				<button className="navButton" onClick={props.openCloseProjects}><span>{props.navProjects}</span></button>
 			</nav>
 			</section>
-			<Projects  projectsXPos={props.projectsXPos} openCloseIndex = {props.openCloseIndex}/>
+			<Projects  projectsXPos={props.projectsXPos} openCloseProjects = {props.openCloseProjects}/>
 			<About/>
 		</section>
 	)

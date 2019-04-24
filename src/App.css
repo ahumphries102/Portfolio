@@ -6,6 +6,7 @@
 html{
   scroll-behavior: smooth;
   background-color:gold;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar{
   height:0 !important;
@@ -22,6 +23,9 @@ a{
   display: inline-block;
   color:rgb(255, 255, 255) !important;
   text-decoration: none;
+}
+button{
+  font-family: 'Arial', sans-serif, !important;
 }
 /*** Disables the blue box around the button on click ***/
 button:focus{
@@ -41,7 +45,7 @@ the clients view ***/
   width: 100%;
 }
 /*** the pro id are styled this way to give us the ability to use the a tag scroll
-feature associated with scrolling. Users can use the Index to scroll to projects with these styles***/
+feature associated with scrolling. Users can use the projects to scroll to projects with these styles***/
 #pro1{
   height:100vh;
 }
@@ -108,15 +112,9 @@ on the left side of the screen ***/
   color:rgb(200,80,80);
   vertical-align: 40%;
 }
-.name{
-  width:20%;
-}
-.name h1{
-  font-size: 2.5em;
-}
 
-/****** Styles for the index page ******/
-.index{
+/****** Styles for the projects page ******/
+.projects{
   position: absolute;
   z-index: 799;
   height:100vh;
@@ -124,30 +122,29 @@ on the left side of the screen ***/
   background-color: rgb(40,40,40);
   transition: .2s ease;
 }
-.index ul{
+.projects ul{
   list-style: none;
 }
-.indexButton{
+.projectsButton{
   color:white;
   background-color: rgb(0,0,0,0);
   border:0;
   transition: .15s linear;
   font-family: inherit;
 }
-.indexButton:hover{
+.projectsButton:hover{
   font-weight: 900;
   transform:translateX(2%);
 }
 
-.indexPage li{
+.projectsPage li{
   position: relative;
   display: block;
   width: 90%;
-  font-size: 1rem;
   padding:100px 0 0 25px;
 }
 
-.indexPage li::after{
+.projectsPage li::after{
   content: '';
   background-color: white;
   height:2px;
@@ -172,12 +169,10 @@ on the left side of the screen ***/
   padding:1%;
   color:black;
   background-color: rgb(0,0,0,0);
-  font-size: 2rem;
   transition: .1s linear;
   transform-origin: center;
   border:0;
   font-family: inherit;
-  font-size: 1em;
 }
 .navButton:hover{
   cursor: pointer;
@@ -215,11 +210,10 @@ on the left side of the screen ***/
   height: 25%;
   border-bottom: solid black thin;
 }
-/*** about is the only style for navigation ***/
+/*** Styles for the about section left of the home content ***/
 .about{
   position: relative;
-  display: flex;
-  flex-direction: row-reverse;
+  z-index: 800;
   text-align: right;
   background-color: rgb(40,40,40);
   width:50vw;
@@ -227,13 +221,9 @@ on the left side of the screen ***/
   color:rgb(255,255,255);
 }
 .aboutText{
-  font-family: 'Maitree', serif !important;
-  font-weight: 100;
-  width:70%;
-  width: 100%;
-  padding:10%;
+  padding: 1rem;
 }
-.aboutText h2{
+.aboutText{
   font-weight: 400;
 }
 .aboutText > h2 span, p > span{
@@ -266,6 +256,7 @@ on the Right side of the screen ***/
   color: white;
   background-color: #ff1144;
   cursor: pointer;
+  /*** this font size is hard coded because it is for the button's visual ***/
   font-size: 36px;
   transition: .2s linear;
   transform-origin: center;
@@ -346,8 +337,48 @@ on the Right side of the screen ***/
   transform: scale(1.2);
   box-shadow: 0 6px 6px rgba(0,0,0,.5);
 }
+h2 {
+  --tt-key: h2;
+  font-size: 1.8rem;
+}
 
+@keyframes h2 {
+  0%, 11.6875% {
+    font-size: 1rem;
+  }
+  24% {
+    font-size: 1.5rem;
+  }
+  37.5% {
+    font-size: 1.8rem;
+  }
+}
+p {
+  --tt-key: p;
+  font-size: 1.5rem;
+}
 
+@keyframes p {
+  0%, 11.6875% {
+    font-size: 1rem;
+  }
+  37.5% {
+    font-size: 1.5rem;
+  }
+}
+h1 {
+  --tt-key: h1;
+  font-size: 2.5rem;
+}
 
-
-
+@keyframes h1 {
+  0%, 11.6875% {
+    font-size: 1.5rem;
+  }
+  24% {
+    font-size: 2rem;
+  }
+  37.5% {
+    font-size: 2.5rem;
+  }
+}
