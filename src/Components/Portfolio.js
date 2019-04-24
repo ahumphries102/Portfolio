@@ -6,7 +6,6 @@ export default function Portfolio() {
 	<section className="portfolio">
     	<div className="portInfo">
     		<h2>Magic the Gathering Tutorial</h2>
-    		<h3>A web application designed to teach users how to play</h3>
     		<p>High lights of this application include fetching an API to display all of the images and
     		using Python's back end tool Flask and a PIP package Flask Mail to send 
     		emails using the form. Material UI was used to create the slideout sidebar</p>

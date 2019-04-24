@@ -5,7 +5,6 @@
 }
 html{
   scroll-behavior: smooth;
-  background-color:gold;
   overflow-x: hidden;
 }
 body::-webkit-scrollbar{
@@ -221,7 +220,7 @@ on the left side of the screen ***/
   color:rgb(255,255,255);
 }
 .aboutText{
-  padding: 1rem;
+  padding: .5rem;
 }
 .aboutText{
   font-weight: 400;
@@ -500,26 +499,29 @@ on the Right side of the screen ***/
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape){
 
   button{
-  font-size: 2rem;
+  font-size: 1rem;
   }
   h1{
     font-size: 1.8rem;
   }
   h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   h3{
     font-size: .8rem
   }
   p{
-    font-size: 1rem;
+    font-size: .75rem;
   }
   li{
     margin: 1rem 0 0 1rem;
   }
   
+  .portfolio img{
+    height:15%;
+  }
   
 }
