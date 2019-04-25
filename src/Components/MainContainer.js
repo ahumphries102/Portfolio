@@ -128,17 +128,17 @@ export default function MainContainer(){
 
 	return(
 		<section className="mainContainer">
-			<animated.section style={slideX} className="innerMainContainer">
+			{/*<animated.section style={slideX} className="innerMainContainer">
 				
 				<LeftWrapper navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
 		{/* these divs set how tall our body is. Currently it is 400vh tall*/}
-			<div id="pro1"/>
+			<div id="pro1">Shuck howdy</div>
 			<div id="pro2"/>
 			<div id="pro3"/>
-			<div id="pro4"/>
+			<div id="pro4">Partner</div>
 		</section>
 	)
 }
