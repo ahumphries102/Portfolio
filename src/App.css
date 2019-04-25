@@ -5,7 +5,7 @@
 }
 html{
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  height:400vh;
 }
 body::-webkit-scrollbar{
   height:0 !important;
