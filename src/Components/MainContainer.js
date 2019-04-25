@@ -124,21 +124,65 @@ export default function MainContainer(){
 			}
 		}
 	})
+	window.addEventListener('touchmove', function(){
+		if(homeState){
+			/***** *This logic defines the scrollFill element *****/
+			let scrollTop = document.documentElement.scrollTop
+			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			let scrollPercent = scrollTop / scrollBottom * 100
+			setHeight(scrollPercent)
 
+		  	/*** Getting wrapR to scroll, the values are in percentages ***/
+			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
+				setContainerYPos('-100%')
+			}
+			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
+				setContainerYPos('-200%')
+			}
+			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 100){
+				setContainerYPos('-300%')
+			}
+			else{
+				setContainerYPos('0%')
+			}
+		}
+	})
+	window.addEventListener('touchstart', function(){
+		if(homeState){
+			/***** *This logic defines the scrollFill element *****/
+			let scrollTop = document.documentElement.scrollTop
+			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			let scrollPercent = scrollTop / scrollBottom * 100
+			setHeight(scrollPercent)
 
+		  	/*** Getting wrapR to scroll, the values are in percentages ***/
+			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
+				setContainerYPos('-100%')
+			}
+			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
+				setContainerYPos('-200%')
+			}
+			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 100){
+				setContainerYPos('-300%')
+			}
+			else{
+				setContainerYPos('0%')
+			}
+		}
+	})
 	return(
 		<section className="mainContainer">
-			{/*<animated.section style={slideX} className="innerMainContainer">
+			<animated.section style={slideX} className="innerMainContainer">
 				
 				<LeftWrapper navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
 		{/* these divs set how tall our body is. Currently it is 400vh tall*/}
-			<div id="pro1">Shuck howdy</div>
+			<div id="pro1"/>
 			<div id="pro2"/>
 			<div id="pro3"/>
-			<div id="pro4">Partner</div>
+			<div id="pro4"/>
 		</section>
 	)
 }
