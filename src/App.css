@@ -7,9 +7,13 @@ html{
   scroll-behavior: smooth;
   height:400vh;
 }
-body::-webkit-scrollbar{
+/*body::-webkit-scrollbar{
   height:0 !important;
   width:0;
+}*/
+button{
+  font-family: Roboto, sans-serif !important;
+  font-weight: 100;
 }
 /*** this class is used to prevent the body from scrolling when a user is not on the home page ***/
 .bodyNoScroll{
@@ -177,7 +181,6 @@ on the left side of the screen ***/
   height:100vh;
   width: 50vw;
   background-color: rgb(40,40,40);
-  transition: .2s ease;
 }
 .projects ul{
   list-style: none;
@@ -242,6 +245,7 @@ on the Right side of the screen ***/
   /*** appears until the projects button is displayed ***/ 
   z-index: 798;
   width: 50px;
+  height: 50px;
   border-radius: 50%;
   left:102%;
   color: white;
@@ -391,7 +395,7 @@ on the Right side of the screen ***/
   }
   .portfolio img{
     width: 100%;
-    height:15%;
+    height:25%;
   }
 }
 
@@ -426,10 +430,6 @@ on the Right side of the screen ***/
   
    .portInfo{
     width: 80%;
-  }
-  .portfolio img{
-    width: 100%;
-    height:15%;
   }
 }
 
@@ -466,7 +466,7 @@ on the Right side of the screen ***/
   }
   .portfolio img{
     width: 100%;
-    height:15%;
+    height:50%;
   }
 }
 
@@ -502,7 +502,7 @@ on the Right side of the screen ***/
   }
   .portfolio img{
     width: 100%;
-    height:15%;
+    height:25%;
   }
 }
 
@@ -540,7 +540,7 @@ on the Right side of the screen ***/
   }
   .portfolio img{
     width: 100%;
-    height:15%;
+    height:auto;
   }
   
 }

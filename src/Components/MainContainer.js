@@ -101,7 +101,7 @@ export default function MainContainer(){
 	//scrollPercent then divides the top from the bottom and multiples it by 100 to give us
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
-	window.onscroll = function(){
+	window.addEventListener('scroll', function(){
 		if(homeState){
 			/***** *This logic defines the scrollFill element *****/
 			let scrollTop = document.documentElement.scrollTop
@@ -123,30 +123,8 @@ export default function MainContainer(){
 				setContainerYPos('0%')
 			}
 		}
-	}
-	window.addEventListener("touchmove", function(){
-		if(homeState){
-			/***** *This logic defines the scrollFill element *****/
-			let scrollTop = document.documentElement.scrollTop
-			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
-			let scrollPercent = scrollTop / scrollBottom * 100
-			setHeight(scrollPercent)
+	})
 
-		  	/*** Getting wrapR to scroll, the values are in percentages ***/
-			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
-				setContainerYPos('-100%')
-			}
-			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
-				setContainerYPos('-200%')
-			}
-			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 100){
-				setContainerYPos('-300%')
-			}
-			else{
-				setContainerYPos('0%')
-			}
-		}
-	});
 
 	return(
 		<section className="mainContainer">
