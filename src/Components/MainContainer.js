@@ -124,6 +124,30 @@ export default function MainContainer(){
 			}
 		}
 	}
+	window.addEventListener("touchmove", function(){
+		if(homeState){
+			/***** *This logic defines the scrollFill element *****/
+			let scrollTop = document.documentElement.scrollTop
+			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			let scrollPercent = scrollTop / scrollBottom * 100
+			setHeight(scrollPercent)
+
+		  	/*** Getting wrapR to scroll, the values are in percentages ***/
+			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
+				setContainerYPos('-100%')
+			}
+			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
+				setContainerYPos('-200%')
+			}
+			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 100){
+				setContainerYPos('-300%')
+			}
+			else{
+				setContainerYPos('0%')
+			}
+		}
+	});
+
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
