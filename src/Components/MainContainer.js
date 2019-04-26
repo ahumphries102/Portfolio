@@ -107,7 +107,7 @@ export default function MainContainer(){
 			let scrollTop = document.documentElement.scrollTop
 			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
 			let scrollPercent = scrollTop / scrollBottom * 100
-			setHeight(height + 1)
+			setHeight(scrollPercent)
 
 		  	/*** Getting wrapR to scroll, the values are in percentages ***/
 			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
@@ -122,6 +122,10 @@ export default function MainContainer(){
 			else{
 				setContainerYPos('0%')
 			}
+
+			console.log("scrollTop", scrollTop)
+			console.log("scrollBottom", scrollBottom)
+		console.log("scroll Percent", scrollPercent)
 		console.log("scroll Height", height)
 		}
 	})
