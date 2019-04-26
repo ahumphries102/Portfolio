@@ -104,7 +104,8 @@ export default function MainContainer(){
 	window.addEventListener('scroll', function(){
 		if(homeState){
 			/***** *This logic defines the scrollFill element *****/
-			let scrollTop = document.documentElement.scrollTop
+			const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+
 			let scrollBottom = document.documentElement.scrollHeight - document.documentElement.clientHeight
 			let scrollPercent = scrollTop / scrollBottom * 100
 			setHeight(scrollPercent)
