@@ -102,6 +102,7 @@ export default function MainContainer(){
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
 	window.addEventListener('scroll', function(){
+		console.log("I'm scrolling for sure")
 		if(homeState){
 			/***** *This logic defines the scrollFill element *****/
 			let scrollTop = document.documentElement.scrollTop
