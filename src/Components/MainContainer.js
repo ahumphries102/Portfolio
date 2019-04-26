@@ -1,5 +1,5 @@
 //MainContainer essentially is our main display
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
@@ -123,11 +123,6 @@ export default function MainContainer(){
 			else{
 				setContainerYPos('0%')
 			}
-
-			console.log("scrollTop", scrollTop)
-			console.log("scrollBottom", scrollBottom)
-		console.log("scroll Percent", scrollPercent)
-		console.log("scroll Height", height)
 		}
 	})
 	return(
