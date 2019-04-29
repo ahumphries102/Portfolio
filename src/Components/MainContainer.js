@@ -1,11 +1,12 @@
 //MainContainer essentially is our main display
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
+import { debounce } from 'lodash'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
 export default function MainContainer(){
 	let ru = Math.ceil
-
+	let scrollBarW = .5
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
 
@@ -28,7 +29,7 @@ export default function MainContainer(){
 	//Set the height of psuedo scroll bar in center of screen
 	const [height, setHeight] = useState(0)
 
-	const [width, setWidth] = useState(1)
+	const [width, setWidth] = useState(scrollBarW)
 
 	const [homeState, setHomeState] = useState(true)
 	const [containerYPos, setContainerYPos] = useState('0%')
@@ -79,13 +80,13 @@ export default function MainContainer(){
 			setNavWork(navWork === 'Work' ? 'Home': 'Work')
 		}
 	
-	//We disable the html from scrolling when we are not on the home page
-			!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
+		//We disable the html from scrolling when we are not on the home page
+		!toggleWork ? document.querySelector('body').classList.remove('bodyNoScroll') : document.querySelector('body').classList.add('bodyNoScroll');
 
 
-			//disable the ability to scroll if you're not on the Home section
-			!toggleWork ? setHomeState(true) : setHomeState(false)
-			!toggleWork ? setWidth(1) : setWidth(0)
+		//disable the ability to scroll if you're not on the Home section
+		!toggleWork ? setHomeState(true) : setHomeState(false)
+		!toggleWork ? setWidth(scrollBarW) : setWidth(0)
 
 	
 	}
@@ -101,7 +102,7 @@ export default function MainContainer(){
 	//scrollPercent then divides the top from the bottom and multiples it by 100 to give us
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
-	window.addEventListener('scroll', function(){
+	window.addEventListener('scroll', debounce(function(){
 		if(homeState){
 			/***** *This logic defines the scrollFill element *****/
 			const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
@@ -124,7 +125,7 @@ export default function MainContainer(){
 				setContainerYPos('0%')
 			}
 		}
-	})
+	}, 10))
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
