@@ -48,16 +48,16 @@ the clients view ***/
 /*** the pro id are styled this way to give us the ability to use the a tag scroll
 feature associated with scrolling. Users can use the projects to scroll to projects with these styles***/
 #pro1{
-  height:100vh;
+  height:400vh;
 }
 #pro2{
-  height:100vh;
+  height:400vh;
 }
 #pro3{
-  height:100vh;
+  height:400vh;
 }
 #pro4{
-  height:100vh;
+  height:400vh;
 }
 
 .innerMainContainer{

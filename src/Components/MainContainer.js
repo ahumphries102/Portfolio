@@ -102,7 +102,7 @@ export default function MainContainer(){
 	//scrollPercent then divides the top from the bottom and multiples it by 100 to give us
 	//a value in percentages which is then used to set the height of the scrollFill to be equal
 	//to the amount the user has scrolled from the top.
-	window.addEventListener('scroll', debounce(function(){
+	window.addEventListener('scroll', function(){
 		if(homeState){
 			/***** *This logic defines the scrollFill element *****/
 			const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
@@ -118,14 +118,14 @@ export default function MainContainer(){
 			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
 				setContainerYPos('-200%')
 			}
-			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 100){
+			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 200){
 				setContainerYPos('-300%')
 			}
 			else{
 				setContainerYPos('0%')
 			}
 		}
-	}, 10))
+	})
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
