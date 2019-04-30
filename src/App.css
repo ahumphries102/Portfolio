@@ -134,7 +134,7 @@ on the left side of the screen ***/
 /*** styles the content on the home page ***/
 .home{
   position: relative;
-  padding: 5%;
+  margin-left: 5%;
 }
 .home h1{
   position: relative;
@@ -151,14 +151,13 @@ on the left side of the screen ***/
   position: absolute;
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  padding: 5%;
-  bottom: 0;
+  width: 90%;
+  bottom: 2.5%;
+  margin-left: 5%;
 }
 .navButton{
   position: relative;
   z-index: 999;
-  padding:1%;
   color:black;
   background-color: rgb(0,0,0,0);
   transition: .1s linear;
@@ -183,7 +182,7 @@ on the left side of the screen ***/
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-.navButton > span:hover:before {
+.navButton > span:hover::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -240,17 +239,6 @@ on the left side of the screen ***/
   width:1%;
 }
 
-/*** wrapL handles most of the inner styles within lef container ***/
-.wrapL{
-  position: relative;
-  z-index: 800;
-  background-color: rgb(255,255,255);
-  width:50vw;
-  height: 100vh;
-  /*** centers the home styles ***/
-  display: flex;
-  align-items: center;
-}
 
 /*** styles the little black lines in center of page ***/
 .scrollList{
@@ -264,6 +252,17 @@ on the left side of the screen ***/
 .scrollList li{
   height: 25%;
   border-bottom: solid black thin;
+}
+/*** wrapL handles most of the inner styles within lef container ***/
+.wrapL{
+  position: relative;
+  z-index: 800;
+  background-color: rgb(255,255,255);
+  width:50vw;
+  height: 100vh;
+  /*** centers the home styles ***/
+  display: flex;
+  align-items: center;
 }
 
 
@@ -548,9 +547,9 @@ on the Right side of the screen ***/
 @media (min-width: 320px) and (max-width: 480px){
 
   button{
-  height: 25px;
-  width: 25px;
-  font-size: .8rem;
+  height: 25px !important;
+  width: 25px !important;
+  font-size: 1rem !important;
   }
   .leftcontainer button{
     font-size: 5rem;
