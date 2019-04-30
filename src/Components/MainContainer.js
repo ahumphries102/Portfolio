@@ -1,7 +1,6 @@
 //MainContainer essentially is our main display
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
-import { debounce } from 'lodash'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
 export default function MainContainer(){
