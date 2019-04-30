@@ -6,15 +6,15 @@ html{
   scroll-behavior: smooth;
   height:400vh;
 }
+body::-webkit-scrollbar{
+  height:0 !important;
+  width:0;
+}
 /*** this class is used to prevent the body from scrolling when a user is not on the home page ***/
 .bodyNoScroll{
   margin: 0;
   height: 100%;
   overflow: hidden
-}
-body::-webkit-scrollbar{
-  height:0 !important;
-  width:0;
 }
 a{
   /*** display needs to be set in order for transforms to work ***/
@@ -81,7 +81,13 @@ feature associated with scrolling. Users can use the projects to scroll to proje
   right:50%;
 }
 
-
+.introPage{
+  position: relative;
+  z-index: 9;
+  background:green;
+  height:100vh;
+  width: 100vw;
+}
 
 
 /*** Left side styles ***/
@@ -111,7 +117,7 @@ on the left side of the screen ***/
 .aboutText{
   font-weight: 400;
 }
-.aboutText > h2 span, p > span{
+.aboutText > h2 span{
   color:#ff1144;
 }
 .aboutText p{
@@ -252,6 +258,19 @@ on the left side of the screen ***/
 .scrollList li{
   height: 25%;
   border-bottom: solid black thin;
+}
+.socialMedia{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  height:10%;
+  width: 100%;
+  bottom: 0;
+  filter: grayscale(1);
+}
+.socialMedia img{
+  height: 75%;
+  width: auto;
 }
 /*** wrapL handles most of the inner styles within lef container ***/
 .wrapL{
