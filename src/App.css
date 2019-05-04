@@ -157,11 +157,11 @@ on the left side of the screen ***/
 /****** Nav Styles *******/
 .nav{
   position: absolute;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   bottom: 2.5%;
-  margin-left: 5%;
 }
 .navButton{
   position: relative;
@@ -172,6 +172,7 @@ on the left side of the screen ***/
   transform-origin: center;
   border:0;
   font-family: inherit;
+  padding: 5%;
 }
 .navButton:hover{
   cursor: pointer;
@@ -247,7 +248,6 @@ on the left side of the screen ***/
   width:1%;
 }
 
-
 /*** styles the little black lines in center of page ***/
 .scrollList{
   position: absolute;
@@ -288,7 +288,9 @@ on the left side of the screen ***/
 
 
 
-/*** Right side styles ***/
+/*************************** ***************** ***
+**************************** Right side styles ***
+**************************** ***************** ***/
 
 /*** Right Container deals with all the html styles
 on the Right side of the screen ***/
@@ -296,53 +298,6 @@ on the Right side of the screen ***/
   background-color: rgb(255,255,255);
   display: flex;
   width: 100vw;
-}
-/**** Styles for Red Button to move container left ****/
-.toggleSlide{
-  position: fixed;
-  top: 50%;
-  /*** appears until the projects button is displayed ***/ 
-  z-index: 798;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  left:102%;
-  color: white;
-  background-color: #ff1144;
-  cursor: pointer;
-  /*** this font size is hard coded because it is for the button's visual ***/
-  font-size: 36px;
-  transition: .2s linear;
-  transform-origin: center;
-  border:0;
-  font-family: inherit;
-}
-
-.toggleSlide:hover{
-  transform: scale(1.2);
-}
-.wrapR{
-  background-color: purple;
-  width:50vw;
-  height: inherit;
-  transition: .3s ease-in-out;
-}
-/*** setting the background-image to each child of wrapR ***/
-.wrapR > div{
-  background: 35%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
-  height: 100vh;
-}
-.wrapR > div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/deckbuild.png);
-  height: 100vh;
-}
-.wrapR > div ~ div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/tomagatchicover.png);
-  height: 100vh;
-}
-.wrapR > div ~ div ~ div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/gamejquerycover.png);
-  height: 100vh;
 }
 
 /*** Portfolio styles ***/
@@ -395,8 +350,55 @@ on the Right side of the screen ***/
   bottom:-20%;
   border-bottom: solid red;
 }
+/**** Styles for Red Button to move container left ****/
+.toggleSlide{
+  position: fixed;
+  top: 50%;
+  /*** appears until the projects button is displayed ***/ 
+  z-index: 798;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left:102%;
+  color: white;
+  background-color: #ff1144;
+  cursor: pointer;
+  /*** this font size is hard coded because it is for the button's visual ***/
+  font-size: 36px;
+  transition: .2s linear;
+  transform-origin: center;
+  border:0;
+  font-family: inherit;
+}
 
+.toggleSlide:hover{
+  transform: scale(1.2);
+}
 
+/*** Styles the right side of the main container ***/
+.wrapR{
+  background-color: purple;
+  width:50vw;
+  height: inherit;
+  transition: .3s ease-in-out;
+}
+/*** setting the background-image to each child of wrapR ***/
+.wrapR > div{
+  background: 35%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
+  height: 100vh;
+}
+.wrapR > div ~ div{
+  background: center / cover no-repeat url(./ScreenShots/deckbuild.png);
+  height: 100vh;
+}
+.wrapR > div ~ div ~ div{
+  background: center / cover no-repeat url(./ScreenShots/tomagatchicover.png);
+  height: 100vh;
+}
+.wrapR > div ~ div ~ div ~ div{
+  background: center / cover no-repeat url(./ScreenShots/gamejquerycover.png);
+  height: 100vh;
+}
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -570,11 +572,7 @@ on the Right side of the screen ***/
 
 @media (min-width: 320px) and (max-width: 480px){
 
-  button{
-  height: 25px !important;
-  width: 25px !important;
-  font-size: 1rem !important;
-  }
+  
   .leftcontainer button{
     font-size: 5rem;
   }
