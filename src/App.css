@@ -476,7 +476,7 @@ on the Right side of the screen ***/
     margin: 1rem 0 0 1rem;
   }
   .portfolio img{
-    width: 100%;
+    width: 80%;
     height:30%;
   }
 }
@@ -511,7 +511,7 @@ on the Right side of the screen ***/
   }
   
   .portfolio img{
-    width: 100%;
+    width: 80%;
     height:20%;
   }
 }
@@ -545,8 +545,8 @@ on the Right side of the screen ***/
     margin: 1rem 0 0 1rem;
   }
   .portfolio img{
-    width: 100%;
-    height:20%;
+    width: 80%;
+    height:30%;
   }
 }
 
@@ -578,8 +578,7 @@ on the Right side of the screen ***/
     margin: 1rem 0 0 1rem;
   }
   .portfolio img{
-    width: 100%;
-    height:30%;
+    height:20%;
   }
 }
 
@@ -613,7 +612,6 @@ on the Right side of the screen ***/
     font-size: .8rem;
   }
   .portfolio img{
-    width: 100%;
     height:auto;
   }
   
