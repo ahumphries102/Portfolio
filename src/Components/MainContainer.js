@@ -1,5 +1,5 @@
 //MainContainer essentially is our main display
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
@@ -125,6 +125,15 @@ export default function MainContainer(){
 			}
 		}
 	})
+
+	useEffect(()=> {
+    fetch("http://localhost:8080/")
+      .then(response => response.json())
+      .then(data =>
+        console.log("We served")
+      )
+      .catch(error=>console.log(error))
+  })
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">

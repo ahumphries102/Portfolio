@@ -2,20 +2,21 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "engines" : {
-    "node" : "8.10.0"
+  "engines": {
+    "node": "8.10.0"
   },
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
-    "react-spring" : "^8.0.19"
+    "react-spring": "^8.0.19"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "nodemon"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,6 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
 }
-

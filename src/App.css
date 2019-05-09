@@ -28,10 +28,6 @@ button:focus{
   outline:0;
 }
 
-button, li{
-  font-family: 'Josefin Sans', sans-serif !important;
-  font-weight: 300;
-}
 li{
   position: relative;
 }
@@ -43,13 +39,16 @@ li::before{
   top: 130%;
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 h1 > span{
   color: #ff1144;
 }
 hr{
   border-top: 3px solid #ff1144;
+}
+p, ul, li, a, button{
+  font-family: 'Josefin Slab', serif !important;
 }
 /*** Main Container sets the height of the entire app.
 Inner Main Container holds all the divs and always remains in
@@ -159,7 +158,7 @@ on the left side of the screen ***/
   position: absolute;
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   bottom: 2.5%;
 }
@@ -172,7 +171,7 @@ on the left side of the screen ***/
   transform-origin: center;
   border:0;
   font-family: inherit;
-  padding: 5%;
+  width: ;
 }
 .navButton:hover{
   cursor: pointer;

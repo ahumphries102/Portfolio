@@ -4,8 +4,8 @@ export default function About(){
 	return(
 		<section className="about">
 			<div className="aboutText">
-				<h2>I’m a <span>deadline-driven</span> web developer and graphic designer who clearly and consistently turns ideas into visuals and interactivity.</h2>
-				<p>I've created <span>logos, web applications</span> and <span>advertisements</span> for the city of Arlington, Washington and many other clients.</p>
+				<h2>I’m a results driven web developer and graphic designer who clearly and consistently turns ideas into visuals and interactivity.</h2>
+				<p>I've created logos, web applications and advertisements for the city of Arlington, Washington, Porsche, Honda, Carl's Jr. and many other clients.</p>
 				<p>Hire me at <span id="email"><a href = "mailto: ahumphries102@gmail.com?subject=Portfolio">Ahumphries102@gmail.com</a></span></p>
 			</div>
 			{/*<section className="socialMedia">
