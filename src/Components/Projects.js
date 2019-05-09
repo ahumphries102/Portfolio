@@ -13,16 +13,16 @@ export default function Projects(props){
 		<animated.section style={projectsSlide} className="projects">
 				<ul>
 					<li>
-						<a href="#pro1" onClick={props.openCloseProjects} className="projectsButton">Magic the Gathering Tutorial</a>
+						<a href="#pro1" onClick={props.openCloseProjects} className="projectsButton"><p>Magic the Gathering Tutorial</p></a>
 					</li>/
 					<li>
-						<a href="#pro2" onClick={props.openCloseProjects} className="projectsButton">Magic the Gathering Deck Builder</a>
+						<a href="#pro2" onClick={props.openCloseProjects} className="projectsButton"><p>Magic the Gathering Deck Builder</p></a>
 					</li>/
 					<li>
-						<a href="#pro3" onClick={props.openCloseProjects} className="projectsButton">Tomogatchi Game</a>
+						<a href="#pro3" onClick={props.openCloseProjects} className="projectsButton"><p>Tomogatchi Game</p></a>
 					</li>/
 					<li>
-						<a href="#pro4" onClick={props.openCloseProjects} className="projectsButton">Typography Quiz</a>
+						<a href="#pro4" onClick={props.openCloseProjects} className="projectsButton"><p>Typography Quiz</p></a>
 					</li>
 				</ul>
 			</animated.section>

@@ -5,7 +5,7 @@ import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
 export default function MainContainer(){
 	let ru = Math.ceil
-	let scrollBarW = .5
+	let scrollBarW = 1
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
 

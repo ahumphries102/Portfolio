@@ -2,6 +2,14 @@
   margin: 0;
   padding:0;
 }
+.testHome{
+  position: relative;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  background-color: pink;
+
+}
 html{
   scroll-behavior: smooth;
   height:400vh;
@@ -22,21 +30,9 @@ a{
   color:rgb(255, 255, 255) !important;
   text-decoration: none;
 }
-
 /*** Disables the blue box around the button on click ***/
 button:focus{
   outline:0;
-}
-
-li{
-  position: relative;
-}
-li::before{
-  content: '';
-  position: absolute;
-  border-bottom: solid white thin;
-  width: 90%;
-  top: 130%;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Josefin Sans', sans-serif !important;
@@ -47,7 +43,21 @@ h1 > span{
 hr{
   border-top: 3px solid #ff1144;
 }
-p, ul, li, a, button{
+li{
+  position: relative;
+}
+li::before{
+  content: '';
+  position: absolute;
+  border-bottom: solid white thin;
+  width: 90%;
+  top: 130%;
+}
+p{
+  font-size: 1rem !important;
+  line-height: 2rem;
+}
+p, ul, li, a, figcaption, button{
   font-family: 'Josefin Slab', serif !important;
 }
 /*** Main Container sets the height of the entire app.
@@ -124,10 +134,14 @@ on the left side of the screen ***/
 .aboutText p{
   margin-top: 2rem;
 }
-
 #email{
   position: relative;
-  width: 100%;
+  font-weight: 700;
+  line-height: 2px;
+  transition: .25s ease-in-out;
+}
+#email:hover{
+  font-size: 1.1rem;
 }
 #email::before{
   content: '';
@@ -217,7 +231,7 @@ on the left side of the screen ***/
 }
 .projectsButton:hover{
   font-weight: 900;
-  transform:translateX(2%);
+  transform:translateX(3%);
 }
 .projectsPage li{
   position: relative;
@@ -244,7 +258,7 @@ on the left side of the screen ***/
   center it vertically ***/
   top: 0% !important;
   z-index: 800;
-  width:1%;
+  width:1.5%;
 }
 
 /*** styles the little black lines in center of page ***/
@@ -313,7 +327,6 @@ on the Right side of the screen ***/
   margin:0 auto;
   padding: 4vh 0 4vh 0;
   height: 92vh;
-  width: 80%;
   background-color: rgb(255,255,255);
 }
 .portInfo::-webkit-scrollbar{
@@ -323,13 +336,15 @@ on the Right side of the screen ***/
 .portInfo figcaption{
   opacity: .5;
   text-align: right;
+  position: relative;
+  right:10%;
 }
 .portInfo img{
   position: relative;
   z-index: 898;
-  width:100%;
+  margin: 5% auto;
+  width: 80%;
   height:80%;
-  margin: 5% 0 5% 0;
   transition: .3s ease-in-out;
   transform-origin: center;
 }
@@ -346,8 +361,12 @@ on the Right side of the screen ***/
   position: absolute;
   content: '';
   width: 100%;
-  bottom:-20%;
-  border-bottom: solid red;
+  bottom:-10%;
+  border-bottom: solid red thin;
+}
+.portText{
+  width: 80%;
+  margin:0 auto;
 }
 /**** Styles for Red Button to move container left ****/
 .toggleSlide{
