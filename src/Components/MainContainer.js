@@ -126,27 +126,55 @@ export default function MainContainer(){
 		}
 	})
 
-	useEffect(()=> {
-    fetch("http://localhost:8080/")
-      .then(response => response.json())
-      .then(data =>
-        console.log("We served")
-      )
-      .catch(error=>console.log(error))
-  })
+	// useEffect(()=> {
+ //    fetch("http://localhost:8080/")
+ //      .then(response => response.json())
+ //      .then(data =>
+ //        console.log("We served")
+ //      )
+ //      .catch(error=>console.log(error))
+ //  })
+
+ //The height of the main container is equal to the amount of objects within the
+ //mainConHeightArray. This let's us dynamically increase the height over our app
+ //based on the amount of projects we include.
+ 	let mainConHeightArr =  [{
+ 			href:"#pro1",
+ 			project:'Magic the Gathering'},
+
+ 		{
+ 			href:"#pro2",
+ 			project:'Magic the Gathering Tutorial',
+ 		},
+ 		{
+ 			href:"#pro3",
+ 			project:'Tamagotchi Game'
+ 		},
+ 		{
+ 			href:"#pro4",
+ 			project:"Typography Game"
+ 		}
+ 	]
+
+ 	let newProjectArr = mainConHeightArr.map((element, index)=>{
+ 		const hrefId = `${element.href}`
+		return <li key={index}><a href={hrefId} onClick={openCloseProjects} className="projectsButton">{element.project}</a></li>
+ 	})
+
+	let newMainConHeightArr = mainConHeightArr.map((element, index)=>{
+		const divName = `pro${index+1}`
+		return <div key={index} id={divName}/>
+	})
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
+				<LeftWrapper projects={newProjectArr} navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
 		{/* these divs set how tall our body is. Currently it is 400vh tall*/}
-			<div id="pro1"/>
-			<div id="pro2"/>
-			<div id="pro3"/>
-			<div id="pro4"/>
+			{newMainConHeightArr}
 		</section>
 	)
 }
