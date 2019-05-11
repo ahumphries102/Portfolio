@@ -162,8 +162,8 @@ export default function MainContainer(){
  	})
 
 	let newMainConHeightArr = mainConHeightArr.map((element, index)=>{
-		const divName = `pro${index+1}`
-		return <div key={index} id={divName}/>
+		const articleName = `pro${index+1}`
+		return <article key={index} id={articleName}/>
 	})
 	return(
 		<section className="mainContainer">
