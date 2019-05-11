@@ -1,5 +1,5 @@
 //MainContainer essentially is our main display
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
@@ -156,11 +156,14 @@ export default function MainContainer(){
  		}
  	]
 
+ 	//Adds a number of list items to the Projects section based on the
+ 	//the number of elements in themainConHeightArr array
  	let newProjectArr = mainConHeightArr.map((element, index)=>{
  		const hrefId = `${element.href}`
 		return <li key={index}><a href={hrefId} onClick={openCloseProjects} className="projectsButton">{element.project}</a></li>
  	})
-
+ 	//Adds a number of Articles to the html based on the number of elements
+ 	//in the mainConHeightArr array.
 	let newMainConHeightArr = mainConHeightArr.map((element, index)=>{
 		const articleName = `pro${index+1}`
 		return <article key={index} id={articleName}/>

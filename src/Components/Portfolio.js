@@ -12,9 +12,7 @@ export default function Portfolio() {
     		  emails using the form. Material UI was used to create the slideout sidebar</p>
     		</div>
     		<img src={Images.img2} alt="placeholder"/>
-    		<img src={Images.img3} alt="placeholder"/>
     		<figcaption>Backend code using Flask</figcaption>
-    		<img src={Images.img4} alt="placeholder"/>
     		<figcaption>Fetching an API using Async/Await</figcaption>
     	</div>
     	
@@ -24,8 +22,7 @@ export default function Portfolio() {
             <p>Users can select cards to build their deck. The bar on the right reflects the users choice. They may delete unwanted cards and once they're satisfied with their deck they can click save to save their deck to an SQL database.</p>
 	    </div>
             <img src={Images.img5} alt="placeholder"/>
-    		<img src={Images.img6} alt="placeholder"/>
-            <figcaption>Node.js is used along with an SQL script to save all the users chosen cards to a database</figcaption>
+    		            <figcaption>Node.js is used along with an SQL script to save all the users chosen cards to a database</figcaption>
     	</div>
         
     	<div className="portInfo">
@@ -34,8 +31,7 @@ export default function Portfolio() {
             <p>A simple game developed using HTML, CSS and Jquery.</p>
         </div>
     		<img src={Images.img7} alt="placeholder"/>
-    		<img src={Images.img8} alt="placeholder"/>
-    	</div>
+    		    	</div>
     	<div className="portInfo">
         <div className="portText">
     		<h2>Typography Game of Doom</h2>
@@ -44,9 +40,9 @@ export default function Portfolio() {
     		<img src={Images.img9} alt="placeholder"/>
            <figcaption>Users select an answer and earn points for</figcaption>
            <figcaption>each correct answer. Each replay randomizes the order of the questions.</figcaption>
-    		<img src={Images.img10} alt="placeholder"/>
+    		
 
-            <img src={Images.img11} alt="placeholder"/>
+            
     	</div>
     </section>
     )
