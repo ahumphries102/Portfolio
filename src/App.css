@@ -2,14 +2,6 @@
   margin: 0;
   padding:0;
 }
-.testHome{
-  position: relative;
-  z-index: 999;
-  height: 100vh;
-  width: 100vw;
-  background-color: pink;
-
-}
 html{
   scroll-behavior: smooth;
   height:400vh;
@@ -25,7 +17,6 @@ body::-webkit-scrollbar{
   overflow: hidden
 }
 a{
-  display: inline-block;
   color:rgb(255, 255, 255) !important;
   text-decoration: none;
 }
@@ -42,16 +33,6 @@ h1 > span{
 }
 hr{
   border-top: 3px solid #ff1144;
-}
-li{
-  position: relative;
-}
-li::before{
-  content: '';
-  position: absolute;
-  border-bottom: solid white thin;
-  width: 90%;
-  top: 130%;
 }
 p{
   font-size: 1rem !important;
@@ -133,7 +114,7 @@ on the left side of the screen ***/
   transition: .25s ease-in-out;
 }
 #email:hover{
-  font-size: 1.1rem;
+  text-shadow: 0 0 0px #FFFFFF, 0 0 0px #FFFFFF;
 }
 #email::before{
   content: '';
@@ -148,16 +129,6 @@ on the left side of the screen ***/
 .home{
   position: relative;
   margin-left: 5%;
-}
-.home h1{
-  position: relative;
-}
-.home h1::before{
-  position: absolute;
-  content: '';
-  width: 15%;
-  bottom:0;
-  border-bottom: solid red;
 }
 /****** Nav Styles *******/
 .nav{
@@ -201,7 +172,6 @@ on the left side of the screen ***/
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
 /****** Styles for the projects page ******/
 .projects{
   position: absolute;
@@ -214,6 +184,19 @@ on the left side of the screen ***/
 .projects ul{
   list-style: none;
 }
+.projects li{
+  position: relative;
+}
+.projects li:nth-child(n + 2){
+  margin-top: 2rem;
+}
+.projects li::before{
+  content: '';
+  position: absolute;
+  border-bottom: solid white thin;
+  width: 90%;
+  top: 130%;
+}
 .projectsButton{
   height:10px;
   margin-top: 10%;
@@ -222,22 +205,6 @@ on the left side of the screen ***/
 .projectsButton:hover{
   text-shadow: 0 0 .6px #FFFFFF, 0 0 .5px #FFFFFF;
   transform:translateX(3%);
-}
-.projectsPage li{
-  position: relative;
-  display: block;
-  width: 90%;
-  padding:100px 0 0 25px;
-}
-
-.projectsPage li::after{
-  content: '';
-  background-color: white;
-  height:2px;
-  width: 95%;
-  display: block;
-  position: absolute;
-  margin-top:2%;
 }
 
 /*** Scroll Fill handles the psuedo scroll bar ***/
@@ -280,13 +247,13 @@ on the left side of the screen ***/
 /*** wrapL handles most of the inner styles within lef container ***/
 .wrapL{
   position: relative;
+  /*** centers the home styles ***/
+  display: flex;
+  align-items: center;
   z-index: 800;
   background-color: rgb(255,255,255);
   width:50vw;
   height: 100vh;
-  /*** centers the home styles ***/
-  display: flex;
-  align-items: center;
 }
 
 
@@ -308,16 +275,37 @@ on the Right side of the screen ***/
   position: relative;
   width:50vw;
 }
-
 /*** style everything in the portfolio ***/
 .portInfo{
   display: flex;
   flex-direction: column;
   overflow-y: scroll; 
   margin:0 auto;
-  padding: 4vh 0 4vh 0;
-  height: 92vh;
+  height: 100vh;
   background-color: rgb(255,255,255);
+}
+/***.portInfo h2 creates space from the top of portInfo and
+pushes the rest of the content down as well without ruining
+the layout ***/
+.portInfo h2{
+  margin-top: 10%;
+}
+.portInfo a{
+  position: relative;
+  font-weight: 700;
+  transition: .25s ease-in-out;
+  color: rgb(0,0,0)!important;
+}
+.portInfo a::after{
+  content: '';
+  width: 1rem;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-bottom: solid red thin;
+}
+.portInfo a:hover{  
+  text-shadow: 0 0 0px #000000, 0 0 0px #000000;
 }
 .portInfo::-webkit-scrollbar{
   height:0 !important;
@@ -327,14 +315,15 @@ on the Right side of the screen ***/
   opacity: .5;
   text-align: right;
   position: relative;
-  right:10%;
+  margin-right: 5vw;
 }
 .portInfo img{
   position: relative;
+  object-fit: contain;
   z-index: 898;
   margin: 5% auto;
   width: 80%;
-  height:80%;
+  height:auto;
   transition: .3s ease-in-out;
   transform-origin: center;
 }
@@ -347,16 +336,19 @@ on the Right side of the screen ***/
   margin:1rem 0 1rem 0;
   position: relative;
 }
-.portInfo p::before{
+.portText{
+  position: relative;
+  width: 80%;
+  margin:0 auto;
+  margin-bottom: 1rem;
+}
+.portText::after{
   position: absolute;
   content: '';
   width: 100%;
+  left: 0;
   bottom:-10%;
   border-bottom: solid red thin;
-}
-.portText{
-  width: 80%;
-  margin:0 auto;
 }
 /**** Styles for Red Button to move container left ****/
 .toggleSlide{
@@ -465,10 +457,6 @@ on the Right side of the screen ***/
   li{
     margin: 1rem 0 0 1rem;
   }
-  .portfolio img{
-    width: 80%;
-    height:30%;
-  }
 }
 
 /* 
@@ -498,11 +486,6 @@ on the Right side of the screen ***/
   }
   li{
     margin: 1rem 0 0 1rem;
-  }
-  
-  .portfolio img{
-    width: 80%;
-    height:20%;
   }
 }
 
@@ -534,10 +517,6 @@ on the Right side of the screen ***/
   li{
     margin: 1rem 0 0 1rem;
   }
-  .portfolio img{
-    width: 80%;
-    height:30%;
-  }
 }
 
 /* 
@@ -567,9 +546,6 @@ on the Right side of the screen ***/
   li{
     margin: 1rem 0 0 1rem;
   }
-  .portfolio img{
-    height:20%;
-  }
 }
 
 /* 
@@ -578,8 +554,6 @@ on the Right side of the screen ***/
 */
 
 @media (min-width: 320px) and (max-width: 480px){
-
-  
 
   h1{
     font-size: 1.5rem;
@@ -602,9 +576,6 @@ on the Right side of the screen ***/
   }
   .leftcontainer button{
     font-size: 5rem;
-  }
-  .portfolio img{
-    height:auto;
   }
   
 }
