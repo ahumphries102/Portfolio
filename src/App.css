@@ -571,5 +571,7 @@ the layout ***/
   .leftcontainer button{
     font-size: 5rem;
   }
-  
+  .nav{
+    bottom: 15%;
+  }
 }
