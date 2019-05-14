@@ -60,7 +60,7 @@ export default function Portfolio() {
         <div className="portInfo">
             <div className="portText">
                 <h2>Porsche Ad</h2>
-                <p>I designed these ads for Porsche of Bellingham as part of their ad campaign that run for over 2 years.</p>
+                <p>I designed these ads for Porsche of Bellingham as part of their ad campaign that ran for over 2 years.</p>
             </div>
             <img src={Images.img10} alt="placeholder"/>
             <figcaption>Photos were supplied by Porsche, I then designed the final look and layout of the ad.</figcaption>
