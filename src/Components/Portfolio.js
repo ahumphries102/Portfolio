@@ -29,8 +29,8 @@ export default function Portfolio() {
             </div>
             <img src={Images.img5} alt="placeholder"/>
             <figcaption>Node.js is used along with an SQL script to save all the users chosen cards to a database</figcaption>
-    	            <img src={Images.img6} alt="placeholder"/>
-
+            <img src={Images.img6} alt="placeholder"/>
+            <figcaption>All choices a user makes will be displayed on the right handside</figcaption>
         </div>
         
     	<div className="portInfo">
@@ -40,20 +40,32 @@ export default function Portfolio() {
             <a href="https://github.com/ahumphries102/Tomagatchi">Github</a>
         </div>
     		<img src={Images.img7} alt="placeholder"/>
-    		    	</div>
-    	<div className="portInfo">
-        <div className="portText">
-    		<h2>Typography Game of Doom</h2>
-            <p>A typography quiz game developed using HTML, CSS and Jquery.</p>
-            <a href="https://github.com/ahumphries102/Game-Project">Github</a>
-        </div>
-    		<img src={Images.img9} alt="placeholder"/>
-           <figcaption>Users select an answer and earn points for</figcaption>
-           <figcaption>each correct answer. Each replay randomizes the order of the questions.</figcaption>
-    		
-
-            
+            <figcaption>Tomagatchi is a game where you simply assign it a name and monitor it's stats</figcaption>
     	</div>
+
+    	<div className="portInfo">
+            <div className="portText">
+        		<h2>Typography Game of Doom</h2>
+                <p>A typography quiz game developed using HTML, CSS and Jquery.</p>
+                <a href="https://github.com/ahumphries102/Game-Project">Github</a>
+            </div>
+            <img src={Images.img8} alt="placeholder"/>
+            <figcaption>Users select an answer and earn points for</figcaption>
+    		<img src={Images.img9} alt="placeholder"/>
+
+           <figcaption>each correct answer. Each replay randomizes the order of the questions.</figcaption>
+
+    	</div>
+        
+        <div className="portInfo">
+            <div className="portText">
+                <h2>Porsche Ad</h2>
+                <p>I designed these ads for Porsche of Bellingham as part of their ad campaign that run for over 2 years.</p>
+            </div>
+            <img src={Images.img10} alt="placeholder"/>
+            <figcaption>Photos were supplied by Porsche, I then designed the final look and layout of the ad.</figcaption>
+
+        </div>
     </section>
     )
 }

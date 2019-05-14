@@ -288,7 +288,7 @@ on the Right side of the screen ***/
 pushes the rest of the content down as well without ruining
 the layout ***/
 .portInfo h2{
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .portInfo a{
   position: relative;
@@ -377,27 +377,21 @@ the layout ***/
 
 /*** Styles the right side of the main container ***/
 .wrapR{
-  background-color: purple;
   width:50vw;
   height: inherit;
   transition: .3s ease-in-out;
 }
 /*** setting the background-image to each child of wrapR ***/
-.wrapR > div{
-  background: 35%/ cover no-repeat url(./ScreenShots/capstonelandingimg.png);
-  height: 100vh;
+.wrapRImg{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-.wrapR > div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/deckbuild.png);
+.wrapRImg img{
+  display: block;
   height: 100vh;
-}
-.wrapR > div ~ div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/tomagatchicover.png);
-  height: 100vh;
-}
-.wrapR > div ~ div ~ div ~ div{
-  background: center / cover no-repeat url(./ScreenShots/gamejquerycover.png);
-  height: 100vh;
+  width: auto;
+  object-fit: fill;
 }
 /* 
   ##Device = Desktops

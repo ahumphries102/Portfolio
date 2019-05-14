@@ -5,6 +5,8 @@ import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
 export default function MainContainer(){
 	let ru = Math.ceil
+	//Determine how much in percent we have to scroll to reach the next project
+	let projectHeight = 20
 	let scrollBarW = 1
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
@@ -111,14 +113,17 @@ export default function MainContainer(){
 			setHeight(scrollPercent)
 
 		  	/*** Getting wrapR to scroll, the values are in percentages ***/
-			if(ru(scrollPercent) >= 25 && ru(scrollPercent) <= 49.9){
+			if(ru(scrollPercent) >= projectHeight && ru(scrollPercent) <= 39.9){
 				setContainerYPos('-100%')
 			}
-			else if(ru(scrollPercent) >= 50 && ru(scrollPercent) <= 74.9){
+			else if(ru(scrollPercent) >= projectHeight * 2 && ru(scrollPercent) <= 59.9){
 				setContainerYPos('-200%')
 			}
-			else if(ru(scrollPercent) >= 75 && ru(scrollPercent) <= 200){
+			else if(ru(scrollPercent) >= projectHeight * 3 && ru(scrollPercent) <= 79.9){
 				setContainerYPos('-300%')
+			}
+			else if(ru(scrollPercent) >= projectHeight * 4 && ru(scrollPercent) <= 200){
+				setContainerYPos('-400%')
 			}
 			else{
 				setContainerYPos('0%')
@@ -153,6 +158,10 @@ export default function MainContainer(){
  		{
  			href:"#pro4",
  			project:"Typography Game"
+ 		},
+ 		{
+ 			href:"#pro5",
+ 			project:"Porsche Ad"
  		}
  	]
 
