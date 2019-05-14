@@ -23,6 +23,8 @@ import tomagatchiCover from '../ScreenShots/tomagatchicover.png'
 import deckBuildCover from '../ScreenShots/deckbuild.png'
 import gameJqueryCover from '../ScreenShots/gamejquerycover.png'
 import porscheCover from '../ScreenShots/porschecover.jpg'
+import blackPorscheAd from '../ScreenShots/blackporschead.jpg'
+import whitePorscheAd from '../ScreenShots/whiteporschead.jpg'
 import porscheCayman from '../ScreenShots/porschecayman.jpg'
 let portfolioImages = {
 	capStoneCover:capImgLand,
@@ -38,7 +40,9 @@ let portfolioImages = {
 	img7:tomagatchiGif,
 	img8:gameGif,
 	img9:typeEnd,
-	img10:porscheCayman
+	img10:porscheCayman,
+	img11:blackPorscheAd,
+	img12:whitePorscheAd
 }
 
 export default portfolioImages

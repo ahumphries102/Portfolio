@@ -64,7 +64,11 @@ export default function Portfolio() {
             </div>
             <img src={Images.img10} alt="placeholder"/>
             <figcaption>Photos were supplied by Porsche, I then designed the final look and layout of the ad.</figcaption>
+            <img src={Images.img11} alt="placeholder"/>
+            <figcaption>The LED billboard this ad ran on was so bright this black ad was created to alleviate eye strain on drivers.</figcaption>
 
+            <img src={Images.img12} alt="placeholder"/>
+            <figcaption>The white ad ran during the day. Porsche corporate said it was clean and simple which caught drivers eyes</figcaption>
         </div>
     </section>
     )
