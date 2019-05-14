@@ -14,8 +14,11 @@ export default function Portfolio() {
               <a href="https://github.com/ahumphries102/Capstone">Github</a>
             </div>
     		<img src={Images.img2} alt="placeholder"/>
-    		<figcaption>Backend code using Flask</figcaption>
-    		<figcaption>Fetching an API using Async/Await</figcaption>
+            <figcaption>Overall view of my capstone which uses Material.ui</figcaption>
+            <img src={Images.img3} alt="placeholder"/>
+    		<figcaption>Backend code using Flask fetching an API using Async/Await</figcaption>
+    		<img src={Images.img4} alt="placeholder"/>
+            <figcaption>A database I created to hold all the relevant information</figcaption>
     	</div>
     	
     	<div className="portInfo">
@@ -26,7 +29,9 @@ export default function Portfolio() {
             </div>
             <img src={Images.img5} alt="placeholder"/>
             <figcaption>Node.js is used along with an SQL script to save all the users chosen cards to a database</figcaption>
-    	</div>
+    	            <img src={Images.img6} alt="placeholder"/>
+
+        </div>
         
     	<div className="portInfo">
         <div className="portText">
