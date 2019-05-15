@@ -9,19 +9,19 @@ export default function RightWrapper(props){
 
 			<section style={props.wrapRFilter} className="wrapR">
 				<div className="wrapRImg">
-					<img src={Images.capStoneCover}/>
+					<img src={Images.capStoneCover} alt="placeholder"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.deckBuildCover}/>
+					<img src={Images.deckBuildCover} alt="placeholder"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.tomaCover}/>
+					<img src={Images.tomaCover} alt="placeholder"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.gameJqueryCover}/>
+					<img src={Images.gameJqueryCover} alt="placeholder"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.porscheCover}/>
+					<img src={Images.porscheCover} alt="placeholder"/>
 				</div>
 			</section>
 

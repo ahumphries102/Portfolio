@@ -233,16 +233,20 @@ on the left side of the screen ***/
 }
 .socialMedia{
   position: absolute;
-  display: flex;
-  justify-content: space-around;
-  height:10%;
+  height:auto;
   width: 100%;
   bottom: 0;
-  filter: grayscale(1);
 }
 .socialMedia img{
-  height: 75%;
-  width: auto;
+  height: auto;
+  margin: 0 5% 1% 0;
+  width: 50px;
+  filter: grayscale(1);
+  transition: .2s ease-in-out;
+}
+.socialMedia img:hover{
+  transform: scale(1.05);
+  filter: grayscale(0);
 }
 /*** wrapL handles most of the inner styles within lef container ***/
 .wrapL{
@@ -327,11 +331,11 @@ the layout ***/
   transition: .3s ease-in-out;
   transform-origin: center;
 }
-.portInfo img:hover{
+/*.portInfo img:hover{
   z-index: 999;
   transform: scale(1.2);
   box-shadow: 0 6px 6px rgba(0,0,0,.5);
-}
+}*/
 .portInfo p{
   margin:1rem 0 1rem 0;
   position: relative;
