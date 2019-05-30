@@ -26,12 +26,26 @@ import porscheCover from '../ScreenShots/porschecover.jpg'
 import blackPorscheAd from '../ScreenShots/blackporschead.jpg'
 import whitePorscheAd from '../ScreenShots/whiteporschead.jpg'
 import porscheCayman from '../ScreenShots/porschecayman.jpg'
+import potad from '../ScreenShots/221ad.jpg'
+import littlecaesers from '../ScreenShots/LC 6 dollar.jpg'
+import littlecaeserssmall from '../ScreenShots/littlecaesers.jpg'
+import mediakit from '../ScreenShots/Digital Media Kit.jpg'
+import mediakitsmall from '../ScreenShots/Digital Media Kit-2.jpg'
+import mediakitsmall2 from '../ScreenShots/Digital Media Kit-4.jpg'
+import strawberry from '../ScreenShots/Nologoflyin.jpg'
+
 let portfolioImages = {
 	capStoneCover:capImgLand,
 	tomaCover:tomagatchiCover,
 	deckBuildCover:deckBuildCover,
 	gameJqueryCover:gameJqueryCover,
 	porscheCover:porscheCover,
+	littlecaesers:littlecaesers,
+	mediakit:mediakit,
+	mediakitsmall:mediakitsmall,
+	mediakitsmall2:mediakitsmall2,
+	
+	potad:potad,
 	img2:capImgGif,
 	img3:capIntro,
 	img4:capData,

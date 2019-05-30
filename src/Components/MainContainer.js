@@ -4,9 +4,10 @@ import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
 export default function MainContainer(){
+	//ru stands for round up
 	let ru = Math.ceil
 	//Determine how much in percent we have to scroll to reach the next project
-	let projectHeight = 20
+	let projectHeight = 10
 	let scrollBarW = 1
 	//Adjusts the X and Y translation sliding of the innerMainContainer
 	const [containerXPos, setContainerXPos] = useState('0%')
@@ -113,17 +114,32 @@ export default function MainContainer(){
 			setHeight(scrollPercent)
 
 		  	/*** Getting wrapR to scroll, the values are in percentages ***/
-			if(ru(scrollPercent) >= projectHeight && ru(scrollPercent) <= 39.9){
+			if(ru(scrollPercent) >= projectHeight && ru(scrollPercent) <= 19.9){
 				setContainerYPos('-100%')
 			}
-			else if(ru(scrollPercent) >= projectHeight * 2 && ru(scrollPercent) <= 59.9){
+			else if(ru(scrollPercent) >= projectHeight * 2 && ru(scrollPercent) <= 29.9){
 				setContainerYPos('-200%')
 			}
-			else if(ru(scrollPercent) >= projectHeight * 3 && ru(scrollPercent) <= 79.9){
+			else if(ru(scrollPercent) >= projectHeight * 3 && ru(scrollPercent) <= 39.9){
 				setContainerYPos('-300%')
 			}
-			else if(ru(scrollPercent) >= projectHeight * 4 && ru(scrollPercent) <= 200){
+			else if(ru(scrollPercent) >= projectHeight * 4 && ru(scrollPercent) <= 49.9){
 				setContainerYPos('-400%')
+			}
+			else if(ru(scrollPercent) >= projectHeight * 5 && ru(scrollPercent) <= 59.9){
+				setContainerYPos('-500%')
+			}
+			else if(ru(scrollPercent) >= projectHeight * 6 && ru(scrollPercent) <= 69.9){
+				setContainerYPos('-600%')
+			}
+			else if(ru(scrollPercent) >= projectHeight * 7 && ru(scrollPercent) <= 79.9){
+				setContainerYPos('-700%')
+			}
+			else if(ru(scrollPercent) >= projectHeight * 8 && ru(scrollPercent) <= 89.9){
+				setContainerYPos('-800%')
+			}
+			else if(ru(scrollPercent) >= projectHeight * 9 && ru(scrollPercent) <= 100){
+				setContainerYPos('-900%')
 			}
 			else{
 				setContainerYPos('0%')
@@ -162,6 +178,26 @@ export default function MainContainer(){
  		{
  			href:"#pro5",
  			project:"Porsche Ad"
+ 		},
+ 		{
+ 			href:"#pro6",
+ 			project:"221 Ad"
+ 		},
+ 		{
+ 			href:"#pro7",
+ 			project:"BPorsche Ad"
+ 		},
+ 		{
+ 			href:"#pro8",
+ 			project:"CPorsche Ad"
+ 		},
+ 		{
+ 			href:"#pro9",
+ 			project:"DPorsche Ad"
+ 		},
+ 		{
+ 			href:"#pro10",
+ 			project:"EPorsche Ad"
  		}
  	]
 

@@ -23,6 +23,33 @@ export default function RightWrapper(props){
 				<div className="wrapRImg">
 					<img src={Images.porscheCover} alt="placeholder"/>
 				</div>
+				<div className="wrapRImg">
+					<img src={Images.potad} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.littlecaesers} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.mediakit} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.porscheCover} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.porscheCover} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.porscheCover} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.porscheCover} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.porscheCover} alt="placeholder"/>
+				</div>
+				<div className="wrapRImg">
+					<img src={Images.porscheCover} alt="placeholder"/>
+				</div>
 			</section>
 
 			<Portfolio />

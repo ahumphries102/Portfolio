@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding:0;
+  box-sizing:border-box;
 }
 html{
   scroll-behavior: smooth;
@@ -187,8 +188,8 @@ on the left side of the screen ***/
 .projects li{
   position: relative;
 }
-.projects li:nth-child(n + 2){
-  margin-top: 2rem;
+.projects li{
+  margin-top:15%;
 }
 .projects li::before{
   content: '';
@@ -287,6 +288,7 @@ on the Right side of the screen ***/
   margin:0 auto;
   height: 100vh;
   background-color: rgb(255,255,255);
+  padding: 8%;
 }
 /***.portInfo h2 creates space from the top of portInfo and
 pushes the rest of the content down as well without ruining
@@ -395,7 +397,7 @@ the layout ***/
   display: block;
   height: 100vh;
   width: auto;
-  object-fit: fill;
+  object-fit: cover;
 }
 /* 
   ##Device = Desktops
