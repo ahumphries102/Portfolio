@@ -27,25 +27,39 @@ import blackPorscheAd from '../ScreenShots/blackporschead.jpg'
 import whitePorscheAd from '../ScreenShots/whiteporschead.jpg'
 import porscheCayman from '../ScreenShots/porschecayman.jpg'
 import potad from '../ScreenShots/221ad.jpg'
-import littlecaesers from '../ScreenShots/LC 6 dollar.jpg'
-import littlecaeserssmall from '../ScreenShots/littlecaesers.jpg'
+import prc from '../ScreenShots/prc.jpg'
+import prcred from '../ScreenShots/PRCDB3.jpg'
+import lclogo from '../ScreenShots/lclogo.jpg'
+import lcsmall from '../ScreenShots/lcsmall.jpg'
+import lcaddress from '../ScreenShots/lcaddress.jpg'
 import mediakit from '../ScreenShots/Digital Media Kit.jpg'
 import mediakitsmall from '../ScreenShots/Digital Media Kit-2.jpg'
 import mediakitsmall2 from '../ScreenShots/Digital Media Kit-4.jpg'
 import strawberry from '../ScreenShots/Nologoflyin.jpg'
-
+import pamphF from '../ScreenShots/Pamph_Front.png'
+import seaAd from '../ScreenShots/Applause 2.jpg'
+import campAd from '../ScreenShots/Applause-2.jpg'
+import bearAd from '../ScreenShots/Applause-2 - Copy.jpg'
 let portfolioImages = {
 	capStoneCover:capImgLand,
 	tomaCover:tomagatchiCover,
 	deckBuildCover:deckBuildCover,
 	gameJqueryCover:gameJqueryCover,
 	porscheCover:porscheCover,
-	littlecaesers:littlecaesers,
+	lclogo:lclogo,
+	lcsmall:lcsmall,
+	lcaddress:lcaddress,
 	mediakit:mediakit,
 	mediakitsmall:mediakitsmall,
 	mediakitsmall2:mediakitsmall2,
-	
 	potad:potad,
+	prc:prc,
+	prcred:prcred,
+	pamphF:pamphF,
+	strawberry:strawberry,
+	seaAd:seaAd,
+	campAd:campAd,
+	bearAd:bearAd,
 	img2:capImgGif,
 	img3:capIntro,
 	img4:capData,

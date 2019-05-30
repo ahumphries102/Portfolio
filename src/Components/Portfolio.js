@@ -59,7 +59,7 @@ export default function Portfolio() {
         
         <div className="portInfo">
             <div className="portText">
-                <h2>Porsche Ad</h2>
+                <h2>Porsche</h2>
                 <p>I designed these ads for Porsche of Bellingham as part of their ad campaign that ran for over 2 years.</p>
             </div>
             <img src={Images.img10} alt="placeholder"/>
@@ -70,6 +70,50 @@ export default function Portfolio() {
             <img src={Images.img12} alt="placeholder"/>
             <figcaption>The white ad ran during the day. Porsche corporate said it was clean and simple which caught drivers eyes</figcaption>
         </div>
+
+        <div className="portInfo">
+            <div className="portText">
+                <h2>PRC Cannabis</h2>
+                <p>I designed these ads for Porsche of Bellingham as part of their ad campaign that ran for over 2 years.</p>
+            </div>
+            <img src={Images.prc} alt="placeholder"/>
+            <figcaption>PRC Cannabis rebranded and tasked me with coming up with a goverment compliant ad that was easy for drivers to understand.</figcaption>
+            <img src={Images.prcred} alt="placeholder"/>
+            <figcaption>I chose a dark red and placed the color over a wood texture to give it a barn feel because the store they were advertising was located in a red barn.</figcaption>
+        </div>
+
+        <div className="portInfo">
+            <div className="portText">
+                <h2>Little Caesers</h2>
+                <p>This campaign was designed to show people that Little Caesers was in their neighborhood and easily accessible.</p>
+            </div>
+            <img src={Images.lcsmall} alt="placeholder"/>
+            <figcaption>$6 was the main focus because this branch was the only one in 20 miles offering this deal.</figcaption>
+
+            <img src={Images.lcaddress} alt="placeholder"/>
+            <figcaption>Adding an address is tricky on a highway billboard so in order to make it more obvious I simply used the image associated with location.</figcaption>
+            </div>
+
+            <div className="portInfo">
+                <div className="portText">
+                    <h2>Stillaguamish Outdoor Media Marketing Material</h2>
+                    <p>Under Construction</p>
+                </div>
+            </div>
+
+            <div className="portInfo">
+                <div className="portText">
+                    <h2>Stillaguamish Outdoor Media Kit</h2>
+                    <p>Under Construction</p>
+                </div>
+            </div>
+
+            <div className="portInfo">
+                <div className="portText">
+                    <h2>River Rock Smoke Shop</h2>
+                    <p>Under Construction</p>
+                </div>
+            </div>
     </section>
     )
 }

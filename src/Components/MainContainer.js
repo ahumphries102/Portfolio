@@ -177,27 +177,27 @@ export default function MainContainer(){
  		},
  		{
  			href:"#pro5",
- 			project:"Porsche Ad"
+ 			project:"Porsche"
  		},
  		{
  			href:"#pro6",
- 			project:"221 Ad"
+ 			project:"PRC Cannabis"
  		},
  		{
  			href:"#pro7",
- 			project:"BPorsche Ad"
+ 			project:"Little Caesers"
  		},
  		{
  			href:"#pro8",
- 			project:"CPorsche Ad"
+ 			project:"Media Kit"
  		},
  		{
  			href:"#pro9",
- 			project:"DPorsche Ad"
+ 			project:"Marketing Material"
  		},
  		{
  			href:"#pro10",
- 			project:"EPorsche Ad"
+ 			project:"River Rock Smoke Shop"
  		}
  	]
 
