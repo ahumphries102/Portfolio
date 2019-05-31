@@ -580,6 +580,10 @@ the layout ***/
   .nav{
     bottom: 15%;
   }
+  .projects li{
+    font-size:.8rem;
+    margin-top:2rem;
+  }
   .socialMedia{
     bottom: 12%;
   }
