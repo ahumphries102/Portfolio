@@ -189,11 +189,11 @@ export default function MainContainer(){
  		},
  		{
  			href:"#pro8",
- 			project:"Media Kit"
+ 			project:"Marketing Material"
  		},
  		{
  			href:"#pro9",
- 			project:"Marketing Material"
+ 			project:"Outdoor Media Web App"
  		},
  		{
  			href:"#pro10",

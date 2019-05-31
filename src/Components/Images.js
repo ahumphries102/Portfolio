@@ -33,10 +33,13 @@ import lclogo from '../ScreenShots/lclogo.jpg'
 import lcsmall from '../ScreenShots/lcsmall.jpg'
 import lcaddress from '../ScreenShots/lcaddress.jpg'
 import mediakit from '../ScreenShots/Digital Media Kit.jpg'
-import mediakitsmall from '../ScreenShots/Digital Media Kit-2.jpg'
-import mediakitsmall2 from '../ScreenShots/Digital Media Kit-4.jpg'
-import strawberry from '../ScreenShots/Nologoflyin.jpg'
+import mediakit2 from '../ScreenShots/Digital Media Kit-2.jpg'
+import mediakit3 from '../ScreenShots/Digital Media Kit-4.jpg'
+import nw1 from '../ScreenShots/nw1.png'
+import nw2 from '../ScreenShots/nw2.png'
+import nw3 from '../ScreenShots/nw3.png'
 import pamphF from '../ScreenShots/Pamph_Front.png'
+import strawberry from '../ScreenShots/Nologoflyin.jpg'
 import seaAd from '../ScreenShots/Applause 2.jpg'
 import campAd from '../ScreenShots/Applause-2.jpg'
 import bearAd from '../ScreenShots/Applause-2 - Copy.jpg'
@@ -50,8 +53,11 @@ let portfolioImages = {
 	lcsmall:lcsmall,
 	lcaddress:lcaddress,
 	mediakit:mediakit,
-	mediakitsmall:mediakitsmall,
-	mediakitsmall2:mediakitsmall2,
+	mediakit2:mediakit2,
+	mediakit3:mediakit3,
+	nw1:nw1,
+	nw2:nw2,
+	nw3:nw3,
 	potad:potad,
 	prc:prc,
 	prcred:prcred,

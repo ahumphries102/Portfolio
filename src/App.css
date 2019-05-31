@@ -189,7 +189,7 @@ on the left side of the screen ***/
   position: relative;
 }
 .projects li{
-  margin-top:4rem;
+  margin-top:3rem;
 }
 .projects li::before{
   content: '';
