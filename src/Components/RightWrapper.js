@@ -12,7 +12,7 @@ export default function RightWrapper(props){
 					<img src={Images.capStoneCover} alt="placeholder"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.deckBuildCover} alt="placeholder"/>
+					<img src='http://www.artofmtg.com/wp-content/uploads/2018/04/Mox-Amber-Dominaria-MtG-Art.jpg' alt="placeholder"/>
 				</div>
 				<div className="wrapRImg">
 					<img src={Images.tomaCover} alt="placeholder"/>
