@@ -144,6 +144,7 @@ export default function MainContainer(){
 			else{
 				setContainerYPos('0%')
 			}
+			console.log(scrollPercent)
 		}
 	})
 
