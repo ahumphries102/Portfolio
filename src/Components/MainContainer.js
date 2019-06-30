@@ -138,7 +138,7 @@ export default function MainContainer(){
 			else if(ru(scrollPercent) >= projectHeight * 8 && ru(scrollPercent) <= 89.9){
 				setContainerYPos('-800%')
 			}
-			else if(ru(scrollPercent) >= projectHeight * 9 && ru(scrollPercent) <= 90){
+			else if(ru(scrollPercent) >= projectHeight * 9 && ru(scrollPercent) <= 100){
 				setContainerYPos('-900%')
 			}
 			else{
