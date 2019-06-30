@@ -20,7 +20,7 @@ import gameGif from '../ScreenShots/game.gif'
 //the right hand side of the main container
 import capImgLand from '../ScreenShots/capstonelandingimg.png'
 import tomagatchiCover from '../ScreenShots/tomagatchicover.png'
-import deckBuildCover from '../ScreenShots/deckbuild.png'
+import deliverunto from '../ScreenShots/deliverunto.jpg'
 import gameJqueryCover from '../ScreenShots/gamejquerycover.png'
 import porscheCover from '../ScreenShots/porschecover.jpg'
 import blackPorscheAd from '../ScreenShots/blackporschead.jpg'
@@ -46,7 +46,7 @@ import bearAd from '../ScreenShots/Applause-2 - Copy.jpg'
 let portfolioImages = {
 	capStoneCover:capImgLand,
 	tomaCover:tomagatchiCover,
-	deckBuildCover:deckBuildCover,
+	deliverunto:deliverunto,
 	gameJqueryCover:gameJqueryCover,
 	porscheCover:porscheCover,
 	lclogo:lclogo,

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import RightWrapper from './RightWrapper'
 import LeftWrapper from './LeftWrapper'
+
 export default function MainContainer(){
 	//ru stands for round up
 	let ru = Math.ceil
@@ -60,7 +61,6 @@ export default function MainContainer(){
 	    config: { ease: 5000 } 
   	})
 
-	
 
   	//Show is called when the About link or the button element is clicked
 	function show(view){
@@ -138,7 +138,7 @@ export default function MainContainer(){
 			else if(ru(scrollPercent) >= projectHeight * 8 && ru(scrollPercent) <= 89.9){
 				setContainerYPos('-800%')
 			}
-			else if(ru(scrollPercent) >= projectHeight * 9 && ru(scrollPercent) <= 100){
+			else if(ru(scrollPercent) >= projectHeight * 9 && ru(scrollPercent) <= 90){
 				setContainerYPos('-900%')
 			}
 			else{

@@ -9,8 +9,8 @@ export default function About(){
 				<p>Hire me at</p> <a href = "mailto: ahumphries102@gmail.com?subject=Portfolio"><span id="email">Ahumphries102@gmail.com</span></a>
 			</div>
 			<section className="socialMedia">
-			<a href="https://www.linkedin.com/in/ahumphriesprofile/"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/56-linkedin-512.png"/></a>
-			<a href="https://github.com/ahumphries102?tab=repositories"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/71-github-512.png"/></a>
+			<a href="https://www.linkedin.com/in/ahumphriesprofile/"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/56-linkedin-512.png" alt="linkedin icon"/></a>
+			<a href="https://github.com/ahumphries102?tab=repositories"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/71-github-512.png" alt="github icon"/></a>
 
 			</section>
 		</section>
