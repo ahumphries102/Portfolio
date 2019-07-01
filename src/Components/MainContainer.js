@@ -114,7 +114,10 @@ export default function MainContainer(){
 			setHeight(scrollPercent)
 
 		  	/*** Getting wrapR to scroll, the values are in percentages ***/
-			if(ru(scrollPercent) >= projectHeight && ru(scrollPercent) <= 19.9){
+		  	if(ru(scrollPercent) >= 0 && ru(scrollPercent <= 9.9)){
+		  		setContainerYPos('0%')
+		  	}
+			else if(ru(scrollPercent) >= projectHeight && ru(scrollPercent) <= 19.9){
 				setContainerYPos('-100%')
 			}
 			else if(ru(scrollPercent) >= projectHeight * 2 && ru(scrollPercent) <= 29.9){
@@ -138,11 +141,8 @@ export default function MainContainer(){
 			else if(ru(scrollPercent) >= projectHeight * 8 && ru(scrollPercent) <= 89.9){
 				setContainerYPos('-800%')
 			}
-			else if(ru(scrollPercent) >= projectHeight * 9 && ru(scrollPercent) < 99.9){
-				setContainerYPos('-900%')
-			}
 			else{
-				setContainerYPos('0%')
+				setContainerYPos('-900%')
 			}
 			console.log(scrollPercent)
 		}
