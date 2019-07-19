@@ -29,7 +29,7 @@ button:focus{
 h1,h2,h3,h4,h5,h6{
   font-family: 'Josefin Sans', sans-serif !important;
 }
-h1 > span{
+h1 > span, h2 > span{
   color: #ff1144;
 }
 hr{
@@ -130,6 +130,9 @@ on the left side of the screen ***/
 .home{
   position: relative;
   margin-left: 5%;
+}
+.home h2{
+  font-size: 1rem;
 }
 /****** Nav Styles *******/
 .nav{
