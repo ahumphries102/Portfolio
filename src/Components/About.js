@@ -4,8 +4,8 @@ export default function About(){
 	return(
 		<section className="about">
 			<div className="aboutText">
-				<h2>I’m a results driven web developer and graphic designer who clearly and consistently turns ideas into visuals and interactivity.</h2>
-				<p>I've had an exciting time learning everything I can about Web Development beginning when I was in college. From there I joined a company and built their entire web application. Since then I got my certificate at General Assembly in Web Development where I studied to be a full stack developer.</p>
+				<h2>I'm a Graphic Designer and Software Engineer. I'm passionate about both fields because I view them as similar mediums to bring ideas into reality.</h2>
+				<p>I've had an exciting time learning everything I can about software development and design beginning when I was in college. From there I joined a company and built their entire web application. Since that first app I decided to get certified as a Software Engineer in order to round out my skills as a developer and designer so I can be the best I can.</p>
 				<p>Learn More About me</p> <a href = "mailto: ahumphries102@gmail.com?subject=Portfolio"><span id="email">Ahumphries102@gmail.com</span></a>
 			</div>
 			<section className="socialMedia">
