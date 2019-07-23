@@ -143,6 +143,11 @@ on the left side of the screen ***/
   width: 100%;
   bottom: 2.5%;
 }
+.nav a{
+  position: relative;
+  z-index: 999;
+  color:black !important;
+}
 .navButton{
   position: relative;
   z-index: 999;
