@@ -26,7 +26,7 @@ export default function LeftWrapper(props){
 			<nav className="nav">
 				<button className="navButton" onClick={()=>props.show('about')}><span>{props.navAbout}</span></button>
 				<button className="navButton" onClick={props.openCloseProjects}><span>{props.navProjects}</span></button>
-				<a href='https://github.com/ahumphries102/Portfolio' target="_blank" rel="noopener noreferrer">Portfolio Git</a>
+				<a href='https://github.com/ahumphries102/Portfolio' target="_blank" rel="noopener noreferrer">{props.gitState}</a>
 			</nav>
 			</section>
 			<Projects  projects={props.projects} projectsXPos={props.projectsXPos} openCloseProjects = {props.openCloseProjects}/>

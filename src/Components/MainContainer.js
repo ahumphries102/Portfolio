@@ -26,6 +26,9 @@ export default function MainContainer(){
 
 	const [navProjects, setNavProjects] = useState('Projects')
 
+	//Changes Portfolio Git to say ' '
+	const [gitState, setGitState] = useState('Portfolio Git')
+
 	//Changes work to say home
 	const [navWork, setNavWork] = useState('Work')
 
@@ -71,6 +74,7 @@ export default function MainContainer(){
 			setNavProjects(navWork === 'Work' ? '' : 'Projects')
 			setNavWork(navWork === 'Work' ? '': 'Work')
 			setNavAbout(navAbout === 'About' ? 'Home': 'About')
+			setGitState(gitState === 'Portfolio Git' ? '' : 'Portfolio Git')
 		}
 		else{
 			
@@ -217,7 +221,7 @@ export default function MainContainer(){
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
 				
-				<LeftWrapper projects={newProjectArr} navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
+				<LeftWrapper projects={newProjectArr} gitState = {gitState} navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
 				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
