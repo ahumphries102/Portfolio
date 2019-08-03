@@ -132,7 +132,7 @@ on the left side of the screen ***/
   margin-left: 5%;
 }
 .home h2{
-  font-size: 1rem;
+  font-size: 2rem;
 }
 /****** Nav Styles *******/
 .nav{
@@ -435,6 +435,9 @@ the layout ***/
   li{
     margin: 1rem 0 0 1rem;
   }
+  .nav a, .nav button{
+    font-size: 1.5rem;
+  }
 }
 
 /* 
@@ -444,12 +447,7 @@ the layout ***/
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   
-  a{
-    font-size: 1.1rem;
-  }
-  button{
-  font-size: 1.5rem;
-  }
+ 
   h1{
     font-size: 3rem;
   }
@@ -465,6 +463,9 @@ the layout ***/
   li{
     margin: 1rem 0 0 1rem;
   }
+  .nav a, .nav button{
+    font-size: 1.5rem;
+  }
 }
 
 /* 
@@ -474,12 +475,6 @@ the layout ***/
 
 @media (min-width: 768px) and (max-width: 1024px) {
   
-  a{
-    font-size: 1rem;
-  }
-  button{
-  font-size: 2rem;
-  }
   h1{
     font-size: 3.5rem;
   }
@@ -495,6 +490,9 @@ the layout ***/
   li{
     margin: 1rem 0 0 1rem;
   }
+  .nav a, .nav button{
+    font-size: 1.5rem;
+  }
 }
 
 /* 
@@ -504,12 +502,7 @@ the layout ***/
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
-  a{
-    font-size: 1.4rem;
-  }
-  button{
-  font-size: 2rem;
-  }
+ 
   h1{
     font-size: 3.5rem;
   }
@@ -533,12 +526,7 @@ the layout ***/
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  a{
-    font-size: 1rem;
-  }
-  button{
-  font-size: 2rem;
-  }
+ 
   h1{
     font-size: 2.5rem;
   }
@@ -587,6 +575,9 @@ the layout ***/
   }
   .nav{
     bottom: 15%;
+  }
+  .nav a, .nav button{
+    font-size: .8rem;
   }
   .projects li{
     font-size:.8rem;
