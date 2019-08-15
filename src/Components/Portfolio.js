@@ -6,19 +6,16 @@ export default function Portfolio() {
 	<section className="portfolio">
     	<div className="portInfo">
             <div className="portText">
-    		  <h2>Magic the Gathering Tutorial</h2>
-    		  <p>High lights of this application include fetching an API to display all of the images and
-    		  using Python's back end tool Flask and a PIP package Flask Mail to send 
-    		  emails using the form. Material UI was used to create the slideout sidebar</p>
+    		  <h2>Full Stack Exercise Tracker</h2>
+    		  <p>This project utilizes the MERN stack to allow users to create users, assign exercises to them. All the data entered in this app is saved to a MongoDB database.</p>
     		  
-              <a href="https://github.com/ahumphries102/Capstone">Github</a>
+              <a href="https://github.com/ahumphries102/exerciseApp">Github</a><br/>
+              <a href="https://ahumphries102.github.io/exerciseApp/" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
     		<img src={Images.img2} alt="placeholder"/>
-            <figcaption>Overall view of my capstone which uses Material.ui</figcaption>
+            <figcaption>The create users page. When a user accesses this page they can create a user which is saved to a MongoDB</figcaption>
             <img src={Images.img3} alt="placeholder"/>
-    		<figcaption>Backend code using Flask fetching an API using Async/Await</figcaption>
-            <img src={Images.img4} alt="placeholder"/>
-            <figcaption>A database I created to hold all the relevant information</figcaption>
+    		<figcaption>The data that is stored in my MongDB</figcaption>
     	</div>
     	
     	<div className="portInfo">

@@ -165,7 +165,7 @@ export default function MainContainer(){
  //based on the amount of projects we include.
  	let mainConHeightArr =  [{
  			href:"#pro1",
- 			project:'Magic the Gathering'},
+ 			project:'Exercise Tracker'},
 
  		{
  			href:"#pro2",

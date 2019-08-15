@@ -1,14 +1,15 @@
 
 //import CapImg2 from '../ScreenShots/flaskserv.png'
 import capImgGif from '../ScreenShots/usewebsite.gif'
-import capIntro from '../ScreenShots/intro.webp'
-import capData from '../ScreenShots/database.png'
+import exerciseCreate from '../ScreenShots/exerciseCreate.jpg'
+import exerciseDb from '../ScreenShots/exerciseDb.jpg'
 /************************************************/
 import saveDeck from '../ScreenShots/saveDeck.png'
 import typeEnd from '../ScreenShots/typographyEnd.png'
 /************************************************/
 //Second div in portfolio images
 import buildDeckGif from '../ScreenShots/builddeck.gif'
+import database from '../ScreenShots/database.png'
 //import DeckBuildPng from '../ScreenShots/deckbuild.png'
 
 //Third div in portfolio images
@@ -18,7 +19,7 @@ import gameGif from '../ScreenShots/game.gif'
 
 //These images are for the portfolio Covers, the images on
 //the right hand side of the main container
-import capImgLand from '../ScreenShots/capstonelandingimg.webp'
+import exerciseCover from '../ScreenShots/exerciseCover.jpeg'
 import tomagatchiCover from '../ScreenShots/tomagatchicover.png'
 import deliverunto from '../ScreenShots/deliverunto.jpg'
 import gameJqueryCover from '../ScreenShots/gamejquerycover.png'
@@ -44,7 +45,7 @@ import seaAd from '../ScreenShots/Applause 2.jpg'
 import campAd from '../ScreenShots/Applause-2.jpg'
 import bearAd from '../ScreenShots/Applause-2 - Copy.jpg'
 let portfolioImages = {
-	capStoneCover:capImgLand,
+	capStoneCover:exerciseCover,
 	tomaCover:tomagatchiCover,
 	deliverunto:deliverunto,
 	gameJqueryCover:gameJqueryCover,
@@ -66,9 +67,9 @@ let portfolioImages = {
 	seaAd:seaAd,
 	campAd:campAd,
 	bearAd:bearAd,
-	img2:capImgGif,
-	img3:capIntro,
-	img4:capData,
+	img2:exerciseCreate,
+	img3:exerciseDb,
+	img4:database,
 	img5:buildDeckGif,
 	img6:saveDeck,
 	img7:tomagatchiGif,
