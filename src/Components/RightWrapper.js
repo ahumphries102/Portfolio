@@ -9,34 +9,34 @@ export default function RightWrapper(props){
 
 			<section style={props.wrapRFilter} className="wrapR">
 				<div className="wrapRImg">
-					<img src={Images.capStoneCover} alt="placeholder"/>
+					<img src={Images.exerciseCover} alt="Exercise"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.deliverunto} alt="placeholder"/>
+					<img src={Images.deliverunto} alt="Magic"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.tomaCover} alt="placeholder"/>
+					<img src={Images.tomaCover} alt="Tomagotchi"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.gameJqueryCover} alt="placeholder"/>
+					<img src={Images.gameJqueryCover} alt="TypographyGame"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.porscheCover} alt="placeholder"/>
+					<img src={Images.porscheCover} alt="Porsche"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.potad} alt="placeholder"/>
+					<img src={Images.potad} alt="Cannabis"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.lclogo} alt="placeholder"/>
+					<img src={Images.lclogo} alt="LCLogo"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.mediakit} alt="placeholder"/>
+					<img src={Images.mediakit} alt="MediaKit"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.pamphF} alt="placeholder"/>
+					<img src={Images.pamphF} alt="Pamphlet"/>
 				</div>
 				<div className="wrapRImg">
-					<img src={Images.strawberry} alt="placeholder"/>
+					<img src={Images.strawberry} alt="strawberry"/>
 				</div>
 			</section>
 

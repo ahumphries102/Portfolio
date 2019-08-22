@@ -163,10 +163,11 @@ export default function MainContainer(){
  //The height of the main container is equal to the amount of objects within the
  //mainConHeightArray. This let's us dynamically increase the height over our app
  //based on the amount of projects we include.
- 	let mainConHeightArr =  [{
+ 	let mainConHeightArr =  [
+ 		{
  			href:"#pro1",
- 			project:'Exercise Tracker'},
-
+ 			project:'Exercise Tracker'
+ 		},
  		{
  			href:"#pro2",
  			project:'Magic the Gathering Tutorial',

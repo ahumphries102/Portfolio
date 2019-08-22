@@ -1,6 +1,5 @@
 
-//import CapImg2 from '../ScreenShots/flaskserv.png'
-import capImgGif from '../ScreenShots/usewebsite.gif'
+
 import exerciseCreate from '../ScreenShots/exerciseCreate.jpg'
 import exerciseDb from '../ScreenShots/exerciseDb.jpg'
 /************************************************/
@@ -45,7 +44,7 @@ import seaAd from '../ScreenShots/Applause 2.jpg'
 import campAd from '../ScreenShots/Applause-2.jpg'
 import bearAd from '../ScreenShots/Applause-2 - Copy.jpg'
 let portfolioImages = {
-	capStoneCover:exerciseCover,
+	exerciseCover:exerciseCover,
 	tomaCover:tomagatchiCover,
 	deliverunto:deliverunto,
 	gameJqueryCover:gameJqueryCover,
