@@ -43,7 +43,15 @@ import strawberry from '../ScreenShots/Nologoflyin.jpg'
 import seaAd from '../ScreenShots/Applause 2.jpg'
 import campAd from '../ScreenShots/Applause-2.jpg'
 import bearAd from '../ScreenShots/Applause-2 - Copy.jpg'
+import quizImg from '../ScreenShots/quiz-night.jpg'
+import createaQuiz from '../ScreenShots/createaQuiz.PNG'
+import emailaquiz from '../ScreenShots/emailaquiz.PNG'
+import emailsuccess from '../ScreenShots/emailsuccess.PNG'
 let portfolioImages = {
+	createaQuiz: createaQuiz,
+	emailaquiz: emailaquiz,
+	emailsuccess: emailsuccess,
+	quizImg: quizImg,
 	exerciseCover:exerciseCover,
 	tomaCover:tomagatchiCover,
 	deliverunto:deliverunto,

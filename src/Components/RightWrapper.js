@@ -9,6 +9,9 @@ export default function RightWrapper(props){
 
 			<section style={props.wrapRFilter} className="wrapR">
 				<div className="wrapRImg">
+					<img src={Images.quizImg} alt="quiz"/>
+				</div>
+				<div className="wrapRImg">
 					<img src={Images.exerciseCover} alt="Exercise"/>
 				</div>
 				<div className="wrapRImg">

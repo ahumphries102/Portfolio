@@ -157,7 +157,6 @@ on the left side of the screen ***/
   transform-origin: center;
   border:0;
   font-family: inherit;
-  width: ;
 }
 .navButton:hover{
   cursor: pointer;
@@ -406,6 +405,9 @@ the layout ***/
   height: 100vh;
   width: auto;
   object-fit: cover;
+}
+.portInfo img:hover{
+  transform:scale(1.5)
 }
 /* 
   ##Device = Desktops

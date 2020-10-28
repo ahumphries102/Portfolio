@@ -4,6 +4,23 @@ export default function Portfolio() {
     return (
 
 	<section className="portfolio">
+        <div className="portInfo">
+            <div className="portText">
+    		  <h2>Quiz App</h2>
+    		  <p>This project uses Vue.js, Vue Router and my own storage (similar Vuex) for storing global variables and functions.</p>
+              <p>This app was created in order to provide people with a way to create as many quizzes or tests as they want. It is fully customizable which means users can create as many questions with as many answers as they choose.</p>
+    		  
+              <a href="https://github.com/ahumphries102/Quiz" target="_blank" rel="noopener noreferrer">Github</a><br/>
+              <a href="https://quizzor.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+    		<img src={Images.createaQuiz} alt="placeholder"/>
+            <figcaption>The create quiz page lets users create custom quizzes</figcaption>
+            <img src={Images.emailaquiz} alt="placeholder"/>
+    		<figcaption>Users can email each other quizzes that only they can take.</figcaption>
+            <img src={Images.emailsuccess} alt="placeholder"/>
+    		<figcaption>What it looks like when a user receives an email</figcaption>
+    	</div>
+
     	<div className="portInfo">
             <div className="portText">
     		  <h2>Full Stack Exercise Tracker</h2>

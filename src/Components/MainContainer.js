@@ -151,42 +151,34 @@ export default function MainContainer(){
 		}
 	})
 
-	// useEffect(()=> {
- //    fetch("http://localhost:8080/")
- //      .then(response => response.json())
- //      .then(data =>
- //        console.log("We served")
- //      )
- //      .catch(error=>console.log(error))
- //  })
 
- //The height of the main container is equal to the amount of objects within the
- //mainConHeightArray. This let's us dynamically increase the height over our app
- //based on the amount of projects we include.
+	//The height of the main container is equal to the amount of objects within the
+	//mainConHeightArray. This let's us dynamically increase the height over our app
+	//based on the amount of projects we include.
  	let mainConHeightArr =  [
+		 {
+			href:"#pro1",
+			project: 'Quiz App'
+		 },
  		{
- 			href:"#pro1",
+ 			href:"#pro2",
  			project:'Exercise Tracker'
  		},
  		{
- 			href:"#pro2",
+ 			href:"#pro3",
  			project:'Magic the Gathering Tutorial',
  		},
  		{
- 			href:"#pro3",
+ 			href:"#pro4",
  			project:'Tamagotchi Game'
  		},
  		{
- 			href:"#pro4",
+ 			href:"#pro5",
  			project:"Typography Game"
  		},
  		{
- 			href:"#pro5",
- 			project:"Porsche"
- 		},
- 		{
  			href:"#pro6",
- 			project:"PRC Cannabis"
+ 			project:"Porsche"
  		},
  		{
  			href:"#pro7",
@@ -207,12 +199,12 @@ export default function MainContainer(){
  	]
 
  	//Adds a number of list items to the Projects section based on the
- 	//the number of elements in themainConHeightArr array
+ 	//the number of elements in the mainConHeightArr array
  	let newProjectArr = mainConHeightArr.map((element, index)=>{
  		const hrefId = `${element.href}`
 		return <li key={index}><a href={hrefId} onClick={openCloseProjects} className="projectsButton">{element.project}</a></li>
  	})
- 	//Adds a number of Articles to the html based on the number of elements
+ 	//Adds a number of Articles to the DOM based on the number of elements
  	//in the mainConHeightArr array.
 	let newMainConHeightArr = mainConHeightArr.map((element, index)=>{
 		const articleName = `pro${index+1}`
