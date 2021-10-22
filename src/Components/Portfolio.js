@@ -88,7 +88,7 @@ export default function Portfolio() {
             <figcaption>The white ad ran during the day. Porsche corporate said it was clean and simple which caught drivers eyes</figcaption>
         </div>
 
-        <div className="portInfo">
+        {/* <div className="portInfo">
             <div className="portText">
                 <h2>PRC Cannabis</h2>
                 <p>PRC came to me when they first began advertising and wanted something creative and would drive business. They told me I delivered on my promise.</p>
@@ -97,7 +97,7 @@ export default function Portfolio() {
             <figcaption>PRC Cannabis rebranded and tasked me with coming up with a goverment compliant ad that was easy for drivers to understand.</figcaption>
             <img src={Images.prcred} alt="placeholder"/>
             <figcaption>A dark red was chosen and placed over a wood texture to give it a barn feel because the store they were operating out of was located at a 'Red Barn' gas station.</figcaption>
-        </div>
+        </div> */}
 
         <div className="portInfo">
             <div className="portText">

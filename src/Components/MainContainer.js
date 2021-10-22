@@ -152,14 +152,14 @@ export default function MainContainer(){
 	})
 
 
-	//The height of the main container is equal to the amount of objects within the
-	//mainConHeightArray. This let's us dynamically increase the height over our app
-	//based on the amount of projects we include.
+	// The height of the main container is equal to the amount of objects within the
+	// mainConHeightArray. This let's us dynamically increase the height over our app
+	// based on the amount of projects we include.
  	let mainConHeightArr =  [
-		 {
+		{
 			href:"#pro1",
 			project: 'Quiz App'
-		 },
+		},
  		{
  			href:"#pro2",
  			project:'Exercise Tracker'
@@ -198,14 +198,14 @@ export default function MainContainer(){
  		}
  	]
 
- 	//Adds a number of list items to the Projects section based on the
- 	//the number of elements in the mainConHeightArr array
+ 	// Adds a number of list items to the Projects section based on the
+ 	// the number of elements in the mainConHeightArr array
  	let newProjectArr = mainConHeightArr.map((element, index)=>{
  		const hrefId = `${element.href}`
 		return <li key={index}><a href={hrefId} onClick={openCloseProjects} className="projectsButton">{element.project}</a></li>
  	})
- 	//Adds a number of Articles to the DOM based on the number of elements
- 	//in the mainConHeightArr array.
+ 	// Adds a number of Articles to the DOM based on the number of elements
+ 	// in the mainConHeightArr array.
 	let newMainConHeightArr = mainConHeightArr.map((element, index)=>{
 		const articleName = `pro${index+1}`
 		return <article key={index} id={articleName}/>
@@ -213,9 +213,7 @@ export default function MainContainer(){
 	return(
 		<section className="mainContainer">
 			<animated.section style={slideX} className="innerMainContainer">
-				
 				<LeftWrapper projects={newProjectArr} gitState = {gitState} navProjects = {navProjects}  button={button} show={show} height={height} width={width} projectsXPos={projectsXPos} navAbout={navAbout} openCloseProjects = {openCloseProjects}/>
-				
 				<RightWrapper wrapRFilter={wrapRFilter}slideY={slideY}/>
 			</animated.section>
 		{/* these divs set how tall our body is. Currently it is 400vh tall*/}

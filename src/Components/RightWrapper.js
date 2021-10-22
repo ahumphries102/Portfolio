@@ -26,9 +26,9 @@ export default function RightWrapper(props){
 				<div className="wrapRImg">
 					<img src={Images.porscheCover} alt="Porsche"/>
 				</div>
-				<div className="wrapRImg">
+				{/* <div className="wrapRImg">
 					<img src={Images.potad} alt="Cannabis"/>
-				</div>
+				</div> */}
 				<div className="wrapRImg">
 					<img src={Images.lclogo} alt="LCLogo"/>
 				</div>
