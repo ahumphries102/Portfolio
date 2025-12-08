@@ -1,13 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-//import './index.css';
-import MainContainer from './Components/MainContainer';
+// 1. Change the import path for ReactDOM
+import { createRoot } from 'react-dom/client'; 
+import App from './Components/MainContainer';
 import './App.css'
-import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(<MainContainer />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const container = document.getElementById('root');
+// 2. Create a root
+const root = createRoot(container); 
+// 3. Render the application
+root.render(<App />);
