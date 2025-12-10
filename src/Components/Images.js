@@ -12,14 +12,14 @@ import database from '../ScreenShots/database.png'
 //import DeckBuildPng from '../ScreenShots/deckbuild.png'
 
 //Third div in portfolio images
-import tomagatchiGif from '../ScreenShots/tomagatchigif.gif'
+import tomagatchiGif from '../ScreenShots/pokedex.jpg'
 //Fourth div in portfolio images
 import gameGif from '../ScreenShots/game.gif'
 
 //These images are for the portfolio Covers, the images on
 //the right hand side of the main container
 import exerciseCover from '../ScreenShots/exerciseCover.jpeg'
-import tomagatchiCover from '../ScreenShots/tomagatchicover.png'
+import tomagatchiCover from '../ScreenShots/pokedexCover.jpeg'
 import deliverunto from '../ScreenShots/deliverunto.jpg'
 import gameJqueryCover from '../ScreenShots/gamejquerycover.png'
 import porscheCover from '../ScreenShots/porschecover.jpg'
@@ -47,6 +47,7 @@ import quizImg from '../ScreenShots/quiz-night.jpg'
 import createaQuiz from '../ScreenShots/createaQuiz.PNG'
 import emailaquiz from '../ScreenShots/emailaquiz.PNG'
 import emailsuccess from '../ScreenShots/emailsuccess.PNG'
+
 let portfolioImages = {
 	createaQuiz: createaQuiz,
 	emailaquiz: emailaquiz,

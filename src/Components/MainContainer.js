@@ -170,7 +170,7 @@ export default function MainContainer(){
  		},
  		{
  			href:"#pro4",
- 			project:'Tamagotchi Game'
+ 			project:'Pokedex'
  		},
  		{
  			href:"#pro5",

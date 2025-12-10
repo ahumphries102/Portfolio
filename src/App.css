@@ -1,141 +1,151 @@
-*{
+* {
   margin: 0;
-  padding:0;
-  box-sizing:border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
-  height:400vh;
+  height: 400vh;
 }
-body::-webkit-scrollbar{
-  height:0 !important;
-  width:0;
+body::-webkit-scrollbar {
+  height: 0 !important;
+  width: 0;
 }
 /*** this class is used to prevent the body from scrolling when a user is not on the home page ***/
-.bodyNoScroll{
+.bodyNoScroll {
   margin: 0;
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
 }
-a{
-  color:rgb(255, 255, 255) !important;
+a {
+  color: rgb(255, 255, 255) !important;
   text-decoration: none;
 }
 /*** Disables the blue box around the button on click ***/
-button:focus{
-  outline:0;
+button:focus {
+  outline: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Josefin Sans', sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif !important;
 }
-h1 > span, h2 > span{
+h1 > span,
+h2 > span {
   color: #ff1144;
 }
-hr{
+hr {
   border-top: 3px solid #ff1144;
 }
-p{
+p {
   font-size: 1rem !important;
   line-height: 2rem;
 }
-p, ul, li, a, figcaption, button{
-  font-family: 'Josefin Slab', serif !important;
+p,
+ul,
+li,
+a,
+figcaption,
+button {
+  font-family: "Josefin Slab", serif !important;
 }
 /*** Main Container sets the height of the entire app.
 Inner Main Container holds all the divs and always remains in
 the clients view ***/
-.mainContainer{
+.mainContainer {
   position: relative;
   width: 100%;
 }
 /*** the pro id are styled this way to give us the ability to use the a tag scroll
 feature associated with scrolling. Users can use the projects to scroll to projects with these styles***/
-.mainContainer article{
-  height:400vh;
+.mainContainer article {
+  height: 400vh;
 }
 
-.innerMainContainer{
+.innerMainContainer {
   position: fixed;
   display: flex;
-  width:100%;
+  width: 100%;
   height: 100vh;
-  right:50%;
+  right: 50%;
 }
 
-.introPage{
+.introPage {
   position: relative;
   z-index: 9;
-  background:green;
-  height:100vh;
+  background: green;
+  height: 100vh;
   width: 100vw;
 }
-
 
 /*** Left side styles ***/
 /*** Left Container deals with all the html styles
 on the left side of the screen ***/
-.leftContainer{
+.leftContainer {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  width:100vw;
+  width: 100vw;
   height: 100vh;
-  background:pink;
+  background: pink;
 }
 /*** Styles for the about section left of the home content ***/
-.about{
+.about {
   z-index: 800;
   text-align: right;
   display: flex;
   flex-direction: row-reverse;
-  background-color: rgb(40,40,40);
-  width:50vw;
+  background-color: rgb(40, 40, 40);
+  width: 50vw;
   height: inherit;
-  color:rgb(255,255,255);
+  color: rgb(255, 255, 255);
   overflow-wrap: break-word;
 }
-.aboutText{
+.aboutText {
   margin: 5% 10% 0 0;
   width: 75%;
 }
-.aboutText{
+.aboutText {
   font-weight: 400;
 }
-.aboutText > h2 span{
-  color:#ff1144;
+.aboutText > h2 span {
+  color: #ff1144;
 }
-.aboutText p{
+.aboutText p {
   margin-top: 2rem;
 }
-#email{
+#email {
   position: relative;
   font-weight: 700;
   line-height: 2px;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
-#email:hover{
-  text-shadow: 0 0 0px #FFFFFF, 0 0 0px #FFFFFF;
+#email:hover {
+  text-shadow: 0 0 0px #ffffff, 0 0 0px #ffffff;
 }
-#email::before{
-  content: '';
+#email::before {
+  content: "";
   width: 6%;
   position: absolute;
-  bottom: -.5rem;
+  bottom: -0.5rem;
   left: 0;
-  border-bottom: solid red ;
+  border-bottom: solid red;
 }
 
 /*** styles the content on the home page ***/
-.home{
+.home {
   position: relative;
   margin-left: 5%;
 }
-.home h2{
+.home h2 {
   font-size: 2rem;
 }
 /****** Nav Styles *******/
-.nav{
+.nav {
   position: absolute;
   z-index: 999;
   display: flex;
@@ -143,25 +153,25 @@ on the left side of the screen ***/
   width: 100%;
   bottom: 2.5%;
 }
-.nav a{
+.nav a {
   position: relative;
   z-index: 999;
-  color:black !important;
+  color: black !important;
 }
-.navButton{
+.navButton {
   position: relative;
   z-index: 999;
-  color:black;
-  background-color: rgb(0,0,0,0);
-  transition: .1s linear;
+  color: black;
+  background-color: rgb(0, 0, 0, 0);
+  transition: 0.1s linear;
   transform-origin: center;
-  border:0;
+  border: 0;
   font-family: inherit;
 }
-.navButton:hover{
+.navButton:hover {
   cursor: pointer;
 }
-.navButton > span::before{
+.navButton > span::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -181,53 +191,53 @@ on the left side of the screen ***/
   transform: scaleX(1);
 }
 /****** Styles for the projects page ******/
-.projects{
+.projects {
   position: absolute;
   /*** goes above the toggleslide button ***/
   z-index: 798;
-  height:100vh;
+  height: 100vh;
   width: 50vw;
-  background-color: rgb(40,40,40);
+  background-color: rgb(40, 40, 40);
 }
-.projects ul{
+.projects ul {
   list-style: none;
 }
-.projects li{
+.projects li {
   position: relative;
 }
-.projects li{
-  margin-top:3rem;
+.projects li {
+  margin-top: 3rem;
 }
-.projects li::before{
-  content: '';
+.projects li::before {
+  content: "";
   position: absolute;
   border-bottom: solid white thin;
   width: 90%;
   top: 130%;
 }
-.projectsButton{
-  height:10px;
+.projectsButton {
+  height: 10px;
   margin-top: 10%;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
-.projectsButton:hover{
-  text-shadow: 0 0 .6px #FFFFFF, 0 0 .5px #FFFFFF;
-  transform:translateX(3%);
+.projectsButton:hover {
+  text-shadow: 0 0 0.6px #ffffff, 0 0 0.5px #ffffff;
+  transform: translateX(3%);
 }
 
 /*** Scroll Fill handles the psuedo scroll bar ***/
-.scrollFill{
+.scrollFill {
   position: absolute;
-  right:0%;
+  right: 0%;
   /*** Top is defined so it's parent's flex doesn't
   center it vertically ***/
   top: 0% !important;
   z-index: 800;
-  width:1.5%;
+  width: 1.5%;
 }
 
 /*** styles the little black lines in center of page ***/
-.scrollList{
+.scrollList {
   position: absolute;
   list-style-type: none;
   right: 0;
@@ -235,40 +245,38 @@ on the left side of the screen ***/
   height: 100%;
   z-index: 801;
 }
-.scrollList li{
+.scrollList li {
   height: 25%;
   border-bottom: solid black thin;
 }
-.socialMedia{
+.socialMedia {
   position: absolute;
-  height:auto;
+  height: auto;
   width: 100%;
   bottom: 0;
 }
-.socialMedia img{
+.socialMedia img {
   height: auto;
   margin: 0 5% 1% 0;
   width: 50px;
   filter: grayscale(1);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.socialMedia img:hover{
+.socialMedia img:hover {
   transform: scale(1.05);
   filter: grayscale(0);
 }
 /*** wrapL handles most of the inner styles within lef container ***/
-.wrapL{
+.wrapL {
   position: relative;
   /*** centers the home styles ***/
   display: flex;
   align-items: center;
   z-index: 800;
-  background-color: rgb(255,255,255);
-  width:50vw;
+  background-color: rgb(255, 255, 255);
+  width: 50vw;
   height: 100vh;
 }
-
-
 
 /*************************** ***************** ***
 **************************** Right side styles ***
@@ -276,168 +284,154 @@ on the left side of the screen ***/
 
 /*** Right Container deals with all the html styles
 on the Right side of the screen ***/
-.rightContainer{
-  background-color: rgb(255,255,255);
+.rightContainer {
+  background-color: rgb(255, 255, 255);
   display: flex;
   width: 100vw;
 }
 
 /*** Portfolio styles ***/
-.portfolio{
+.portfolio {
   position: relative;
-  width:50vw;
+  width: 50vw;
 }
 /*** style everything in the portfolio ***/
-.portInfo{
+.portInfo {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll; 
-  margin:0 auto;
+  overflow-y: scroll;
+  margin: 0 auto;
   height: 100vh;
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   padding: 8%;
 }
 /***.portInfo h2 creates space from the top of portInfo and
 pushes the rest of the content down as well without ruining
 the layout ***/
-.portInfo h2{
+.portInfo h2 {
   margin-top: 5%;
 }
-.portInfo a{
+.portInfo a {
   position: relative;
   font-weight: 700;
-  transition: .25s ease-in-out;
-  color: rgb(0,0,0)!important;
+  transition: 0.25s ease-in-out;
+  color: rgb(0, 0, 0) !important;
 }
-.portInfo a::after{
-  content: '';
+.portInfo a::after {
+  content: "";
   width: 1rem;
   bottom: 0;
   left: 0;
   position: absolute;
   border-bottom: solid red thin;
 }
-.portInfo a:hover{  
+.portInfo a:hover {
   text-shadow: 0 0 0px #000000, 0 0 0px #000000;
 }
-.portInfo::-webkit-scrollbar{
-  height:0 !important;
-  width:0;
+.portInfo::-webkit-scrollbar {
+  height: 0 !important;
+  width: 0;
 }
-.portInfo figcaption{
-  opacity: .5;
+.portInfo figcaption {
+  opacity: 0.5;
   text-align: right;
   position: relative;
   margin-right: 5vw;
 }
-.portInfo img{
+.portInfo img {
   position: relative;
   object-fit: contain;
   z-index: 898;
   margin: 5% auto;
   width: 80%;
-  height:auto;
-  transition: .3s ease-in-out;
-  transform-origin: center;
+  height: auto;
 }
-/*.portInfo img:hover{
-  z-index: 999;
-  transform: scale(1.2);
-  box-shadow: 0 6px 6px rgba(0,0,0,.5);
-}*/
-.portInfo p{
-  margin:1rem 0 1rem 0;
+.portInfo p {
+  margin: 1rem 0 1rem 0;
   position: relative;
 }
-.portText{
+.portText {
   position: relative;
   width: 80%;
-  margin:0 auto;
+  margin: 0 auto;
   margin-bottom: 1rem;
 }
-.portText::after{
+.portText::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   left: 0;
-  bottom:-10%;
+  bottom: -10%;
   border-bottom: solid red thin;
 }
 /**** Styles for Red Button to move container left ****/
-.toggleSlide{
+.toggleSlide {
   position: fixed;
   top: 50%;
-  /*** appears until the projects button is displayed ***/ 
+  /*** appears until the projects button is displayed ***/
   z-index: 798;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  left:102%;
+  left: 102%;
   color: white;
   background-color: #ff1144;
   cursor: pointer;
   /*** this font size is hard coded because it is for the button's visual ***/
   font-size: 36px;
-  transition: .2s linear;
+  transition: 0.2s linear;
   transform-origin: center;
-  border:0;
+  border: 0;
   font-family: inherit;
 }
 
-.toggleSlide:hover{
+.toggleSlide:hover {
   transform: scale(1.2);
 }
 
 /*** Styles the right side of the main container ***/
-.wrapR{
-  width:50vw;
+.wrapR {
+  width: 50vw;
   height: inherit;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 /*** setting the background-image to each child of wrapR ***/
-.wrapRImg{
+.wrapRImg {
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
-.wrapRImg img{
+.wrapRImg img {
   display: block;
   height: 100vh;
   width: auto;
   object-fit: cover;
 }
-.portInfo img:hover{
-  transform:scale(1.5)
-}
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
 
 @media (min-width: 1281px) {
-  
-  a{
+  a {
     font-size: 1.5rem;
   }
-  button{
-  font-size: 1.5rem;
+  button {
+    font-size: 1.5rem;
   }
-  h1{
+  h1 {
     font-size: 3.5rem;
   }
   h2 {
     font-size: 1.3rem;
   }
-  h3{
-    font-size: .8rem
+  h3 {
+    font-size: 0.8rem;
   }
-  p{
+  p {
     font-size: 1rem;
   }
-  li{
+  li {
     margin: 1rem 0 0 1rem;
   }
-  .nav a, .nav button{
+  .nav a,
+  .nav button {
     font-size: 1.5rem;
   }
 }
@@ -448,24 +442,23 @@ the layout ***/
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
- 
-  h1{
+  h1 {
     font-size: 3rem;
   }
   h2 {
     font-size: 1.5rem;
   }
-  h3{
-    font-size: .8rem
+  h3 {
+    font-size: 0.8rem;
   }
-  p{
+  p {
     font-size: 1.1rem;
   }
-  li{
+  li {
     margin: 1rem 0 0 1rem;
   }
-  .nav a, .nav button{
+  .nav a,
+  .nav button {
     font-size: 1.5rem;
   }
 }
@@ -476,23 +469,23 @@ the layout ***/
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-  h1{
+  h1 {
     font-size: 3.5rem;
   }
   h2 {
     font-size: 1.5rem;
   }
-  h3{
-    font-size: .8rem
+  h3 {
+    font-size: 0.8rem;
   }
-  p{
+  p {
     font-size: 1rem;
   }
-  li{
+  li {
     margin: 1rem 0 0 1rem;
   }
-  .nav a, .nav button{
+  .nav a,
+  .nav button {
     font-size: 1.5rem;
   }
 }
@@ -503,21 +496,19 @@ the layout ***/
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
- 
-  h1{
+  h1 {
     font-size: 3.5rem;
   }
   h2 {
     font-size: 1.6rem;
   }
-  h3{
-    font-size: .8rem
+  h3 {
+    font-size: 0.8rem;
   }
-  p{
+  p {
     font-size: 1.4rem;
   }
-  li{
+  li {
     margin: 1rem 0 0 1rem;
   }
 }
@@ -528,20 +519,19 @@ the layout ***/
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
- 
-  h1{
+  h1 {
     font-size: 2.5rem;
   }
   h2 {
     font-size: 1.5rem;
   }
-  h3{
-    font-size: .8rem
+  h3 {
+    font-size: 0.8rem;
   }
-  p{
+  p {
     font-size: 1.2rem;
   }
-  li{
+  li {
     margin: 1rem 0 0 1rem;
   }
 }
@@ -551,41 +541,41 @@ the layout ***/
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px){
-
-  h1{
+@media (min-width: 320px) and (max-width: 480px) {
+  h1 {
     font-size: 1.5rem;
   }
   h2 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  h3{
-    font-size: .8rem
+  h3 {
+    font-size: 0.8rem;
   }
-  p{
+  p {
     line-height: 1rem;
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
-  li{
+  li {
     margin: 1rem 0 0 1rem;
   }
-  figcaption{
-    font-size: .8rem;
+  figcaption {
+    font-size: 0.8rem;
   }
-  .leftcontainer button{
+  .leftcontainer button {
     font-size: 5rem;
   }
-  .nav{
+  .nav {
     bottom: 15%;
   }
-  .nav a, .nav button{
-    font-size: .8rem;
+  .nav a,
+  .nav button {
+    font-size: 0.8rem;
   }
-  .projects li{
-    font-size:.8rem;
-    margin-top:2rem;
+  .projects li {
+    font-size: 0.8rem;
+    margin-top: 2rem;
   }
-  .socialMedia{
+  .socialMedia {
     bottom: 12%;
   }
 }

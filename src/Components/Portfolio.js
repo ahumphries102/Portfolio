@@ -11,7 +11,7 @@ export default function Portfolio() {
               <p>This app was created in order to provide people with a way to create as many quizzes or tests as they want. It is fully customizable which means users can create as many questions with as many answers as they choose.</p>
     		  
               <a href="https://github.com/ahumphries102/Quiz" target="_blank" rel="noopener noreferrer">Github</a><br/>
-              <a href="https://quizzor.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Project</a>
+              {/* <a href="https://quizzor.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Project</a> */}
             </div>
     		<img src={Images.createaQuiz} alt="placeholder"/>
             <figcaption>The create quiz page lets users create custom quizzes</figcaption>
@@ -27,7 +27,7 @@ export default function Portfolio() {
     		  <p>This project utilizes the MERN stack to allow users to create users, assign exercises to them. All the data entered in this app is saved to a MongoDB database.</p>
     		  
               <a href="https://github.com/ahumphries102/exerciseApp">Github</a><br/>
-              <a href="https://ahumphries102.github.io/exerciseApp/" target="_blank" rel="noopener noreferrer">View Project</a>
+              {/* <a href="https://ahumphries102.github.io/exerciseApp/" target="_blank" rel="noopener noreferrer">View Project</a> */}
             </div>
     		<img src={Images.img2} alt="placeholder"/>
             <figcaption>The create users page. When a user accesses this page they can create a user which is saved to a MongoDB</figcaption>
@@ -40,7 +40,7 @@ export default function Portfolio() {
         		<h2>Magic the Gathering Deck Builder</h2>
                 <p>Users can select cards to build their deck. The bar on the right reflects the users choice. They may delete unwanted cards and once they're satisfied with their deck they can click save to save their deck to an SQL database.</p>
                 <a href="https://github.com/ahumphries102/database_project">Github</a><br/>
-                <a href="https://ahumphries102.github.io/deckbuilder/" target="_blank" rel="noopener noreferrer">View Project</a>
+                {/* <a href="https://ahumphries102.github.io/deckbuilder/" target="_blank" rel="noopener noreferrer">View Project</a> */}
             </div>
             <img src={Images.img5} alt="placeholder"/>
             <figcaption>Node.js is used along with an SQL script to save all the users chosen cards to a database</figcaption>
@@ -52,12 +52,13 @@ export default function Portfolio() {
         
     	<div className="portInfo">
         <div className="portText">
-    		<h2>Tamagotchi Game</h2>
-            <p>A simple game developed using HTML, CSS and Jquery.</p>
-            <a href="https://github.com/ahumphries102/Tomagatchi">Github</a>
+    		<h2>Pokedex</h2>
+            <p>Look up your favorite pokemon stats and abilities using the Pokemon API</p>
+            <p>This uses React 19.2 with typescript and the file structure is organized and easy to follow</p>
+            <a href="https://github.com/ahumphries102/pokedex">Github</a>
         </div>
     		<img src={Images.img7} alt="placeholder"/>
-            <figcaption>Tomagatchi is a game where you simply assign it a name and monitor it's stats</figcaption>
+            <figcaption>Find your favorite pokemon!</figcaption>
     	</div>
 
     	<div className="portInfo">
